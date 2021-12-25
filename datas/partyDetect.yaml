@@ -1,0 +1,328 @@
+#当事人信息纠错
+-
+ caseName: case6_1----顺序错误
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：张三，汉族，男，系文盲，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: {
+                  "level": 1,
+                  "type": 1101,
+                  "keyword": "原告：张三，汉族，男，系文盲，1980年11月16日生，汉族，住云南省昆明市盘龙区",
+                  "suggestion": "",
+                  "tip": "[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]"
+              }
+-
+ caseName: case6_2----当事人信息正确（包含职业）
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：张三，男，1980年11月16日生，汉族，农村务农，住云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case6_3----当事人信息正确（不包含职业）
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case6_4----民族信息缺少“族”
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：张三，男，1980年11月16日生，汉，住云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1105,
+                    "keyword": "原告：张三，男，1980年11月16日生，汉，住云南省昆明市盘龙区",
+                    "suggestion": "",
+                    "tip": "民族后缺少“族”字"
+                }
+-
+ caseName: case6_5----“住所信息”不规范-居住地
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：张三，男，1980年11月16日生，汉族，居住地云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1105,
+                    "keyword": "原告：张三，男，1980年11月16日生，汉族，居住地云南省昆明市盘龙区",
+                    "suggestion": "",
+                    "tip": "地址前缺少“住”字"
+                }
+-
+ caseName: case6_6----“住所信息”不规范-住址
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：张三，男，1980年11月16日生，汉族，住址云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1105,
+                    "keyword": "原告：张三，男，1980年11月16日生，汉族，住址云南省昆明市盘龙区",
+                    "suggestion": "",
+                    "tip": "地址前缺少“住”字"
+                }
+-
+ caseName: case6_7----“住所信息”不规范-联系地址
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：张三，男，1980年11月16日生，汉族，联系住址云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1105,
+                    "keyword": "原告：张三，男，1980年11月16日生，汉族，联系住址云南省昆明市盘龙区",
+                    "suggestion": "",
+                    "tip": "地址前缺少“住”字"
+                }
+-
+ caseName: case6_8----“住所信息”不规范-缺少“住”
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：张三，男，1980年11月16日生，汉族，云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1105,
+                    "keyword": "原告：张三，男，1980年11月16日生，汉族，云南省昆明市盘龙区",
+                    "suggestion": "",
+                    "tip": "地址前缺少“住”字"
+                }
+-
+ caseName: case6_9----当事人信息不完整-缺少民族信息
+ payloads: {
+             "judgeId": 3,
+             "paragraphs": [
+               {
+                 "index": 2,
+                 "content": "原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区。"
+               }
+             ]
+           }
+ expectResult: {
+                 "level": 1,
+                 "type": 1105,
+                 "keyword": "原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区",
+                 "suggestion": "",
+                 "tip": "[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]"
+               }
+-
+ caseName: case6_10----当事人信息不完整-缺少性别信息
+ payloads: {
+             "judgeId": 3,
+             "paragraphs": [
+               {
+                 "index": 2,
+                 "content": "原告：张三，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+               }
+             ]
+           }
+ expectResult: {
+                 "level": 1,
+                 "type": 1105,
+                 "keyword": "原告：张三，1980年11月16日生，汉族，住云南省昆明市盘龙区",
+                 "suggestion": "",
+                 "tip": "请写明当事人性别"
+               }
+-
+ caseName: case6_11----当事人信息不完整-出生日期不完整
+ payloads: {
+             "judgeId": 3,
+             "paragraphs": [
+               {
+                 "index": 2,
+                 "content": "原告：张三，男，1980年11月生，汉族，住云南省昆明市盘龙区。"
+               }
+             ]
+           }
+ expectResult: {
+                 "level": 1,
+                 "type": 1105,
+                 "keyword": "原告：张三，男，1980年11月生，汉族，住云南省昆明市盘龙区",
+                 "suggestion": "",
+                 "tip": "[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]"
+               }
+-
+ caseName: case6_12----当事人信息不完整-缺少姓名
+ payloads: {
+             "judgeId": 3,
+             "paragraphs": [
+               {
+                 "index": 2,
+                 "content": "原告：，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+               }
+             ]
+           }
+ expectResult: {
+                 "level": 1,
+                 "type": 1105,
+                 "keyword": "原告：，男，1980年11月16日生，汉族，住云南省昆明市盘龙区",
+                 "suggestion": "",
+                 "tip": "[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]"
+               }
+-
+ caseName: case6_13----当事人信息不完整-缺少姓名
+ payloads: {
+             "judgeId": 3,
+             "paragraphs": [
+               {
+                 "index": 2,
+                 "content": "原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+               }
+             ]
+           }
+ expectResult: {
+                 "level": 1,
+                 "type": 1105,
+                 "keyword": "原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区",
+                 "suggestion": "",
+                 "tip": "[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]"
+               }
+-
+ caseName: case6_14----当事人信息不完整-诉讼地位与姓名之间没有冒号
+ payloads: {
+             "judgeId": 3,
+             "paragraphs": [
+               {
+                 "index": 2,
+                 "content": "原告张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+               }
+             ]
+           }
+ expectResult: {
+                 "level": 1,
+                 "type": 1105,
+                 "keyword": "原告张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区",
+                 "suggestion": "",
+                 "tip": "诉讼地位与姓名之间缺少冒号"
+               }
+-
+ caseName: case6_15----当事人信息不完整-缺少诉讼地位
+ payloads: {
+             "judgeId": 3,
+             "paragraphs": [
+               {
+                 "index": 2,
+                 "content": "张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+               }
+             ]
+           }
+ expectResult: {
+                 "level": 1,
+                 "type": 1106,
+                 "keyword": "张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区",
+                 "suggestion": "",
+                 "tip": "[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]"
+               }
+-
+ caseName: case6_16----当事人信息错误-添加不必要信息
+ payloads: {
+             "judgeId": 3,
+             "paragraphs": [
+               {
+                 "index": 2,
+                 "content": "原告：张三，性别男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+               }
+             ]
+           }
+ expectResult: {
+                 "level": 1,
+                 "type": 1105,
+                 "keyword": "原告：张三，性别男，1980年11月16日生，汉族，住云南省昆明市盘龙区",
+                 "suggestion": "",
+                 "tip": "[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]"
+               }
+-
+ caseName: case6_17----当事人信息不对等
+ payloads: {
+             "judgeId": 3,
+             "paragraphs": [
+               {
+                 "index": 2,
+                 "content": "原告：张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。
+                 被告：李四，男，1980年11月16日生，汉族，住昆明市盘龙区。"
+               }
+             ]
+           }
+ expectResult: {
+                  "level": 2,
+                  "type": 1102,
+                  "keyword": "",
+                  "suggestion": "",
+                  "tip": null
+              }
+-
+ caseName: case6_18----当事人信息错误-住所地址不同时未写明属于哪个省份
+ payloads: {
+             "judgeId": 3,
+             "paragraphs": [
+               {
+                 "index": 2,
+                 "content": "原告：张三，男，1980年11月16日生，汉族，住昆明市盘龙区。
+                 被告：李四，男，1980年11月16日生，汉族，住厦门市思明区。"
+               }
+             ]
+           }
+ expectResult: {
+                    "level": 2,
+                    "type": 1103,
+                    "keyword": "",
+                    "suggestion": "",
+                    "tip": null
+                }
+-
+ caseName: case6_19----当事人信息信息对等
+ payloads: {
+             "judgeId": 3,
+             "paragraphs": [
+               {
+                 "index": 2,
+                 "content": "原告：张三，男，1980年11月16日生，汉族，住厦门市集美区。
+                 被告：李四，男，1980年11月16日生，汉族，住厦门市思明区。"
+               }
+             ]
+           }
+ expectResult: []

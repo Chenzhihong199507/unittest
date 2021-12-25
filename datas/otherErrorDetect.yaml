@@ -1,0 +1,139 @@
+##标点符号纠错
+#-
+# caseName: case7_1----中英文标点使用混乱-冒号错误
+# payloads:  {
+#                "judgeId":3,
+#                "paragraphs": [
+#                    {
+#                        "index":2,
+#                        "content": "原告:张三"
+#                    }
+#                ]
+#            }
+# expectResult: {
+#                    "level": 1,
+#                    "type": 1401,
+#                    "keyword": ":",
+#                    "suggestion": "：",
+#                    "tip": ""
+#                }
+#-
+# caseName: case7_2----中英文标点使用混乱-小括号错误
+# payloads:  {
+#                "judgeId":3,
+#                "paragraphs": [
+#                    {
+#                        "index":2,
+#                        "content": "(2021）"
+#                    }
+#                ]
+#            }
+# expectResult: {
+#                    "level": 1,
+#                    "type": 1401,
+#                    "keyword": "(",
+#                    "suggestion": "（",
+#                    "tip": ""
+#                }
+#-
+# caseName: case7_3----中英文标点使用混乱-逗号错误
+# payloads:  {
+#                "judgeId":3,
+#                "paragraphs": [
+#                    {
+#                        "index":2,
+#                        "content": "原告：张三,男，1980年11月16日生，汉族，住所：云南省昆明市盘龙区"
+#                    }
+#                ]
+#            }
+# expectResult: {
+#                    "level": 1,
+#                    "type": 1401,
+#                    "keyword": ",",
+#                    "suggestion": "，",
+#                    "tip": ""
+#                }
+#-
+# caseName: case7_4----中英文标点使用混乱-句号错误
+# payloads:  {
+#                "judgeId":3,
+#                "paragraphs": [
+#                    {
+#                        "index":2,
+#                        "content": "原告：张三，男，1980年11月16日生，汉族，住所：云南省昆明市盘龙区."
+#                    }
+#                ]
+#            }
+# expectResult: {
+#                    "level": 1,
+#                    "type": 1401,
+#                    "keyword": ".",
+#                    "suggestion": "。",
+#                    "tip": ""
+#                }
+#-
+# caseName: case7_5----中英文标点使用混乱-引号错误
+# payloads:  {
+#                "judgeId":3,
+#                "paragraphs": [
+#                    {
+#                        "index":2,
+#                        "content": '“原告"'
+#                    }
+#                ]
+#            }
+# expectResult: {
+#                    "level": 1,
+#                    "type": 1401,
+#                    "keyword": '"',
+#                    "suggestion": '”',
+#                    "tip": ""
+#                }
+#-
+# caseName: case7_6----中英文标点使用混乱-书名号错误
+# payloads:  {
+#                "judgeId":3,
+#                "paragraphs": [
+#                    {
+#                        "index":2,
+#                        "content": "<民事协议书》"
+#                    }
+#                ]
+#            }
+# expectResult: {
+#                    "level": 1,
+#                    "type": 1401,
+#                    "keyword": "<",
+#                    "suggestion": "《",
+#                    "tip": ""
+#                }
+#-
+# caseName: case7_7----大数千分位检测-后面不带“元”
+# payloads:  {
+#                "judgeId":3,
+#                "paragraphs": [
+#                    {
+#                        "index":2,
+#                        "content": "12346486"
+#                    }
+#                ]
+#            }
+# expectResult: []
+#-
+# caseName: case7_8----大数千分位检测-后面带“元”
+# payloads:  {
+#                "judgeId":3,
+#                "paragraphs": [
+#                    {
+#                        "index":2,
+#                        "content": "12346486元"
+#                    }
+#                ]
+#            }
+# expectResult: {
+#                    "level": 1,
+#                    "type": 1201,
+#                    "keyword": "12346486",
+#                    "suggestion": "12,346,486",
+#                    "tip": null
+#                }
