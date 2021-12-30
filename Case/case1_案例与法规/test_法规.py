@@ -12,6 +12,8 @@ from common.readConfig import ReadConfigFile
 from common.readYaml import WRYaml
 
 ad = APIdemo()
+rc = ReadConfigFile()
+host = rc.read_config("test_host")
 #通过yaml文件读取数据
 # wryaml = WRYaml()
 # ym = wryaml.read_yaml('D:\\Projects\\PycharmProjects\\unittest\\datas\\CaseInfo.yaml')
@@ -34,12 +36,12 @@ class TestLawInfo(unittest.TestCase):
         expectResult2 = kwargs.get("expectResult2")
 
         print(caseName)
-        url = "https://wszs-api.huiwei.tech/library/laws"
+        url = host[0] + "/library/laws"
 
         headers = {
             'Content-Type': 'application/json'
         }
-        response = ad.do_post(url,json.dumps(payloads),headers=headers)
+        response = ad.do_post(url,json.dumps(payloads),headers=headers,verify=False)
         res = response.json()
         print("期望返回1:" + str(expectResult) + "\n" + "实际返回1:" + str(res["totalResults"]))
         print("期望返回2:" + str(expectResult2) + "\n" + "实际返回2:" + str(len(res["data"])))
@@ -54,12 +56,12 @@ class TestLawInfo(unittest.TestCase):
         expectResult =kwargs.get("expectResult")
 
         print(caseName)
-        url = "https://wszs-api.huiwei.tech/library/law/info"
+        url = host[0] + "/library/law/info"
 
         headers = {
             'Content-Type': 'application/json'
         }
-        response = ad.do_post(url,json.dumps(payloads),headers=headers)
+        response = ad.do_post(url,json.dumps(payloads),headers=headers,verify=False)
         res = response.json()["data"]["lawInfoSchema"]["chapters"]
         print("期望返回:" + str(expectResult) + "\n" + "实际返回:" + str(len(res)))
         self.assertEqual(len(res), expectResult)

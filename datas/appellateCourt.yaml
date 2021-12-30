@@ -1,0 +1,97 @@
+#上诉法院检测
+-
+ caseName: case11_1----登录账号最高法，上诉最高法
+ payloads:  {
+                "judgeId":4,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "如不服本判决，可在判决书送达之日起十五日内向本院递交上诉状，并按对方当事人的人数提出副本，上诉于最高人民法院。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case11_2----登录账号“福建省厦门中级人民法院”，上诉“最高人民法院”
+ payloads:  {
+                "judgeId":1,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "如不服本判决，可在判决书送达之日起十五日内向本院递交上诉状，并按对方当事人的人数提出副本，上诉于最高人民法院。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1800,
+                    "keyword": "最高人民法院",
+                    "suggestion": "福建省高级人民法院",
+                    "tip": ""
+                }
+-
+ caseName: case11_3----登录账号“延庆县人民法院”，上诉“最高人民法院”
+ payloads:  {
+                "judgeId":8,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "如不服本判决，可在判决书送达之日起十五日内向本院递交上诉状，并按对方当事人的人数提出副本，上诉于最高人民法院。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1800,
+                    "keyword": "最高人民法院",
+                    "suggestion": "北京市第二中级人民法院",
+                    "tip": ""
+                }
+-
+ caseName: case11_4----登录账号“遵化市人民法院”，上诉“河北省高级人民法院”
+ payloads:  {
+                "judgeId":9,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "如不服本判决，可在判决书送达之日起十五日内向本院递交上诉状，并按对方当事人的人数提出副本，上诉于河北省高级人民法院。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1800,
+                    "keyword": "河北省高级人民法院",
+                    "suggestion": "河北省唐山市中级人民法院",
+                    "tip": ""
+                }
+-
+ caseName: case11_3----登录账号“中国人民解放军北京军区河北军事法院”，上诉“中国人民解放军北京军区河北军事法院”
+ payloads:  {
+                "judgeId":10,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "如不服本判决，可在判决书送达之日起十五日内向本院递交上诉状，并按对方当事人的人数提出副本，上诉于中国人民解放军北京军区河北军事法院。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1800,
+                    "keyword": "中国人民解放军北京军区河北军事法院",
+                    "suggestion": "中国人民解放军北京军区军事法院",
+                    "tip": ""
+                }
+-
+ caseName: case11_6----登录账号最高法，终审判决
+ payloads:  {
+                "judgeId":4,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "本判决为终审判决。"
+                    }
+                ]
+            }
+ expectResult: []

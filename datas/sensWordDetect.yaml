@@ -1,0 +1,506 @@
+#敏感词检测
+-
+ caseName: case9_1----涉及恐怖主义
+ payloads:  {
+                "judgeId":5,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "法轮功"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1501,
+                    "keyword": "法轮功",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_2----涉及恐怖主义
+ payloads:  {
+                "judgeId":5,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "邪教"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1501,
+                    "keyword": "邪教",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_3----涉及危害国家安全犯罪、涉及国防利益、涉及军事秘密
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "打倒共产党"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1502,
+                    "keyword": "打倒共产党",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_4----涉及危害国家安全犯罪、涉及国防利益、涉及军事秘密
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "煽动颠覆国家政权"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1502,
+                    "keyword": "煽动颠覆国家政权",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_5----涉及国家秘密
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "国家秘密"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1503,
+                    "keyword": "国家秘密",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_6----涉及党和国家形象的谣言、反动言论
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "藏独"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1504,
+                    "keyword": "藏独",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_7----涉及党和国家形象的谣言、反动言论
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "疆独"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1504,
+                    "keyword": "疆独",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_8----涉及党和国家形象的谣言、反动言论
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "台独"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1504,
+                    "keyword": "台独",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_9----涉及党和国家形象的谣言、反动言论
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "社会主义制度"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1504,
+                    "keyword": "社会主义制度",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_10----涉及党和国家形象的谣言、反动言论
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "共产主义"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1504,
+                    "keyword": "共产主义",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_11----涉及党和国家领导人
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "李克强"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1505,
+                    "keyword": "涉及党和国家领导人",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_12----涉及党和国家领导人
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "邓小平"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1505,
+                    "keyword": "涉及党和国家领导人",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_13----涉及党和国家领导人
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "胡锦涛"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1505,
+                    "keyword": "涉及党和国家领导人",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_14----涉及党和国家领导人
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "毛泽东"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case9_15----涉及党和国家领导人
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "副委员长"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1505,
+                    "keyword": "涉及党和国家领导人",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_16----涉及党和国家领导人
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "习明泽"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1505,
+                    "keyword": "涉及党和国家领导人",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_17----涉及不当言论
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "谣言"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1506,
+                    "keyword": "谣言",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_18----人民法院认为可能影响政治、军事安全的其他情形
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "死刑"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1507,
+                    "keyword": "死刑",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_19----人民法院认为可能影响政治、军事安全的其他情形
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "寻衅滋事"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1507,
+                    "keyword": "寻衅滋事",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_20----人民法院认为可能影响政治、军事安全的其他情形
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "诽谤"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1507,
+                    "keyword": "诽谤",
+                    "suggestion": "",
+                    "tip": ""
+                }
+
+-
+ caseName: case9_21----人民法院认为可能影响政治、军事安全的其他情形
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "中南海"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1507,
+                    "keyword": "中南海",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_22----人民法院认为可能影响政治、军事安全的其他情形
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "天安门"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1507,
+                    "keyword": "天安门",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_23----人民法院认为可能影响政治、军事安全的其他情形
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "公安局"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1507,
+                    "keyword": "公安局",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_24----人民法院认为可能影响政治、军事安全的其他情形
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "公安机关"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1507,
+                    "keyword": "公安机关",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_25----人民法院认为可能影响政治、军事安全的其他情形
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "侮辱罪"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1507,
+                    "keyword": "侮辱罪",
+                    "suggestion": "",
+                    "tip": ""
+                }
+#-
+# caseName: case9_26----其他（涉及欺骗、迷信、煽动、恐怖、极端、淫秽性质等内容）
+# payloads:  {
+#                "judgeId":3,
+#                "paragraphs": [
+#                    {
+#                        "index":2,
+#                        "content": "法轮功"
+#                    }
+#                ]
+#            }
+# expectResult: {
+#                    "level": 1,
+#                    "type": 1508,
+#                    "keyword": "法轮功",
+#                    "suggestion": "",
+#                    "tip": ""
+#                }
+-
+ caseName: case9_27----不涉及敏感词的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "婚姻登记机关查明双方确实是自愿并对子女和财产问题已有适当处理时，发给离婚证"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case9_28----在个人敏感词库中
+ payloads:  {
+              "judgeId": 4,
+              "paragraphs": [
+                {
+                  "index": 1,
+                  "content": "test"
+                }
+              ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1501,
+                    "keyword": "test",
+                    "suggestion": "",
+                    "tip": ""
+                }
+-
+ caseName: case9_29----不在当前账号的个人敏感词库中
+ payloads:  {
+              "judgeId": 3,
+              "paragraphs": [
+                {
+                  "index": 1,
+                  "content": "test"
+                }
+              ]
+            }
+ expectResult: []

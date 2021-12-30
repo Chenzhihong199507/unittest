@@ -1,0 +1,147 @@
+#重复词语或句子检测
+-
+ caseName: case10_1----数字重复
+ payloads:  {
+                "judgeId":5,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "2020"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case10_2----一段里面出现多个相同数字
+ payloads:  {
+                "judgeId":5,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "被告人名下工商银行开户账号银行卡号6222082502004841432，以上财产价值暂计：1，560,000.00元人民币；
+                        3.请求法院分割夫妻共同财产被告李四借给张金彩750,000.00元人民币；4.请求法院分割被告在云南恒久科技有限公司50%的股权，
+                        价值约300,000.00元人民币；5.由被告李四一次性补偿原告张三200,000.00元人民币；6.由被告承担本案诉讼费用。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case10_3----文字重复
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "《中《中华人民共和国民法通则》"
+                    }
+                ]
+            }
+ expectResult: [{
+                    "level": 1,
+                    "type": 1700,
+                    "keyword": "《中《中",
+                    "suggestion": "",
+                    "tip": null
+                }]
+-
+ caseName: case10_4----段落重复
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "根据当事人的陈述、举证及庭审查明的事实，本院确认如下事实。"
+                    },
+                    {
+                        "index":3,
+                        "content": "根据当事人的陈述、举证及庭审查明的事实，本院确认如下事实。"
+                    }
+                ]
+            }
+ expectResult: [{
+                    "level": 1,
+                    "type": 1700,
+                    "keyword": "根据当事人的陈述、举证及庭审查明的事实，本院确认如下事实。",
+                    "suggestion": "",
+                    "tip": ""
+                },
+                 {
+                   "level": 1,
+                   "type": 1700,
+                   "keyword": "根据当事人的陈述、举证及庭审查明的事实，本院确认如下事实。",
+                   "suggestion": "",
+                   "tip": ""
+                 }]
+-
+ caseName: case10_5----文字重复
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：张三，男，1980年11月16日生，汉族，汉族，住云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: [{
+                    "level": 1,
+                    "type": 1700,
+                    "keyword": "，汉族，汉族",
+                    "suggestion": "",
+                    "tip": ""
+                }]
+-
+ caseName: case10_6----叠词-AABB型
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "口口声声"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case10_7----叠词-ABAB型
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "一个一个"
+                    }
+                ]
+            }
+ expectResult: [{
+                    "level": 1,
+                    "type": 1700,
+                    "keyword": "一个一个",
+                    "suggestion": "",
+                    "tip": null
+                }]
+-
+ caseName: case10_8----段落里面有语句重复
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告张三起诉称：1.依法判令撤销原被告双方签订的离婚协议（财产分割部分）；
+                        2.依法分割夫妻共同财产车辆：云A656Y1大众朗逸轿车一辆、云A656Y1奥迪Q5越野车一辆；不动产：
+                        a、昆明市盘龙区青云街道办事处东三环西侧金色交响家园，房地产权证编号：房地证津字第52号；
+                        b、昆明市盘龙区青云街道办事处东三环西侧金色交响家园；c、成都市天来国际广场温江区政通路；
+                        被告人名下工商银行开户账号银行卡号6222082502004841432，以上财产价值暂计：1,560,000.00元人民币；
+                        3.请求法院分割夫妻共同财产被告李四借给张金彩750,000.00元人民币；
+                        4.请求法院分割被告在云南恒久科技有限公司50%的股权，价值约300,000.00元人民币；
+                        5.由被告李四一次性补偿原告张三200,000.00元人民币；6.由被告承担本案诉讼费用。"
+                    }
+                ]
+            }
+ expectResult: [{
+                    "level": 1,
+                    "type": 1700,
+                    "keyword": "昆明市盘龙区青云街道办事处东三环西侧金色交响家园",
+                    "suggestion": "",
+                    "tip": null
+                }]

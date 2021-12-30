@@ -1,0 +1,139 @@
+#地区套用错误
+-
+ caseName: case7_1----省与市不匹配
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "福建省九江市"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1600,
+                    "keyword": "福建省九江市",
+                    "suggestion": "",
+                    "tip": null
+                }
+-
+ caseName: case7_2----省与市匹配
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "黑龙江省哈尔滨市"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case7_3----省与市不匹配
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "广西省昆明市盘龙区"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1600,
+                    "keyword": "广西省昆明市盘龙区",
+                    "suggestion": "",
+                    "tip": null
+                }
+-
+ caseName: case7_4----省下来直接到县或者县级市
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "福建省漳浦县."
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1600,
+                    "keyword": "福建省漳浦县",
+                    "suggestion": "",
+                    "tip": null
+                }
+-
+ caseName: case7_5----省下来直接到县或者县级市
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": '“江苏省丹徒区"'
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1600,
+                    "keyword": '江苏省丹徒区',
+                    "suggestion": '',
+                    "tip": null
+                }
+-
+ caseName: case7_6----省下来直接到县或者县级市
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "福建省龙海市"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1600,
+                    "keyword": "福建省龙海市",
+                    "suggestion": "",
+                    "tip": null
+                }
+-
+ caseName: case7_7----直辖市与县
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "重庆市嘉陵区"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case7_8----直辖市与县
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "天津市蓟县"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case7_8----非地区套用的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "北京市隆安（南京）律师事务所律师"
+                    }
+                ]
+            }
+ expectResult: []

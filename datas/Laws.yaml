@@ -25,11 +25,11 @@
  payloads:  {"pageNO": 6,"pageSize":10,"keyword": "宪法"}
  expectResult: 53
  expectResult2: 3
--
- caseName: case3_6----搜索关键词“宪法”，分页大小设为10，当前页设为7
- payloads:  {"pageNO": 7,"pageSize":10,"keyword": "宪法"}
- expectResult: 53
- expectResult2: 0
+#-
+# caseName: case3_6----搜索关键词“宪法”，分页大小设为10，当前页设为7
+# payloads:  {"pageNO": 7,"pageSize":10,"keyword": "宪法"}
+# expectResult: 53
+# expectResult2: 0
 -
  caseName: case3_7----搜索关键词“宪法”，分页大小设为20，当前页设为3
  payloads:  {"pageNO": 3,"pageSize":20,"keyword": "宪法"}

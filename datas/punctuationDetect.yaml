@@ -96,7 +96,7 @@
                 "paragraphs": [
                     {
                         "index":2,
-                        "content": "<民事协议书》"
+                        "content": "<民事协议书>"
                     }
                 ]
             }
@@ -135,5 +135,35 @@
                     "type": 1201,
                     "keyword": "12346486",
                     "suggestion": "12,346,486",
+                    "tip": null
+                }
+-
+ caseName: case7_9----大数千分位检测-有两个千分符
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "1,560,000元"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case7_10----大数千分位检测-千分符个数不够
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "1560,000元"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1201,
+                    "keyword": "1560,000",
+                    "suggestion": "1,560,000",
                     "tip": null
                 }

@@ -14,30 +14,32 @@ from config.setting import file_path
 
 ad = APIdemo()
 fp = file_path()
+rc = ReadConfigFile()
+host = rc.read_config("test_host")
 
 # 2、继承自unittest.TestCase类
 @ddt
-class TestPunctuation(unittest.TestCase):
+class TestAreaError(unittest.TestCase):
     # 3、配置环境：进行测试前的初始化工作
     def setUp(self):
         #print('\ncases before')
         pass
 
     # 4、定义测试用例，名字以“test”开头
-    @file_data(fp.get_file_path("datas","punctuationDetect.yaml"))
-    def test_punctuation(self,**kwargs):
-        """anhaoDetect"""
+    @file_data(fp.get_file_path("datas","AreaErrorDetect.yaml"))
+    def test_AreaError(self,**kwargs):
+        """AreaErrorDetect"""
         caseName = kwargs.get("caseName")
         payloads = kwargs.get("payloads")
         expectResult =kwargs.get("expectResult")
 
         print(caseName)
-        url = "https://wszs-api.huiwei.tech/Judgements/ErrorDetect"
+        url = host[0] + "/Judgements/ErrorDetect"
 
         headers = {
             'Content-Type': 'application/json'
         }
-        response = ad.do_post(url,json.dumps(payloads),headers=headers)
+        response = ad.do_post(url,json.dumps(payloads),headers=headers,verify=False)
         try:
             res = response.json()["detections"][0]["corrections"][0]
             print("期望返回:" + str(expectResult) + "\n" + "实际返回:" + str(res))
