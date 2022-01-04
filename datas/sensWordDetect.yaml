@@ -477,29 +477,29 @@
 -
  caseName: case9_28----在个人敏感词库中
  payloads:  {
-              "judgeId": 4,
+              "judgeId": 9,
               "paragraphs": [
                 {
                   "index": 1,
-                  "content": "test"
+                  "content": "国民党"
                 }
               ]
             }
  expectResult: {
                     "level": 1,
-                    "type": 1501,
-                    "keyword": "test",
+                    "type": 1506,
+                    "keyword": "国民党",
                     "suggestion": "",
                     "tip": ""
                 }
 -
  caseName: case9_29----不在当前账号的个人敏感词库中
  payloads:  {
-              "judgeId": 3,
+              "judgeId": 4,
               "paragraphs": [
                 {
                   "index": 1,
-                  "content": "test"
+                  "content": "国民党"
                 }
               ]
             }

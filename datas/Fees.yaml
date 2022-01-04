@@ -1,0 +1,196 @@
+#受理费承担人检测
+-
+ caseName: case12_1----有承担人。
+ payloads:  {
+                "judgeId":4,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "案件受理费4,676元，减半收取计2,338元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case12_2----只有名字，没有诉讼地位
+ payloads:  {
+                "judgeId":1,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "案件受理费4,676元，减半收取计2,338元，由林印党负担。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1803,
+                    "keyword": "",
+                    "suggestion": "",
+                    "tip": "受理费承担人须指定当事人身份"
+                }
+-
+ caseName: case12_3----有多名承担人
+ payloads:  {
+                "judgeId":8,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "本案受理费11,837.50元，减半收取5,918.75元，鉴定费4,000元，合计诉讼费9,928.65元，由原告负担8,596.02元，被告负担1,322.73元。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case12_4----上诉部分也有受理费信息
+ payloads:  {
+                "judgeId":9,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "本案受理费11,837.50元，由原告负担8,596.02元，被告负担1,322.73元。"
+                    },
+                    {
+                      "index": 3,
+                      "content": "如不服本判决，可在判决书送达之日起十日内，向本院递交上诉状，并按对方当事人人数提出副本，上诉于河北省唐山市中级人民法院。根据《诉讼费用交纳办法》的规定，向该院预交上诉案件受理费11,837.50元。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case12_5----遗漏承担人信息
+ payloads:  {
+                "judgeId":9,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "案件受理费4,676元"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1802,
+                    "keyword": "",
+                    "suggestion": "",
+                    "tip": "请补充受理费并指定承担人"
+                }
+-
+ caseName: case12_6----有附加费用但没有承担人
+ payloads:  {
+                "judgeId":9,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "本案受理费1,1837.50元，鉴定费4,000元，合计诉讼费9,918.75元"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1802,
+                    "keyword": "",
+                    "suggestion": "",
+                    "tip": "请补充受理费并指定承担人"
+                }
+-
+ caseName: case12_7----有减收费用但没有承担人
+ payloads:  {
+                "judgeId":9,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "本案受理费11,837.50元，减半收取5,918.75元"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1802,
+                    "keyword": "",
+                    "suggestion": "",
+                    "tip": "请补充受理费并指定承担人"
+                }
+-
+ caseName: case12_8----遗漏整段受理费信息
+ payloads:  {
+                "judgeId": 4,
+                "paragraphs": [
+                    {
+                        "index": 0,
+                        "content": "江苏省如皋市人民法院\r"
+                    },
+                    {
+                        "index": 1,
+                        "content": "民 事 裁 定 书\r"
+                    },
+                    {
+                        "index": 2,
+                        "content": "（2021）最高法民初4447号\r"
+                    },
+                    {
+                        "index": 3,
+                        "content": "原告：谢德云，男，1962年5月29日出生，汉族，住南通市崇川区钟秀西路宏景大厦1幢1015室\r"
+                    },
+                    {
+                        "index": 4,
+                        "content": "委托诉讼代理人：李育忠，江苏联佑律师事务所律师。\r"
+                    },
+                    {
+                        "index": 5,
+                        "content": "被告：贾毛娜，女，1986年7月25日出生，汉族，现住南通市崇川区钟秀西路宏景大厦1幢1015室。\r"
+                    },
+                    {
+                        "index": 6,
+                        "content": "原告谢德云与被告贾毛娜后财产纠纷一案，本院于2021年5月6日立案。"
+                    },
+                    {
+                        "index": 7,
+                        "content": "原告谢德云于2021年8月27日向本院提出撤诉申请。\r"
+                    },
+                    {
+                        "index": 8,
+                        "content": "本院认为，原告的撤诉申请不违反法律规定，应予准许，依照《中华人民共和国民事诉讼法》第一百四十五条第一款之规定，裁定如下：\r"
+                    },
+                    {
+                        "index": 9,
+                        "content": "准许原告谢德云撤回起诉。\r"
+                    },
+
+                    {
+                        "index": 10,
+                        "content": "如不服本判决，可在判决书送达之日起十日内，向本院递交上诉状，并按对方当事人人数提出副本，上诉于最高人民法院。根据《诉讼费用交纳办法》的规定，向该院预交上诉案件受理费11,837.50元。"
+                    },
+                    {
+                        "index": 11,
+                        "content": "审　判　长　　孙俊驹\r"
+                    },
+                    {
+                        "index": 12,
+                        "content": "人民陪审员　　袁培培\r"
+                    },
+                    {
+                        "index": 13,
+                        "content": "人民陪审员　　刘国发\r"
+                    },
+                    {
+                        "index": 14,
+                        "content": "二〇二一年八月二十七日\r"
+                    },
+                    {
+                        "index": 15,
+                        "content": "法官　助理　　孔德莱\r"
+                    },
+                    {
+                        "index": 16,
+                        "content": "书　记　员　　佘佳佳\r\r"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1802,
+                    "keyword": "",
+                    "suggestion": "",
+                    "tip": "请补充受理费并指定承担人"
+                }

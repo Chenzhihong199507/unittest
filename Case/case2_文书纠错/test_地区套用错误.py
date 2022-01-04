@@ -34,6 +34,7 @@ class TestAreaError(unittest.TestCase):
         expectResult =kwargs.get("expectResult")
 
         print(caseName)
+        print(payloads)
         url = host[0] + "/Judgements/ErrorDetect"
 
         headers = {

@@ -17,16 +17,16 @@ host = rc.read_config("test_host")
 
 # 2、继承自unittest.TestCase类
 @ddt
-class TestRepetition(unittest.TestCase):
+class TestFees(unittest.TestCase):
     # 3、配置环境：进行测试前的初始化工作
     def setUp(self):
         #print('\ncases before')
         pass
 
     # 4、定义测试用例，名字以“test”开头
-    @file_data("D:\\Projects\\PycharmProjects\\unittest\\datas\\appellateCourt.yaml")
-    def test_appellateCourt(self,**kwargs):
-        """appellateCourt"""
+    @file_data("D:\\Projects\\PycharmProjects\\unittest\\datas\\Fees.yaml")
+    def test_fees(self,**kwargs):
+        """fees"""
         caseName = kwargs.get("caseName")
         payloads = kwargs.get("payloads")
         expectResult =kwargs.get("expectResult")
@@ -39,10 +39,6 @@ class TestRepetition(unittest.TestCase):
             'Content-Type': 'application/json',
         }
         response = ad.do_post(url,json.dumps(payloads),headers=headers,verify=False)
-        # res = response.json()["detections"]
-        # print("期望返回:" + str(expectResult) + "\n" + "实际返回:" + str(res))
-        # self.assertIn(res, expectResult)
-
         try:
             res = response.json()["detections"][0]["corrections"][0]
             print("期望返回:" + str(expectResult) + "\n" + "实际返回:" + str(res))

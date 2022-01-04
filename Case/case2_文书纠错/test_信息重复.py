@@ -26,14 +26,14 @@ class TestRepetition(unittest.TestCase):
     # 4、定义测试用例，名字以“test”开头
     @file_data("D:\\Projects\\PycharmProjects\\unittest\\datas\\repetitionDetect.yaml")
     def test_repetition(self,**kwargs):
-        """repetitionDetect"""
+        """重复信息检测"""
         caseName = kwargs.get("caseName")
         payloads = kwargs.get("payloads")
         expectResult =kwargs.get("expectResult")
 
         print(caseName)
+        print(payloads)
         url = host[0] + "/Judgements/ErrorDetect"
-        print(url)
 
         headers = {
             'Content-Type': 'application/json',
