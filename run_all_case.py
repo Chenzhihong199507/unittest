@@ -3,6 +3,8 @@ import unittest
 import os
 import time
 from common import HTMLTestRunner
+from selenium import webdriver
+
 
 # 用例路径
 case_path = os.path.join(os.getcwd())
@@ -32,3 +34,7 @@ if __name__ == '__main__':
     # 4、调用add_case函数返回值
     runner.run(all_case())
     fp.close()
+
+    # 5、浏览器打开报告
+    driver = webdriver.Chrome("D:\\Downloads\\EdgeDownloads\\chromedriver_win32\\chromedriver.exe")
+    driver.get(report_abspath)

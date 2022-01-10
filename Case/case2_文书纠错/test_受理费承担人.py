@@ -4,16 +4,13 @@
 import unittest
 import requests
 import json
-import ddt
 from ddt import ddt, data, file_data, unpack
-from common.excel_handler import ExcelHandler
-from common.request import APIdemo
 from common.readConfig import ReadConfigFile
-from common.readYaml import WRYaml
+from common.setting import file_path
 
-ad = APIdemo()
 rc = ReadConfigFile()
 host = rc.read_config("test_host")
+fp = file_path()
 
 # 2、继承自unittest.TestCase类
 @ddt
@@ -38,16 +35,16 @@ class TestFees(unittest.TestCase):
         headers = {
             'Content-Type': 'application/json',
         }
-        response = ad.do_post(url,json.dumps(payloads),headers=headers,verify=False)
+        response = requests.post(url,json.dumps(payloads),headers=headers,verify=False)
         try:
             res = response.json()["detections"][0]["corrections"][0]
             print("期望返回:" + str(expectResult) + "\n" + "实际返回:" + str(res))
-            self.assertEqual(res, expectResult)
+            self.assertEqual(expectResult,res)
 
         except:
             res = response.json()["detections"]
             print("期望返回:" + str(expectResult) + "\n" + "实际返回:" + str(res))
-            self.assertEqual(res, expectResult)
+            self.assertEqual(expectResult,res)
 
 
     # 6、清理环境

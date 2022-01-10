@@ -1,0 +1,267 @@
+#案由错误检测
+-
+ caseName: case13_1----案由在案由库中
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告福建威廉涂料有限公司与被告范兴浩买卖合同纠纷一案"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case13_2----案由不在案由库中
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告姚俊杰与被告张清辉工程承包合同纠纷一案"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: [{
+                    "level": 1,
+                    "type": 1900,
+                    "keyword": "工程承包合同纠纷",
+                    "suggestion": "",
+                    "tip": ""
+                }]
+-
+ caseName: case13_3----有“一案”但非案由信息的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告姚俊杰与被告张清辉建设工程施工合同纠纷一案"
+                    },
+                    {
+                      "index": 3,
+                      "content": "法院在审理（2022）最高法民初123号一案中"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case13_4----有两个案由信息且以“和”连接的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "上诉人酒泉市华美种子有限责任公司（以下简称华美公司）因与被上诉人夏中福植物新品种临时保护期使用费纠纷和侵害植物新品种权纠纷一案"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case13_5----有两个案由信息且以顿号连接的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "上诉人中国人寿保险股份有限公司渭南分公司，因与被上诉人渭南成健暖通工程有限公司买卖合同纠纷、承揽合同纠纷一案"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case13_6----案由名称中有顿号的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告姚俊杰与被告张清辉生命权、健康权、身体权纠纷一案"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case13_7----案由名称中有一个顿号的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告姚俊杰与被告张清辉婚姻家庭、继承纠纷一案"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case13_8----案由名称中有两个顿号的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告姚俊杰与被告张清辉合同、无因管理、不当得利纠纷一案"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case13_9----案由名称中有三个顿号的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告姚俊杰与被告张清辉与公司、证券、保险、票据等有关的民事纠纷一案"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case13_10----案由名称中有“和”字的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告姚俊杰与被告张清辉建筑物和其他土地附着物抵押权纠纷一案"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case13_11----案由名称中有“和”字的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告姚俊杰与被告张清辉申请破产和解一案"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case13_12----案由名称中有“和”字的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告姚俊杰与被告张清辉协助送达司法文书和调查取证一案"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case13_13----案由名称中有“和”字以及顿号的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告姚俊杰与被告张清辉申请承认和执行外国法院民事判决、裁定一案"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case13_14----案由名称中有“与”字的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告姚俊杰与被告张清辉与公司有关的纠纷一案"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case13_15----案由名称中有“及”字的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告姚俊杰与被告张清辉申请扣押船用燃油及船用物料一案"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case13_16----案由名称中有“及”字的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "再审申请人张小变因与被申请人海南中航天建设集团有限公司（以下简称中航天公司）及一审第三人郭国胜、陈四刚、徐克起一般取回权纠纷一案"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []

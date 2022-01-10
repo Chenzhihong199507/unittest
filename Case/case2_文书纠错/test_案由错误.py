@@ -14,16 +14,16 @@ fp = file_path()
 
 # 2、继承自unittest.TestCase类
 @ddt
-class TestAreaError(unittest.TestCase):
+class TestCaseMain(unittest.TestCase):
     # 3、配置环境：进行测试前的初始化工作
     def setUp(self):
         #print('\ncases before')
         pass
 
     # 4、定义测试用例，名字以“test”开头
-    @file_data(fp.get_file_path("datas","AreaErrorDetect.yaml"))
-    def test_AreaError(self,**kwargs):
-        """AreaErrorDetect"""
+    @file_data(fp.get_data_path("caseMainDetect.yaml"))
+    def test_caseMain(self,**kwargs):
+        """caseMainDetect"""
         caseName = kwargs.get("caseName")
         payloads = kwargs.get("payloads")
         expectResult =kwargs.get("expectResult")
@@ -55,10 +55,4 @@ class TestAreaError(unittest.TestCase):
 
 # 7、该方法会搜索该模块下所有以test开头的测试用例方法,并自动执行它们
 if __name__ == '__main__':
-    # suite1 = unittest.TestLoader().loadTestsFromTestCase(TestAreaError)
-    #
-    # suite = unittest.TestSuite([suite1])
-    #
-    # unittest.TextTestRunner(verbosity=2).run(suite)
-
     unittest.main()

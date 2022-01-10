@@ -19,7 +19,7 @@
                     "type": 1600,
                     "keyword": "福建省九江市",
                     "suggestion": "",
-                    "tip": null
+                    "tip": ""
                 }
 -
  caseName: case7_2----省与市匹配
@@ -57,7 +57,7 @@
                     "type": 1600,
                     "keyword": "广西省昆明市",
                     "suggestion": "",
-                    "tip": null
+                    "tip": ""
                 }
 -
  caseName: case7_4----省下来直接到县或者县级市
@@ -74,7 +74,13 @@
                     }
                 ]
             }
- expectResult: []
+ expectResult: {
+                    "level": 1,
+                    "type": 1600,
+                    "keyword": "福建省漳浦县",
+                    "suggestion": "",
+                    "tip": ""
+                }
 -
  caseName: case7_5----省下来直接到县或者县级市
  payloads:  {
@@ -82,7 +88,7 @@
                 "paragraphs": [
                     {
                         "index":2,
-                        "content": '“江苏省丹徒区"'
+                        "content": '江苏省丹徒区'
                     },
                     {
                       "index": 10,
@@ -106,13 +112,7 @@
                     }
                 ]
             }
- expectResult: {
-                    "level": 1,
-                    "type": 1600,
-                    "keyword": "福建省龙海市",
-                    "suggestion": "",
-                    "tip": null
-                }
+ expectResult: []
 -
  caseName: case7_7----直辖市与县
  payloads:  {
@@ -120,7 +120,7 @@
                 "paragraphs": [
                     {
                         "index":2,
-                        "content": "重庆市嘉陵区"
+                        "content": "重庆市沙坪坝区 "
                     },
                     {
                       "index": 10,
