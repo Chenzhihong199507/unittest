@@ -14,7 +14,7 @@ fp = file_path()
 
 # 2、继承自unittest.TestCase类
 @ddt
-class TestRepetition(unittest.TestCase):
+class TestAppellateCourt(unittest.TestCase):
     # 3、配置环境：进行测试前的初始化工作
     def setUp(self):
         #print('\ncases before')

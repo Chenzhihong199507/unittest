@@ -14,5 +14,5 @@ class ReadConfigFile(object):
 
         return [host]
 #
-rc = ReadConfigFile()
-print(rc.read_config("test_host"))
+# rc = ReadConfigFile()
+# print(rc.read_config("test_host"))
