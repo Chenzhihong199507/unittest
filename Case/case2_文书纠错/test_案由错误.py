@@ -37,7 +37,7 @@ class TestCaseMain(unittest.TestCase):
         }
         response = requests.post(url,json.dumps(payloads),headers=headers,verify=False)
         try:
-            res = response.json()["detections"][0]["corrections"][0]
+            res = response.json()["detections"][0]["corrections"]
             print("期望返回:" + str(expectResult) + "\n" + "实际返回:" + str(res))
             self.assertEqual(expectResult,res)
 
