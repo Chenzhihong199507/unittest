@@ -1,0 +1,67 @@
+#屏蔽手机号---API/#51
+-
+ caseName: case18_1----正常手机号
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "15638296218"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2004,
+                    "keyword": "15638296218",
+                    "suggestion": "156xxxx6218",
+                    "tip": ""
+                }
+-
+ caseName: case18_2----小于11位
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "1563829621"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case18_3----大于11位
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "156382962164"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case18_4----非正常手机号（第二位小于等于2）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "12638296218"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case18_5----非正常手机号（第一位不是1）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "22638296218"
+                    }
+                ]
+            }
+ expectResult: []

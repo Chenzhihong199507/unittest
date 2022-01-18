@@ -1,0 +1,145 @@
+#屏蔽车牌号---API/#49
+-
+ caseName: case16_1----车牌号暴露
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "闽D12345"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2002,
+                    "keyword": "闽D12345",
+                    "suggestion": "闽Dxxxxx",
+                    "tip": ""
+                }
+-
+ caseName: case16_2----车牌号暴露
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "辽A98765"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2002,
+                    "keyword": "辽A98765",
+                    "suggestion": "辽Axxxxx",
+                    "tip": ""
+                }
+-
+ caseName: case16_3----非车牌号暴露
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "回A98765"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case16_4----车牌号开头“使”
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "使D12345"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2002,
+                    "keyword": "使D12345",
+                    "suggestion": "使Dxxxxx",
+                    "tip": ""
+                }
+-
+ caseName: case16_5----车牌号开头“领”
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "领D12345"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2002,
+                    "keyword": "领D12345",
+                    "suggestion": "领Dxxxxx",
+                    "tip": ""
+                }
+-
+ caseName: case16_6----车牌号数字与字母结合
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "鲁DA2345"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2002,
+                    "keyword": "鲁DA2345",
+                    "suggestion": "鲁Dxxxxx",
+                    "tip": ""
+                }
+-
+ caseName: case16_7----车牌号数字与字母结合-含有“I”
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "领DA2I45"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case16_8----车牌号数字与字母结合-含有“O”
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "领DA2O45"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case16_9----车牌号-新能源汽车（6位）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "鲁DF23456"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2002,
+                    "keyword": "鲁DF23456",
+                    "suggestion": "鲁Dxxxxxx",
+                    "tip": ""
+                }

@@ -14,23 +14,23 @@ fp = file_path()
 
 # 2、继承自unittest.TestCase类
 @ddt
-class TestSensWord(unittest.TestCase):
+class TestShield(unittest.TestCase):
     # 3、配置环境：进行测试前的初始化工作
     def setUp(self):
         #print('\ncases before')
         pass
 
     # 4、定义测试用例，名字以“test”开头
-    @file_data(fp.get_data_path("sensWordDetect.yaml"))
-    def test_sensWord(self,**kwargs):
-        """sensWordDetect"""
+    @file_data(fp.get_data_path("shieldRealName.yaml"))
+    def test_shieldRealName(self,**kwargs):
+        """shieldRealName"""
         caseName = kwargs.get("caseName")
         payloads = kwargs.get("payloads")
         expectResult =kwargs.get("expectResult")
 
         print(caseName)
         print(payloads)
-        url = host[0] + "/Judgements/SensitiveDetect"
+        url = host[0] + "/Judgements/PrivacyDetect"
 
         headers = {
             'Content-Type': 'application/json'

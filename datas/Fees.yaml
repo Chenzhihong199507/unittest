@@ -22,13 +22,7 @@
                     }
                 ]
             }
- expectResult: {
-                    "level": 1,
-                    "type": 1803,
-                    "keyword": "",
-                    "suggestion": "",
-                    "tip": "受理费承担人须指定当事人身份"
-                }
+ expectResult: []
 -
  caseName: case12_3----有多名承担人
  payloads:  {
@@ -70,10 +64,10 @@
             }
  expectResult: {
                     "level": 1,
-                    "type": 1802,
+                    "type": 1803,
                     "keyword": "",
                     "suggestion": "",
-                    "tip": "请补充受理费并指定承担人"
+                    "tip": "请补充受理费承担人"
                 }
 -
  caseName: case12_6----有附加费用但没有承担人
@@ -82,16 +76,16 @@
                 "paragraphs": [
                     {
                         "index":2,
-                        "content": "本案受理费1,1837.50元，鉴定费4,000元，合计诉讼费9,918.75元"
+                        "content": "本案受理费1,837.50元，鉴定费4,000元，合计诉讼费9,918.75元"
                     }
                 ]
             }
  expectResult: {
                     "level": 1,
-                    "type": 1802,
+                    "type": 1803,
                     "keyword": "",
                     "suggestion": "",
-                    "tip": "请补充受理费并指定承担人"
+                    "tip": "请补充受理费承担人"
                 }
 -
  caseName: case12_7----有减收费用但没有承担人
@@ -106,10 +100,10 @@
             }
  expectResult: {
                     "level": 1,
-                    "type": 1802,
+                    "type": 1803,
                     "keyword": "",
                     "suggestion": "",
-                    "tip": "请补充受理费并指定承担人"
+                    "tip": "请补充受理费承担人"
                 }
 -
  caseName: case12_8----遗漏整段受理费信息
@@ -126,7 +120,7 @@
                     },
                     {
                         "index": 2,
-                        "content": "（2021）最高法民初4447号\r"
+                        "content": "（2022）最高法民初4447号\r"
                     },
                     {
                         "index": 3,
@@ -155,11 +149,6 @@
                     {
                         "index": 9,
                         "content": "准许原告谢德云撤回起诉。\r"
-                    },
-
-                    {
-                        "index": 10,
-                        "content": "如不服本判决，可在判决书送达之日起十日内，向本院递交上诉状，并按对方当事人人数提出副本，上诉于最高人民法院。根据《诉讼费用交纳办法》的规定，向该院预交上诉案件受理费11,837.50元。"
                     },
                     {
                         "index": 11,
@@ -193,4 +182,94 @@
                     "keyword": "",
                     "suggestion": "",
                     "tip": "请补充受理费并指定承担人"
+                }
+-
+ caseName: case12_9----格式错误-缺少“由”
+ payloads:  {
+                "judgeId":9,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "本案受理费11,837.50元，张三承担。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1804,
+                    "keyword": "",
+                    "suggestion": "",
+                    "tip": "格式：案件受理费xx元，XXXXX，由xxx负担。"
+                }
+-
+ caseName: case12_10----格式错误-缺少“负担”
+ payloads:  {
+                "judgeId":9,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "本案受理费11,837.50元，由张三。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1804,
+                    "keyword": "",
+                    "suggestion": "",
+                    "tip": "格式：案件受理费xx元，XXXXX，由xxx负担。"
+                }
+-
+ caseName: case12_11----缺少承担人
+ payloads:  {
+                "judgeId":9,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "本案受理费11,837.50元，由承担。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1803,
+                    "keyword": "",
+                    "suggestion": "",
+                    "tip": "请补充受理费承担人"
+                }
+-
+ caseName: case12_12----承担人用XXX代替
+ payloads:  {
+                "judgeId":9,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "本案受理费11,837.50元，由XXX承担。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1803,
+                    "keyword": "",
+                    "suggestion": "",
+                    "tip": "请补充受理费承担人"
+                }
+-
+ caseName: case12_12----承担人用***代替
+ payloads:  {
+                "judgeId":9,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "本案受理费11,837.50元，由***承担。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1803,
+                    "keyword": "",
+                    "suggestion": "",
+                    "tip": "请补充受理费承担人"
                 }

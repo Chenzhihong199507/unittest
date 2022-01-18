@@ -1,0 +1,314 @@
+#屏蔽真实姓名---API/#50
+-
+ caseName: case17_1----姓名两个字的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：张三，汉族，男，系文盲，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2003,
+                    "keyword": "张三",
+                    "suggestion": "张某",
+                    "tip": ""
+                }
+-
+ caseName: case17_2----姓名三个字的（非复姓）
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "原告：秦始皇，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2003,
+                    "keyword": "秦始皇",
+                    "suggestion": "秦某",
+                    "tip": ""
+                }
+-
+ caseName: case17_3----姓名三个字（复姓）
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "原告：上官燕，女，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2003,
+                    "keyword": "上官燕",
+                    "suggestion": "上某",
+                    "tip": ""
+                }
+-
+ caseName: case17_4----姓名四个字的（非复姓）
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：张杨舞爪，男，1980年11月16日生，汉，住云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2003,
+                    "keyword": "张杨舞爪",
+                    "suggestion": "张某",
+                    "tip": ""
+                }
+-
+ caseName: case17_5----姓名四个字的（复姓）
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：司马长空，男，1980年11月16日生，汉族，居住地云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2003,
+                    "keyword": "司马长空",
+                    "suggestion": "司某",
+                    "tip": ""
+                }
+-
+ caseName: case17_6----少数民族姓名
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：迪丽热巴·迪力木拉提，女，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2003,
+                    "keyword": "迪丽热巴·迪力木拉提",
+                    "suggestion": "迪某",
+                    "tip": ""
+                }
+-
+ caseName: case17_7----外国人姓名（中文译名）
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：菲尔普斯，男，1980年11月16日生，汉族，联系住址云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2003,
+                    "keyword": "菲尔普斯",
+                    "suggestion": "菲某",
+                    "tip": ""
+                }
+-
+ caseName: case17_8----外国人姓名（英文名）
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：Edward Adam Davis，男，1980年11月16日生，汉族，云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2003,
+                    "keyword": "Edward Adam Davis",
+                    "suggestion": "E某",
+                    "tip": ""
+                }
+-
+ caseName: case17_9----不同姓名隐名处理后发生重复
+ payloads: {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "原告：秦始皇，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+                    },
+                    {
+                        "index": 3,
+                        "content": "原告：秦二世，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+                    }
+                ]
+            }
+ expectResult: [{
+                    "index": 2,
+                    "corrections": [
+                        {
+                            "level": 1,
+                            "type": 2003,
+                            "keyword": "秦始皇",
+                            "suggestion": "秦某1",
+                            "tip": ""
+                        }
+                    ]
+                },
+                {
+                    "index": 3,
+                    "corrections": [
+                        {
+                            "level": 1,
+                            "type": 2003,
+                            "keyword": "秦二世",
+                            "suggestion": "秦某2",
+                            "tip": ""
+                        }
+                    ]
+                }]
+-
+ caseName: case17_10----当事人姓名在后面文档中出现
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "原告：李世民，男，1980年11月16日生，汉族，联系住址云南省昆明市盘龙区。"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由李世民负担。"
+                    }
+                ]
+            }
+ expectResult: [
+                  {
+                      "index": 2,
+                      "corrections": [
+                          {
+                              "level": 1,
+                              "type": 2003,
+                              "keyword": "李世民",
+                              "suggestion": "李某",
+                              "tip": ""
+                          }
+                      ]
+                  },
+                  {
+                      "index": 10,
+                      "corrections": [
+                          {
+                              "level": 1,
+                              "type": 2003,
+                              "keyword": "李世民",
+                              "suggestion": "李某",
+                              "tip": ""
+                          }
+                      ]
+                  }
+              ]
+-
+ caseName: case17_11----非当事人信息中有姓名
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "张三丰，李四光，王老五，"
+                    },
+                    {
+                      "index": 10,
+                      "content": "案件受理费4,676元，由李世民负担。"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case17_12----不同姓名隐名处理后发生重复2
+ payloads: {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "原告：秦始皇，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+                    },
+                    {
+                        "index": 3,
+                        "content": "原告：秦二世，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+                    },
+                  {
+                    "index": 4,
+                    "content": "被告：秦香莲，女，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+                  }
+                ]
+            }
+ expectResult: [{
+                    "index": 2,
+                    "corrections": [
+                        {
+                            "level": 1,
+                            "type": 2003,
+                            "keyword": "秦始皇",
+                            "suggestion": "秦某1",
+                            "tip": ""
+                        }
+                    ]
+                },
+                {
+                    "index": 3,
+                    "corrections": [
+                        {
+                            "level": 1,
+                            "type": 2003,
+                            "keyword": "秦二世",
+                            "suggestion": "秦某2",
+                            "tip": ""
+                        }
+                    ]
+                },
+                {
+                    "index": 4,
+                    "corrections": [
+                        {
+                            "level": 1,
+                            "type": 2003,
+                            "keyword": "秦香莲",
+                            "suggestion": "秦某3",
+                            "tip": ""
+                        }
+                    ]
+                }]
+-
+ caseName: case17_13----当事人为上诉人的
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "被上诉人（一审原告）：夏中福，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2003,
+                    "keyword": "夏中福",
+                    "suggestion": "夏某",
+                    "tip": ""
+                }

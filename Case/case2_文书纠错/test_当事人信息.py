@@ -28,7 +28,7 @@ class TestParty(unittest.TestCase):
         payloads = kwargs.get("payloads")
         expectResult =kwargs.get("expectResult")
 
-        print(caseName)
+        print('\033[1;31;40m'+caseName)
         print(payloads)
         url = host[0] + "/Judgements/ErrorDetect"
 

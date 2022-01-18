@@ -50,7 +50,7 @@
                 "paragraphs": [
                     {
                         "index":2,
-                        "content": "原告：张三,男，1980年11月16日生，汉族，住所：云南省昆明市盘龙区"
+                        "content": "原告：张三,男，1980年11月16日生，汉族，住云南省昆明市盘龙区"
                     },
                     {
                       "index": 10,
@@ -72,7 +72,7 @@
                 "paragraphs": [
                     {
                         "index":2,
-                        "content": "原告：张三，男，1980年11月16日生，汉族，住所：云南省昆明市盘龙区."
+                        "content": "原告：张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区."
                     },
                     {
                       "index": 10,
@@ -109,28 +109,28 @@
                     "suggestion": "",
                     "tip": "‘’"
                 }
--
- caseName: case7_6----中英文标点使用混乱-书名号错误
- payloads:  {
-                "judgeId":3,
-                "paragraphs": [
-                    {
-                        "index":2,
-                        "content": "<民事协议书>"
-                    },
-                    {
-                      "index": 10,
-                      "content": "案件受理费4,676元，由原告林印党负担。"
-                    }
-                ]
-            }
- expectResult: {
-                    "level": 1,
-                    "type": 1401,
-                    "keyword": "<",
-                    "suggestion": "《",
-                    "tip": ""
-                }
+#-
+# caseName: case7_6----中英文标点使用混乱-书名号错误
+# payloads:  {
+#                "judgeId":3,
+#                "paragraphs": [
+#                    {
+#                        "index":2,
+#                        "content": "<民事协议书>"
+#                    },
+#                    {
+#                      "index": 10,
+#                      "content": "案件受理费4,676元，由原告林印党负担。"
+#                    }
+#                ]
+#            }
+# expectResult: {
+#                    "level": 1,
+#                    "type": 1401,
+#                    "keyword": "<",
+#                    "suggestion": "《",
+#                    "tip": ""
+#                }
 -
  caseName: case7_7----大数千分位检测-后面不带“元”
  payloads:  {

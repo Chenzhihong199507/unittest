@@ -1,0 +1,67 @@
+#屏蔽地址信息---API/#47
+-
+ caseName: case14_1----当事人详细地址暴露（省、市、区、路）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "原告：张三，男，1980年11月10日生，汉族，住云南省昆明市盘龙区中山路。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2000,
+                    "keyword": "住云南省昆明市盘龙区中山路",
+                    "suggestion": "住云南省昆明市盘龙区",
+                    "tip": ""
+                }
+-
+ caseName: case14_2----当事人详细地址暴露（省、市、路）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "被告：张三，男，1980年11月10日生，汉族，住云南省昆明市中山路。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2000,
+                    "keyword": "住云南省昆明市中山路",
+                    "suggestion": "住云南省昆明市",
+                    "tip": ""
+                }
+-
+ caseName: case14_3----当事人详细地址暴露（省、市、县、镇、村）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "被告：张三，男，1980年11月10日生，汉族，住福建省漳州市漳浦县佛昙镇东坂村。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2000,
+                    "keyword": "住福建省漳州市漳浦县佛昙镇东坂村",
+                    "suggestion": "住福建省漳州市漳浦县",
+                    "tip": ""
+                }
+-
+ caseName: case14_3----非当事人信息的详细地址
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "云南省昆明市盘龙区中山路。"
+                    }
+                ]
+            }
+ expectResult: []

@@ -263,9 +263,9 @@ function showOutput(id, name) {
 <div class='heading'>
 <h1>接口自动化测试报告,测试结果如下：</h1>
 <p class='attribute'><strong>测试人员:</strong> Stephen</p>
-<p class='attribute'><strong>开始时间:</strong> 2022-01-07 16:06:47</p>
-<p class='attribute'><strong>合计耗时:</strong> 0:00:13.309691</p>
-<p class='attribute'><strong>测试结果:</strong> 总共 105 通过 87 失败 18 通过率 = 82.86%</p>
+<p class='attribute'><strong>开始时间:</strong> 2022-01-13 23:08:53</p>
+<p class='attribute'><strong>合计耗时:</strong> 0:00:28.979917</p>
+<p class='attribute'><strong>测试结果:</strong> 总共 130 通过 105 失败 25 通过率 = 80.77%</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -274,9 +274,9 @@ function showOutput(id, name) {
 
 <p id='show_detail_line'>显示
 <a href='javascript:showCase(0)'>概要</a>
-<a href='javascript:showCase(1)'>失败[18]</a>
-<a href='javascript:showCase(2)'>通过[87]</a>
-<a href='javascript:showCase(3)'>所有[105]</a>
+<a href='javascript:showCase(1)'>失败[25]</a>
+<a href='javascript:showCase(2)'>通过[105]</a>
+<a href='javascript:showCase(3)'>所有[130]</a>
 </p>
 <table id='result_table'>
 <colgroup>
@@ -299,7 +299,7 @@ function showOutput(id, name) {
 </tr>
 
 <tr class='passClass'>
-    <td>Case.case2_文书纠错.test_上诉法院信息.TestRepetition</td>
+    <td>Case.case2_文书纠错.test_上诉法院信息.TestAppellateCourt</td>
     <td>6</td>
     <td>6</td>
     <td>0</td>
@@ -488,11 +488,11 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-<tr class='failClass'>
+<tr class='passClass'>
     <td>Case.case2_文书纠错.test_信息重复.TestRepetition</td>
     <td>8</td>
-    <td>3</td>
-    <td>5</td>
+    <td>8</td>
+    <td>0</td>
     <td>0</td>
     <td><a href="javascript:showClassDetail('c2',8)">详情</a></td>
     <td>&nbsp;</td>
@@ -558,67 +558,27 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='ft2.3' class='none'>
-        <td class='failCase'><div class='testcase'>test_repetition_00003: test_repetition_00003</div></td>
+    <tr id='pt2.3' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_repetition_00003: test_repetition_00003</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.3')" >
-            失败</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.3')" >
+            通过</a>
 
-        <div id='div_ft2.3' class="popup_window">
+        <div id='div_pt2.3' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.3').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.3').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-ft2.3: case10_3----文字重复
+pt2.3: case10_3----文字重复
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '《中《中华人民共和国民法通则》'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
 期望返回:[{'level': 1, 'type': 1700, 'keyword': '《中《中', 'suggestion': '', 'tip': ''}]
-实际返回:[{'level': 1, 'type': 1700, 'keyword': '《中《中', 'suggestion': '', 'tip': None}]
-期望返回:[{'level': 1, 'type': 1700, 'keyword': '《中《中', 'suggestion': '', 'tip': ''}]
-实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1700, 'keyword': '《中《中', 'suggestion': '', 'tip': None}]}]
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_信息重复.py", line 42, in test_repetition
-    self.assertEqual(expectResult,res)
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
-    assertion_func(first, second, msg=msg)
-AssertionError: Lists differ: [{'level': 1, 'type': 1700, 'keyword': '《中《中', 'suggestion': '', 'tip': ''}] != [{'level': 1, 'type': 1700, 'keyword': '《中《中', 'suggestion': '', 'tip': None}]
-
-First differing element 0:
-{'level': 1, 'type': 1700, 'keyword': '《中《中', 'suggestion': '', 'tip': ''}
-{'level': 1, 'type': 1700, 'keyword': '《中《中', 'suggestion': '', 'tip': None}
-
-- [{'keyword': '《中《中', 'level': 1, 'suggestion': '', 'tip': '', 'type': 1700}]
-?                                                           ^^
-
-+ [{'keyword': '《中《中', 'level': 1, 'suggestion': '', 'tip': None, 'type': 1700}]
-?                                                           ^^^^
-
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_信息重复.py", line 47, in test_repetition
-    self.assertEqual(expectResult,res)
-AssertionError: Lists differ: [{'level': 1, 'type': 1700, 'keyword': '《中《中[27 chars] ''}] != [{'index': 2, 'corrections': [{'level': 1, '[60 chars]e}]}]
-
-First differing element 0:
-{'level': 1, 'type': 1700, 'keyword': '《中《中[26 chars]: ''}
-{'index': 2, 'corrections': [{'level': 1, '[59 chars]ne}]}
-
-- [{'keyword': '《中《中', 'level': 1, 'suggestion': '', 'tip': '', 'type': 1700}]
-+ [{'corrections': [{'keyword': '《中《中',
-+                    'level': 1,
-+                    'suggestion': '',
-+                    'tip': None,
-+                    'type': 1700}],
-+   'index': 2}]
+实际返回:[{'level': 1, 'type': 1700, 'keyword': '《中《中', 'suggestion': '', 'tip': ''}]
 
 
             </pre>
@@ -628,51 +588,27 @@ First differing element 0:
     <td></td>
 </tr>
 
-    <tr id='ft2.4' class='none'>
-        <td class='failCase'><div class='testcase'>test_repetition_00004: test_repetition_00004</div></td>
+    <tr id='pt2.4' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_repetition_00004: test_repetition_00004</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.4')" >
-            失败</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.4')" >
+            通过</a>
 
-        <div id='div_ft2.4' class="popup_window">
+        <div id='div_pt2.4' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.4').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.4').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-ft2.4: case10_4----段落重复
+pt2.4: case10_4----段落重复
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '根据当事人的陈述、举证及庭审查明的事实，本院确认如下事实。'}, {'index': 3, 'content': '根据当事人的陈述、举证及庭审查明的事实，本院确认如下事实。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
 期望返回:[{'level': 1, 'type': 1700, 'keyword': '根据当事人的陈述、举证及庭审查明的事实，本院确认如下事实', 'suggestion': '', 'tip': ''}]
-实际返回:[]
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_信息重复.py", line 40, in test_repetition
-    res = response.json()["detections"][0]["corrections"]
-IndexError: list index out of range
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_信息重复.py", line 47, in test_repetition
-    self.assertEqual(expectResult,res)
-AssertionError: Lists differ: [{'level': 1, 'type': 1700, 'keyword': '根据[53 chars] ''}] != []
-
-First list contains 1 additional elements.
-First extra element 0:
-{'level': 1, 'type': 1700, 'keyword': '根据当事人的陈述、举证及庭审查明的事实，本院确认如下事实', 'suggestion': '', 'tip': ''}
-
-+ []
-- [{'keyword': '根据当事人的陈述、举证及庭审查明的事实，本院确认如下事实',
--   'level': 1,
--   'suggestion': '',
--   'tip': '',
--   'type': 1700}]
+实际返回:[{'level': 1, 'type': 1700, 'keyword': '根据当事人的陈述、举证及庭审查明的事实，本院确认如下事实', 'suggestion': '', 'tip': ''}]
 
 
             </pre>
@@ -682,77 +618,27 @@ First extra element 0:
     <td></td>
 </tr>
 
-    <tr id='ft2.5' class='none'>
-        <td class='failCase'><div class='testcase'>test_repetition_00005: test_repetition_00005</div></td>
+    <tr id='pt2.5' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_repetition_00005: test_repetition_00005</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.5')" >
-            失败</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.5')" >
+            通过</a>
 
-        <div id='div_ft2.5' class="popup_window">
+        <div id='div_pt2.5' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.5').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.5').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-ft2.5: case10_5----文字重复
+pt2.5: case10_5----文字重复
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
 期望返回:[{'level': 1, 'type': 1700, 'keyword': '，汉族，汉族', 'suggestion': '', 'tip': ''}]
-实际返回:[{'level': 1, 'type': 1700, 'keyword': '，汉族，汉族', 'suggestion': '', 'tip': None}, {'level': 1, 'type': 1700, 'keyword': '汉族', 'suggestion': '', 'tip': None}]
-期望返回:[{'level': 1, 'type': 1700, 'keyword': '，汉族，汉族', 'suggestion': '', 'tip': ''}]
-实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1700, 'keyword': '，汉族，汉族', 'suggestion': '', 'tip': None}, {'level': 1, 'type': 1700, 'keyword': '汉族', 'suggestion': '', 'tip': None}]}]
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_信息重复.py", line 42, in test_repetition
-    self.assertEqual(expectResult,res)
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
-    assertion_func(first, second, msg=msg)
-AssertionError: Lists differ: [{'le[64 chars]ip': ''}] != [{'le[64 chars]ip': None}, {'level': 1, 'type': 1700, 'keywor[36 chars]one}]
-
-First differing element 0:
-{'level': 1, 'type': 1700, 'keyword': '，汉族，汉族', 'suggestion': '', 'tip': ''}
-{'level': 1, 'type': 1700, 'keyword': '，汉族，汉族', 'suggestion': '', 'tip': None}
-
-Second list contains 1 additional elements.
-First extra element 1:
-{'level': 1, 'type': 1700, 'keyword': '汉族', 'suggestion': '', 'tip': None}
-
-- [{'keyword': '，汉族，汉族', 'level': 1, 'suggestion': '', 'tip': '', 'type': 1700}]
-?                                                             ^^               ^
-
-+ [{'keyword': '，汉族，汉族', 'level': 1, 'suggestion': '', 'tip': None, 'type': 1700},
-?                                                             ^^^^               ^
-
-+  {'keyword': '汉族', 'level': 1, 'suggestion': '', 'tip': None, 'type': 1700}]
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_信息重复.py", line 47, in test_repetition
-    self.assertEqual(expectResult,res)
-AssertionError: Lists differ: [{'level': 1, 'type': 1700, 'keyword': '，汉族，[29 chars] ''}] != [{'index': 2, 'corrections': [{'level': 1, '[138 chars]e}]}]
-
-First differing element 0:
-{'level': 1, 'type': 1700, 'keyword': '，汉族，[28 chars]: ''}
-{'index': 2, 'corrections': [{'level': 1, '[137 chars]ne}]}
-
-- [{'keyword': '，汉族，汉族', 'level': 1, 'suggestion': '', 'tip': '', 'type': 1700}]
-+ [{'corrections': [{'keyword': '，汉族，汉族',
-+                    'level': 1,
-+                    'suggestion': '',
-+                    'tip': None,
-+                    'type': 1700},
-+                   {'keyword': '汉族',
-+                    'level': 1,
-+                    'suggestion': '',
-+                    'tip': None,
-+                    'type': 1700}],
-+   'index': 2}]
+实际返回:[{'level': 1, 'type': 1700, 'keyword': '，汉族，汉族', 'suggestion': '', 'tip': ''}]
 
 
             </pre>
@@ -792,67 +678,27 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='ft2.7' class='none'>
-        <td class='failCase'><div class='testcase'>test_repetition_00007: test_repetition_00007</div></td>
+    <tr id='pt2.7' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_repetition_00007: test_repetition_00007</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.7')" >
-            失败</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.7')" >
+            通过</a>
 
-        <div id='div_ft2.7' class="popup_window">
+        <div id='div_pt2.7' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.7').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.7').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-ft2.7: case10_7----叠词-ABAB型
+pt2.7: case10_7----叠词-ABAB型
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '一个一个'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
 期望返回:[{'level': 1, 'type': 1700, 'keyword': '一个一个', 'suggestion': '', 'tip': ''}]
-实际返回:[{'level': 1, 'type': 1700, 'keyword': '一个一个', 'suggestion': '', 'tip': None}]
-期望返回:[{'level': 1, 'type': 1700, 'keyword': '一个一个', 'suggestion': '', 'tip': ''}]
-实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1700, 'keyword': '一个一个', 'suggestion': '', 'tip': None}]}]
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_信息重复.py", line 42, in test_repetition
-    self.assertEqual(expectResult,res)
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
-    assertion_func(first, second, msg=msg)
-AssertionError: Lists differ: [{'level': 1, 'type': 1700, 'keyword': '一个一个', 'suggestion': '', 'tip': ''}] != [{'level': 1, 'type': 1700, 'keyword': '一个一个', 'suggestion': '', 'tip': None}]
-
-First differing element 0:
-{'level': 1, 'type': 1700, 'keyword': '一个一个', 'suggestion': '', 'tip': ''}
-{'level': 1, 'type': 1700, 'keyword': '一个一个', 'suggestion': '', 'tip': None}
-
-- [{'keyword': '一个一个', 'level': 1, 'suggestion': '', 'tip': '', 'type': 1700}]
-?                                                           ^^
-
-+ [{'keyword': '一个一个', 'level': 1, 'suggestion': '', 'tip': None, 'type': 1700}]
-?                                                           ^^^^
-
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_信息重复.py", line 47, in test_repetition
-    self.assertEqual(expectResult,res)
-AssertionError: Lists differ: [{'level': 1, 'type': 1700, 'keyword': '一个一个[27 chars] ''}] != [{'index': 2, 'corrections': [{'level': 1, '[60 chars]e}]}]
-
-First differing element 0:
-{'level': 1, 'type': 1700, 'keyword': '一个一个[26 chars]: ''}
-{'index': 2, 'corrections': [{'level': 1, '[59 chars]ne}]}
-
-- [{'keyword': '一个一个', 'level': 1, 'suggestion': '', 'tip': '', 'type': 1700}]
-+ [{'corrections': [{'keyword': '一个一个',
-+                    'level': 1,
-+                    'suggestion': '',
-+                    'tip': None,
-+                    'type': 1700}],
-+   'index': 2}]
+实际返回:[{'level': 1, 'type': 1700, 'keyword': '一个一个', 'suggestion': '', 'tip': ''}]
 
 
             </pre>
@@ -862,77 +708,27 @@ First differing element 0:
     <td></td>
 </tr>
 
-    <tr id='ft2.8' class='none'>
-        <td class='failCase'><div class='testcase'>test_repetition_00008: test_repetition_00008</div></td>
+    <tr id='pt2.8' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_repetition_00008: test_repetition_00008</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.8')" >
-            失败</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.8')" >
+            通过</a>
 
-        <div id='div_ft2.8' class="popup_window">
+        <div id='div_pt2.8' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.8').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.8').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-ft2.8: case10_8----段落里面有语句重复
+pt2.8: case10_8----段落里面有语句重复
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告张三起诉称：1.依法判令撤销原被告双方签订的协议（财产分割部分）； 2.依法分割夫妻共同财产车辆：云A656Y1大众朗逸轿车一辆、云A656Y1奥迪Q5越野车一辆；不动产： a、昆明市盘龙区青云街道办事处东三环西侧金色交响家园，房地产权证编号：房地证津字第52号； b、昆明市盘龙区青云街道办事处东三环西侧金色交响家园；'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
 期望返回:[{'level': 1, 'type': 1700, 'keyword': '昆明市盘龙区青云街道办事处东三环西侧金色交响家园', 'suggestion': '', 'tip': ''}]
-实际返回:[{'level': 1, 'type': 1700, 'keyword': '昆明市盘龙区青云街道办事处东三环西侧金色交响家园', 'suggestion': '', 'tip': None}]
-期望返回:[{'level': 1, 'type': 1700, 'keyword': '昆明市盘龙区青云街道办事处东三环西侧金色交响家园', 'suggestion': '', 'tip': ''}]
-实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1700, 'keyword': '昆明市盘龙区青云街道办事处东三环西侧金色交响家园', 'suggestion': '', 'tip': None}]}]
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_信息重复.py", line 42, in test_repetition
-    self.assertEqual(expectResult,res)
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
-    assertion_func(first, second, msg=msg)
-AssertionError: Lists differ: [{'le[30 chars]d': '昆明市盘龙区青云街道办事处东三环西侧金色交响家园', 'suggestion': '', 'tip': ''}] != [{'le[30 chars]d': '昆明市盘龙区青云街道办事处东三环西侧金色交响家园', 'suggestion': '', 'tip': None}]
-
-First differing element 0:
-{'lev[28 chars]rd': '昆明市盘龙区青云街道办事处东三环西侧金色交响家园', 'suggestion': '', 'tip': ''}
-{'lev[28 chars]rd': '昆明市盘龙区青云街道办事处东三环西侧金色交响家园', 'suggestion': '', 'tip': None}
-
-  [{'keyword': '昆明市盘龙区青云街道办事处东三环西侧金色交响家园',
-    'level': 1,
-    'suggestion': '',
--   'tip': '',
-?          ^^
-
-+   'tip': None,
-?          ^^^^
-
-    'type': 1700}]
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_信息重复.py", line 47, in test_repetition
-    self.assertEqual(expectResult,res)
-AssertionError: Lists differ: [{'level': 1, 'type': 1700, 'keyword': '昆明市盘[47 chars] ''}] != [{'index': 2, 'corrections': [{'level': 1, '[80 chars]e}]}]
-
-First differing element 0:
-{'level': 1, 'type': 1700, 'keyword': '昆明市盘[46 chars]: ''}
-{'index': 2, 'corrections': [{'level': 1, '[79 chars]ne}]}
-
-- [{'keyword': '昆明市盘龙区青云街道办事处东三环西侧金色交响家园',
-+ [{'corrections': [{'keyword': '昆明市盘龙区青云街道办事处东三环西侧金色交响家园',
-? +++++++++++++++++
-
--   'level': 1,
--   'suggestion': '',
--   'tip': '',
--   'type': 1700}]
-+                    'level': 1,
-+                    'suggestion': '',
-+                    'tip': None,
-+                    'type': 1700}],
-+   'index': 2}]
+实际返回:[{'level': 1, 'type': 1700, 'keyword': '昆明市盘龙区青云街道办事处东三环西侧金色交响家园', 'suggestion': '', 'tip': ''}]
 
 
             </pre>
@@ -942,13 +738,13 @@ First differing element 0:
     <td></td>
 </tr>
 
-<tr class='passClass'>
+<tr class='failClass'>
     <td>Case.case2_文书纠错.test_受理费承担人.TestFees</td>
-    <td>8</td>
-    <td>8</td>
+    <td>13</td>
+    <td>4</td>
+    <td>9</td>
     <td>0</td>
-    <td>0</td>
-    <td><a href="javascript:showClassDetail('c3',8)">详情</a></td>
+    <td><a href="javascript:showClassDetail('c3',13)">详情</a></td>
     <td>&nbsp;</td>
 </tr>
 
@@ -982,27 +778,56 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt3.2' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_fees_00002: test_fees_00002</div></td>
+    <tr id='ft3.2' class='none'>
+        <td class='failCase'><div class='testcase'>test_fees_00002: test_fees_00002</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.2')" >
-            通过</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.2')" >
+            失败</a>
 
-        <div id='div_pt3.2' class="popup_window">
+        <div id='div_ft3.2' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.2').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.2').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt3.2: case12_2----只有名字，没有诉讼地位
+ft3.2: case12_2----只有名字，没有诉讼地位
 {'judgeId': 1, 'paragraphs': [{'index': 2, 'content': '案件受理费4,676元，减半收取计2,338元，由林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '受理费承担人须指定当事人身份'}
+期望返回:[]
 实际返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '受理费承担人须指定当事人身份'}
+期望返回:[]
+实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '受理费承担人须指定当事人身份'}]}]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 42, in test_fees
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: [] != {'level': 1, 'type': 1803, 'keyword': '',[38 chars]人身份'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 47, in test_fees
+    self.assertEqual(expectResult,res)
+AssertionError: Lists differ: [] != [{'index': 2, 'corrections': [{'level': 1,[70 chars]'}]}]
+
+Second list contains 1 additional elements.
+First extra element 0:
+{'index': 2, 'corrections': [{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '受理费承担人须指定当事人身份'}]}
+
+- []
++ [{'corrections': [{'keyword': '',
++                    'level': 1,
++                    'suggestion': '',
++                    'tip': '受理费承担人须指定当事人身份',
++                    'type': 1803}],
++   'index': 2}]
 
 
             </pre>
@@ -1072,27 +897,50 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt3.5' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_fees_00005: test_fees_00005</div></td>
+    <tr id='ft3.5' class='none'>
+        <td class='failCase'><div class='testcase'>test_fees_00005: test_fees_00005</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.5')" >
-            通过</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.5')" >
+            失败</a>
 
-        <div id='div_pt3.5' class="popup_window">
+        <div id='div_ft3.5' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.5').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.5').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt3.5: case12_5----遗漏承担人信息
+ft3.5: case12_5----遗漏承担人信息
 {'judgeId': 9, 'paragraphs': [{'index': 2, 'content': '案件受理费4,676元'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}
+期望返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'}
 实际返回:{'level': 1, 'type': 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}
+期望返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'}
+实际返回:[{'index': -1, 'corrections': [{'level': 1, 'type': 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}]}]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 42, in test_fees
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: {'lev[14 chars]: 1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'} != {'lev[14 chars]: 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}
+- {'keyword': '', 'level': 1, 'suggestion': '', 'tip': '请补充受理费承担人', 'type': 1803}
++ {'keyword': '',
++  'level': 1,
++  'suggestion': '',
++  'tip': '请补充受理费并指定承担人',
++  'type': 1802}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 47, in test_fees
+    self.assertEqual(expectResult,res)
+AssertionError: {'level': 1, 'type': 1803, 'keyword': '',[33 chars]承担人'} != [{'index': -1, 'corrections': [{'level': [70 chars]'}]}]
 
 
             </pre>
@@ -1102,27 +950,50 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt3.6' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_fees_00006: test_fees_00006</div></td>
+    <tr id='ft3.6' class='none'>
+        <td class='failCase'><div class='testcase'>test_fees_00006: test_fees_00006</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.6')" >
-            通过</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.6')" >
+            失败</a>
 
-        <div id='div_pt3.6' class="popup_window">
+        <div id='div_ft3.6' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.6').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.6').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt3.6: case12_6----有附加费用但没有承担人
-{'judgeId': 9, 'paragraphs': [{'index': 2, 'content': '本案受理费1,1837.50元，鉴定费4,000元，合计诉讼费9,918.75元'}]}
+ft3.6: case12_6----有附加费用但没有承担人
+{'judgeId': 9, 'paragraphs': [{'index': 2, 'content': '本案受理费1,837.50元，鉴定费4,000元，合计诉讼费9,918.75元'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}
+期望返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'}
 实际返回:{'level': 1, 'type': 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}
+期望返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'}
+实际返回:[{'index': -1, 'corrections': [{'level': 1, 'type': 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}]}]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 42, in test_fees
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: {'lev[14 chars]: 1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'} != {'lev[14 chars]: 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}
+- {'keyword': '', 'level': 1, 'suggestion': '', 'tip': '请补充受理费承担人', 'type': 1803}
++ {'keyword': '',
++  'level': 1,
++  'suggestion': '',
++  'tip': '请补充受理费并指定承担人',
++  'type': 1802}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 47, in test_fees
+    self.assertEqual(expectResult,res)
+AssertionError: {'level': 1, 'type': 1803, 'keyword': '',[33 chars]承担人'} != [{'index': -1, 'corrections': [{'level': [70 chars]'}]}]
 
 
             </pre>
@@ -1132,27 +1003,50 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt3.7' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_fees_00007: test_fees_00007</div></td>
+    <tr id='ft3.7' class='none'>
+        <td class='failCase'><div class='testcase'>test_fees_00007: test_fees_00007</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.7')" >
-            通过</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.7')" >
+            失败</a>
 
-        <div id='div_pt3.7' class="popup_window">
+        <div id='div_ft3.7' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.7').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.7').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt3.7: case12_7----有减收费用但没有承担人
+ft3.7: case12_7----有减收费用但没有承担人
 {'judgeId': 9, 'paragraphs': [{'index': 2, 'content': '本案受理费11,837.50元，减半收取5,918.75元'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}
+期望返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'}
 实际返回:{'level': 1, 'type': 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}
+期望返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'}
+实际返回:[{'index': -1, 'corrections': [{'level': 1, 'type': 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}]}]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 42, in test_fees
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: {'lev[14 chars]: 1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'} != {'lev[14 chars]: 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}
+- {'keyword': '', 'level': 1, 'suggestion': '', 'tip': '请补充受理费承担人', 'type': 1803}
++ {'keyword': '',
++  'level': 1,
++  'suggestion': '',
++  'tip': '请补充受理费并指定承担人',
++  'type': 1802}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 47, in test_fees
+    self.assertEqual(expectResult,res)
+AssertionError: {'level': 1, 'type': 1803, 'keyword': '',[33 chars]承担人'} != [{'index': -1, 'corrections': [{'level': [70 chars]'}]}]
 
 
             </pre>
@@ -1178,11 +1072,286 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             <pre>
             
 pt3.8: case12_8----遗漏整段受理费信息
-{'judgeId': 4, 'paragraphs': [{'index': 0, 'content': '江苏省如皋市人民法院\r'}, {'index': 1, 'content': '民 事 裁 定 书\r'}, {'index': 2, 'content': '（2021）最高法民初4447号\r'}, {'index': 3, 'content': '原告：谢德云，男，1962年5月29日出生，汉族，住南通市崇川区钟秀西路宏景大厦1幢1015室\r'}, {'index': 4, 'content': '委托诉讼代理人：李育忠，江苏联佑律师事务所律师。\r'}, {'index': 5, 'content': '被告：贾毛娜，女，1986年7月25日出生，汉族，现住南通市崇川区钟秀西路宏景大厦1幢1015室。\r'}, {'index': 6, 'content': '原告谢德云与被告贾毛娜后财产纠纷一案，本院于2021年5月6日立案。'}, {'index': 7, 'content': '原告谢德云于2021年8月27日向本院提出撤诉申请。\r'}, {'index': 8, 'content': '本院认为，原告的撤诉申请不违反法律规定，应予准许，依照《中华人民共和国民事诉讼法》第一百四十五条第一款之规定，裁定如下：\r'}, {'index': 9, 'content': '准许原告谢德云撤回起诉。\r'}, {'index': 10, 'content': '如不服本判决，可在判决书送达之日起十日内，向本院递交上诉状，并按对方当事人人数提出副本，上诉于最高人民法院。根据《诉讼费用交纳办法》的规定，向该院预交上诉案件受理费11,837.50元。'}, {'index': 11, 'content': '审\u3000判\u3000长\u3000\u3000孙俊驹\r'}, {'index': 12, 'content': '人民陪审员\u3000\u3000袁培培\r'}, {'index': 13, 'content': '人民陪审员\u3000\u3000刘国发\r'}, {'index': 14, 'content': '二〇二一年八月二十七日\r'}, {'index': 15, 'content': '法官\u3000助理\u3000\u3000孔德莱\r'}, {'index': 16, 'content': '书\u3000记\u3000员\u3000\u3000佘佳佳\r\r'}]}
+{'judgeId': 4, 'paragraphs': [{'index': 0, 'content': '江苏省如皋市人民法院\r'}, {'index': 1, 'content': '民 事 裁 定 书\r'}, {'index': 2, 'content': '（2022）最高法民初4447号\r'}, {'index': 3, 'content': '原告：谢德云，男，1962年5月29日出生，汉族，住南通市崇川区钟秀西路宏景大厦1幢1015室\r'}, {'index': 4, 'content': '委托诉讼代理人：李育忠，江苏联佑律师事务所律师。\r'}, {'index': 5, 'content': '被告：贾毛娜，女，1986年7月25日出生，汉族，现住南通市崇川区钟秀西路宏景大厦1幢1015室。\r'}, {'index': 6, 'content': '原告谢德云与被告贾毛娜后财产纠纷一案，本院于2021年5月6日立案。'}, {'index': 7, 'content': '原告谢德云于2021年8月27日向本院提出撤诉申请。\r'}, {'index': 8, 'content': '本院认为，原告的撤诉申请不违反法律规定，应予准许，依照《中华人民共和国民事诉讼法》第一百四十五条第一款之规定，裁定如下：\r'}, {'index': 9, 'content': '准许原告谢德云撤回起诉。\r'}, {'index': 11, 'content': '审\u3000判\u3000长\u3000\u3000孙俊驹\r'}, {'index': 12, 'content': '人民陪审员\u3000\u3000袁培培\r'}, {'index': 13, 'content': '人民陪审员\u3000\u3000刘国发\r'}, {'index': 14, 'content': '二〇二一年八月二十七日\r'}, {'index': 15, 'content': '法官\u3000助理\u3000\u3000孔德莱\r'}, {'index': 16, 'content': '书\u3000记\u3000员\u3000\u3000佘佳佳\r\r'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
 期望返回:{'level': 1, 'type': 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}
 实际返回:{'level': 1, 'type': 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='ft3.9' class='none'>
+        <td class='failCase'><div class='testcase'>test_fees_00009: test_fees_00009</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.9')" >
+            失败</a>
+
+        <div id='div_ft3.9' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.9').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+ft3.9: case12_9----格式错误-缺少“由”
+{'judgeId': 9, 'paragraphs': [{'index': 2, 'content': '本案受理费11,837.50元，张三承担。'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1804, 'keyword': '', 'suggestion': '', 'tip': '格式：案件受理费xx元，XXXXX，由xxx负担。'}
+实际返回:{'level': 1, 'type': 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}
+期望返回:{'level': 1, 'type': 1804, 'keyword': '', 'suggestion': '', 'tip': '格式：案件受理费xx元，XXXXX，由xxx负担。'}
+实际返回:[{'index': -1, 'corrections': [{'level': 1, 'type': 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}]}]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 42, in test_fees
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: {'lev[14 chars]: 1804, 'keyword': '', 'suggestion': '', 'tip'[25 chars]负担。'} != {'lev[14 chars]: 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}
+  {'keyword': '',
+   'level': 1,
+   'suggestion': '',
+-  'tip': '格式：案件受理费xx元，XXXXX，由xxx负担。',
++  'tip': '请补充受理费并指定承担人',
+-  'type': 1804}
+?             ^
+
++  'type': 1802}
+?             ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 47, in test_fees
+    self.assertEqual(expectResult,res)
+AssertionError: {'level': 1, 'type': 1804, 'keyword': '',[49 chars]负担。'} != [{'index': -1, 'corrections': [{'level': [70 chars]'}]}]
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='ft3.10' class='none'>
+        <td class='failCase'><div class='testcase'>test_fees_00010: test_fees_00010</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.10')" >
+            失败</a>
+
+        <div id='div_ft3.10' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.10').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+ft3.10: case12_10----格式错误-缺少“负担”
+{'judgeId': 9, 'paragraphs': [{'index': 2, 'content': '本案受理费11,837.50元，由张三。'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1804, 'keyword': '', 'suggestion': '', 'tip': '格式：案件受理费xx元，XXXXX，由xxx负担。'}
+实际返回:{'level': 1, 'type': 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}
+期望返回:{'level': 1, 'type': 1804, 'keyword': '', 'suggestion': '', 'tip': '格式：案件受理费xx元，XXXXX，由xxx负担。'}
+实际返回:[{'index': -1, 'corrections': [{'level': 1, 'type': 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}]}]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 42, in test_fees
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: {'lev[14 chars]: 1804, 'keyword': '', 'suggestion': '', 'tip'[25 chars]负担。'} != {'lev[14 chars]: 1802, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费并指定承担人'}
+  {'keyword': '',
+   'level': 1,
+   'suggestion': '',
+-  'tip': '格式：案件受理费xx元，XXXXX，由xxx负担。',
++  'tip': '请补充受理费并指定承担人',
+-  'type': 1804}
+?             ^
+
++  'type': 1802}
+?             ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 47, in test_fees
+    self.assertEqual(expectResult,res)
+AssertionError: {'level': 1, 'type': 1804, 'keyword': '',[49 chars]负担。'} != [{'index': -1, 'corrections': [{'level': [70 chars]'}]}]
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='ft3.11' class='none'>
+        <td class='failCase'><div class='testcase'>test_fees_00011: test_fees_00011</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.11')" >
+            失败</a>
+
+        <div id='div_ft3.11' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.11').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+ft3.11: case12_11----缺少承担人
+{'judgeId': 9, 'paragraphs': [{'index': 2, 'content': '本案受理费11,837.50元，由承担。'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'}
+实际返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '受理费承担人须指定当事人身份'}
+期望返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'}
+实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '受理费承担人须指定当事人身份'}]}]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 42, in test_fees
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: {'lev[16 chars]1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'} != {'lev[16 chars]1803, 'keyword': '', 'suggestion': '', 'tip': '受理费承担人须指定当事人身份'}
+- {'keyword': '', 'level': 1, 'suggestion': '', 'tip': '请补充受理费承担人', 'type': 1803}
++ {'keyword': '',
++  'level': 1,
++  'suggestion': '',
++  'tip': '受理费承担人须指定当事人身份',
++  'type': 1803}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 47, in test_fees
+    self.assertEqual(expectResult,res)
+AssertionError: {'level': 1, 'type': 1803, 'keyword': '',[33 chars]承担人'} != [{'index': 2, 'corrections': [{'level': 1[71 chars]'}]}]
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='ft3.12' class='none'>
+        <td class='failCase'><div class='testcase'>test_fees_00012: test_fees_00012</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.12')" >
+            失败</a>
+
+        <div id='div_ft3.12' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.12').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+ft3.12: case12_12----承担人用XXX代替
+{'judgeId': 9, 'paragraphs': [{'index': 2, 'content': '本案受理费11,837.50元，由XXX承担。'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'}
+实际返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '受理费承担人须指定当事人身份'}
+期望返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'}
+实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '受理费承担人须指定当事人身份'}]}]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 42, in test_fees
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: {'lev[16 chars]1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'} != {'lev[16 chars]1803, 'keyword': '', 'suggestion': '', 'tip': '受理费承担人须指定当事人身份'}
+- {'keyword': '', 'level': 1, 'suggestion': '', 'tip': '请补充受理费承担人', 'type': 1803}
++ {'keyword': '',
++  'level': 1,
++  'suggestion': '',
++  'tip': '受理费承担人须指定当事人身份',
++  'type': 1803}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 47, in test_fees
+    self.assertEqual(expectResult,res)
+AssertionError: {'level': 1, 'type': 1803, 'keyword': '',[33 chars]承担人'} != [{'index': 2, 'corrections': [{'level': 1[71 chars]'}]}]
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='ft3.13' class='none'>
+        <td class='failCase'><div class='testcase'>test_fees_00013: test_fees_00013</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.13')" >
+            失败</a>
+
+        <div id='div_ft3.13' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.13').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+ft3.13: case12_12----承担人用***代替
+{'judgeId': 9, 'paragraphs': [{'index': 2, 'content': '本案受理费11,837.50元，由***承担。'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'}
+实际返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '受理费承担人须指定当事人身份'}
+期望返回:{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'}
+实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1803, 'keyword': '', 'suggestion': '', 'tip': '受理费承担人须指定当事人身份'}]}]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 42, in test_fees
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: {'lev[16 chars]1803, 'keyword': '', 'suggestion': '', 'tip': '请补充受理费承担人'} != {'lev[16 chars]1803, 'keyword': '', 'suggestion': '', 'tip': '受理费承担人须指定当事人身份'}
+- {'keyword': '', 'level': 1, 'suggestion': '', 'tip': '请补充受理费承担人', 'type': 1803}
++ {'keyword': '',
++  'level': 1,
++  'suggestion': '',
++  'tip': '受理费承担人须指定当事人身份',
++  'type': 1803}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_受理费承担人.py", line 47, in test_fees
+    self.assertEqual(expectResult,res)
+AssertionError: {'level': 1, 'type': 1803, 'keyword': '',[33 chars]承担人'} != [{'index': 2, 'corrections': [{'level': 1[71 chars]'}]}]
 
 
             </pre>
@@ -1535,8 +1704,8 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
 <tr class='failClass'>
     <td>Case.case2_文书纠错.test_当事人信息.TestParty</td>
     <td>22</td>
-    <td>15</td>
-    <td>7</td>
+    <td>8</td>
+    <td>14</td>
     <td>0</td>
     <td><a href="javascript:showClassDetail('c5',22)">详情</a></td>
     <td>&nbsp;</td>
@@ -1557,7 +1726,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt5.1: case6_1----顺序错误
+pt5.1: [1;31;40mcase6_1----顺序错误
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，汉族，男，系文盲，1980年11月16日生，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -1587,7 +1756,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt5.2: case6_2----当事人信息正确（包含职业）
+pt5.2: [1;31;40mcase6_2----当事人信息正确（包含职业）
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，农村务农，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -1617,7 +1786,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt5.3: case6_3----当事人信息正确（不包含职业）
+pt5.3: [1;31;40mcase6_3----当事人信息正确（不包含职业）
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -1632,27 +1801,54 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt5.4' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_party_00004: test_party_00004</div></td>
+    <tr id='ft5.4' class='none'>
+        <td class='failCase'><div class='testcase'>test_party_00004: test_party_00004</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.4')" >
-            通过</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.4')" >
+            失败</a>
 
-        <div id='div_pt5.4' class="popup_window">
+        <div id='div_ft5.4' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.4').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.4').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt5.4: case6_4----民族信息缺少“族”
+ft5.4: [1;31;40mcase6_4----民族信息缺少“族”
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月16日生，汉，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '民族后缺少“族”字'}
+期望返回:{'level': 1, 'type': 1110, 'keyword': '原告：张三，男，1980年11月16日生，汉，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '民族后缺少“族”字'}
 实际返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月16日生，汉，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '民族后缺少“族”字'}
+期望返回:{'level': 1, 'type': 1110, 'keyword': '原告：张三，男，1980年11月16日生，汉，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '民族后缺少“族”字'}
+实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月16日生，汉，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '民族后缺少“族”字'}]}]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 42, in test_party
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: {'lev[13 chars]': 1110, 'keyword': '原告：张三，男，1980年11月16日生，汉，住云[43 chars]族”字'} != {'lev[13 chars]': 1101, 'keyword': '原告：张三，男，1980年11月16日生，汉，住云[43 chars]族”字'}
+  {'keyword': '原告：张三，男，1980年11月16日生，汉，住云南省昆明市盘龙区',
+   'level': 1,
+   'suggestion': '',
+   'tip': '民族后缺少“族”字',
+-  'type': 1110}
+?          -
+
++  'type': 1101}
+?             +
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 47, in test_party
+    self.assertEqual(expectResult,res)
+AssertionError: {'level': 1, 'type': 1110, 'keyword': '原告[66 chars]族”字'} != [{'index': 2, 'corrections': [{'level': 1[99 chars]'}]}]
 
 
             </pre>
@@ -1677,11 +1873,11 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-ft5.5: case6_5----“住所信息”不规范-居住地
+ft5.5: [1;31;40mcase6_5----“住所信息”不规范-居住地
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，居住地云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月16日生，汉族，居住地云南省昆明市盘龙区', 'suggestion': '', 'tip': '地址前缺少“住”字'}
+期望返回:{'level': 1, 'type': 1113, 'keyword': '原告：张三，男，1980年11月16日生，汉族，居住地云南省昆明市盘龙区', 'suggestion': '', 'tip': '住址信息要以“住”字开头'}
 实际返回:[]
 Traceback (most recent call last):
   File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 40, in test_party
@@ -1695,7 +1891,7 @@ Traceback (most recent call last):
     return func(self, *args, **kwargs)
   File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 47, in test_party
     self.assertEqual(expectResult,res)
-AssertionError: {'level': 1, 'type': 1101, 'keyword': '原告[69 chars]住”字'} != []
+AssertionError: {'level': 1, 'type': 1113, 'keyword': '原告[72 chars]字开头'} != []
 
 
             </pre>
@@ -1705,27 +1901,40 @@ AssertionError: {'level': 1, 'type': 1101, 'keyword': '原告[69 chars]住”字
     <td></td>
 </tr>
 
-    <tr id='pt5.6' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_party_00006: test_party_00006</div></td>
+    <tr id='ft5.6' class='none'>
+        <td class='failCase'><div class='testcase'>test_party_00006: test_party_00006</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.6')" >
-            通过</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.6')" >
+            失败</a>
 
-        <div id='div_pt5.6' class="popup_window">
+        <div id='div_ft5.6' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.6').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.6').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt5.6: case6_6----“住所信息”不规范-住址
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，住址云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+ft5.6: [1;31;40mcase6_7----“住所信息”不规范-联系地址
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，联系住址云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:[]
+期望返回:{'level': 1, 'type': 1113, 'keyword': '原告：张三，男，1980年11月16日生，汉族，联系住址云南省昆明市盘龙区', 'suggestion': '', 'tip': '住址信息要以“住”字开头'}
 实际返回:[]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 40, in test_party
+    res = response.json()["detections"][0]["corrections"][0]
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 47, in test_party
+    self.assertEqual(expectResult,res)
+AssertionError: {'level': 1, 'type': 1113, 'keyword': '原告[73 chars]字开头'} != []
 
 
             </pre>
@@ -1750,16 +1959,31 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-ft5.7: case6_7----“住所信息”不规范-联系地址
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，联系住址云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+ft5.7: [1;31;40mcase6_8----“住所信息”不规范-缺少“住”
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月16日生，汉族，联系住址云南省昆明市盘龙区', 'suggestion': '', 'tip': '地址前缺少“住”字'}
-实际返回:[]
+期望返回:{'level': 1, 'type': 1113, 'keyword': '原告：张三，男，1980年11月16日生，汉族，云南省昆明市盘龙区', 'suggestion': '', 'tip': '住址信息要以“住”字开头'}
+实际返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月16日生，汉族，云南省昆明市盘龙区', 'suggestion': '', 'tip': '地址前缺少“住”字'}
+期望返回:{'level': 1, 'type': 1113, 'keyword': '原告：张三，男，1980年11月16日生，汉族，云南省昆明市盘龙区', 'suggestion': '', 'tip': '住址信息要以“住”字开头'}
+实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月16日生，汉族，云南省昆明市盘龙区', 'suggestion': '', 'tip': '地址前缺少“住”字'}]}]
 Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 40, in test_party
-    res = response.json()["detections"][0]["corrections"][0]
-IndexError: list index out of range
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 42, in test_party
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: {'lev[13 chars]': 1113, 'keyword': '原告：张三，男，1980年11月16日生，汉族，云[46 chars]字开头'} != {'lev[13 chars]': 1101, 'keyword': '原告：张三，男，1980年11月16日生，汉族，云[43 chars]住”字'}
+  {'keyword': '原告：张三，男，1980年11月16日生，汉族，云南省昆明市盘龙区',
+   'level': 1,
+   'suggestion': '',
+-  'tip': '住址信息要以“住”字开头',
++  'tip': '地址前缺少“住”字',
+-  'type': 1113}
+?             -
+
++  'type': 1101}
+?            +
+
 
 During handling of the above exception, another exception occurred:
 
@@ -1768,7 +1992,7 @@ Traceback (most recent call last):
     return func(self, *args, **kwargs)
   File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 47, in test_party
     self.assertEqual(expectResult,res)
-AssertionError: {'level': 1, 'type': 1101, 'keyword': '原告[70 chars]住”字'} != []
+AssertionError: {'level': 1, 'type': 1113, 'keyword': '原告[69 chars]字开头'} != [{'index': 2, 'corrections': [{'level': 1[99 chars]'}]}]
 
 
             </pre>
@@ -1778,27 +2002,55 @@ AssertionError: {'level': 1, 'type': 1101, 'keyword': '原告[70 chars]住”字
     <td></td>
 </tr>
 
-    <tr id='pt5.8' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_party_00008: test_party_00008</div></td>
+    <tr id='ft5.8' class='none'>
+        <td class='failCase'><div class='testcase'>test_party_00008: test_party_00008</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.8')" >
-            通过</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.8')" >
+            失败</a>
 
-        <div id='div_pt5.8' class="popup_window">
+        <div id='div_ft5.8' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.8').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.8').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt5.8: case6_8----“住所信息”不规范-缺少“住”
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+ft5.8: [1;31;40mcase6_9----当事人信息不完整-缺少民族信息
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月16日生，汉族，云南省昆明市盘龙区', 'suggestion': '', 'tip': '地址前缺少“住”字'}
-实际返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月16日生，汉族，云南省昆明市盘龙区', 'suggestion': '', 'tip': '地址前缺少“住”字'}
+期望返回:{'level': 1, 'type': 1109, 'keyword': '原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请补充当事人民族信息'}
+实际返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '民族后缺少“族”字'}
+期望返回:{'level': 1, 'type': 1109, 'keyword': '原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请补充当事人民族信息'}
+实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '民族后缺少“族”字'}]}]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 42, in test_party
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: {'lev[14 chars]: 1109, 'keyword': '原告：张三，男，1980年11月16日生，住云南省昆[41 chars]族信息'} != {'lev[14 chars]: 1101, 'keyword': '原告：张三，男，1980年11月16日生，住云南省昆[40 chars]族”字'}
+  {'keyword': '原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区',
+   'level': 1,
+   'suggestion': '',
+-  'tip': '请补充当事人民族信息',
++  'tip': '民族后缺少“族”字',
+-  'type': 1109}
+?             ^
+
++  'type': 1101}
+?             ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 47, in test_party
+    self.assertEqual(expectResult,res)
+AssertionError: {'level': 1, 'type': 1109, 'keyword': '原告[65 chars]族信息'} != [{'index': 2, 'corrections': [{'level': 1[97 chars]'}]}]
 
 
             </pre>
@@ -1823,26 +2075,146 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-ft5.9: case6_9----当事人信息不完整-缺少民族信息
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+ft5.9: [1;31;40mcase6_10----当事人信息不完整-缺少性别信息
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，1980年11月16日生，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1105, 'keyword': '原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}
-实际返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '民族后缺少“族”字'}
-期望返回:{'level': 1, 'type': 1105, 'keyword': '原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}
-实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '民族后缺少“族”字'}]}]
+期望返回:{'level': 1, 'type': 1114, 'keyword': '原告：张三，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请补充当事人性别信息'}
+实际返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请写明当事人性别'}
+期望返回:{'level': 1, 'type': 1114, 'keyword': '原告：张三，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请补充当事人性别信息'}
+实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1101, 'keyword': '原告：张三，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请写明当事人性别'}]}]
 Traceback (most recent call last):
   File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 42, in test_party
     self.assertEqual(expectResult,res)
   File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
     assertion_func(first, second, msg=msg)
-AssertionError: {'lev[14 chars]: 1105, 'keyword': '原告：张三，男，1980年11月16日生，住云南省昆[95 chars]住址]'} != {'lev[14 chars]: 1101, 'keyword': '原告：张三，男，1980年11月16日生，住云南省昆[40 chars]族”字'}
-  {'keyword': '原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区',
+AssertionError: {'lev[13 chars]': 1114, 'keyword': '原告：张三，1980年11月16日生，汉族，住云南[43 chars]别信息'} != {'lev[13 chars]': 1101, 'keyword': '原告：张三，1980年11月16日生，汉族，住云南[41 chars]人性别'}
+  {'keyword': '原告：张三，1980年11月16日生，汉族，住云南省昆明市盘龙区',
    'level': 1,
    'suggestion': '',
--  'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]',
-+  'tip': '民族后缺少“族”字',
--  'type': 1105}
+-  'tip': '请补充当事人性别信息',
+?           ^^     --
+
++  'tip': '请写明当事人性别',
+?           ^^
+
+-  'type': 1114}
+?             -
+
++  'type': 1101}
+?            +
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 47, in test_party
+    self.assertEqual(expectResult,res)
+AssertionError: {'level': 1, 'type': 1114, 'keyword': '原告[66 chars]别信息'} != [{'index': 2, 'corrections': [{'level': 1[97 chars]'}]}]
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='ft5.10' class='none'>
+        <td class='failCase'><div class='testcase'>test_party_00010: test_party_00010</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.10')" >
+            失败</a>
+
+        <div id='div_ft5.10' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.10').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+ft5.10: [1;31;40mcase6_11----当事人信息不完整-出生日期不完整
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月生，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1111, 'keyword': '原告：张三，男，1980年11月生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请补充当事人生日信息'}
+实际返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}
+期望返回:{'level': 1, 'type': 1111, 'keyword': '原告：张三，男，1980年11月生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请补充当事人生日信息'}
+实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}]}]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 42, in test_party
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: {'lev[13 chars]': 1111, 'keyword': '原告：张三，男，1980年11月生，汉族，住云南省[42 chars]日信息'} != {'lev[13 chars]': 1101, 'keyword': '原告：张三，男，1980年11月生，汉族，住云南省[96 chars]住址]'}
+  {'keyword': '原告：张三，男，1980年11月生，汉族，住云南省昆明市盘龙区',
+   'level': 1,
+   'suggestion': '',
+-  'tip': '请补充当事人生日信息',
++  'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]',
+-  'type': 1111}
+?            ^
+
++  'type': 1101}
+?            ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 47, in test_party
+    self.assertEqual(expectResult,res)
+AssertionError: {'level': 1, 'type': 1111, 'keyword': '原告[65 chars]日信息'} != [{'index': 2, 'corrections': [{'level': 1[152 chars]'}]}]
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='ft5.11' class='none'>
+        <td class='failCase'><div class='testcase'>test_party_00011: test_party_00011</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.11')" >
+            失败</a>
+
+        <div id='div_ft5.11' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.11').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+ft5.11: [1;31;40mcase6_12----当事人信息不完整-缺少姓名
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1107, 'keyword': '原告：，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请补充当事人姓名'}
+实际返回:{'level': 1, 'type': 1101, 'keyword': '原告：，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}
+期望返回:{'level': 1, 'type': 1107, 'keyword': '原告：，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请补充当事人姓名'}
+实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1101, 'keyword': '原告：，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}]}]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 42, in test_party
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: {'lev[14 chars]: 1107, 'keyword': '原告：，男，1980年11月16日生，汉族，住云南省[40 chars]人姓名'} != {'lev[14 chars]: 1101, 'keyword': '原告：，男，1980年11月16日生，汉族，住云南省[96 chars]住址]'}
+  {'keyword': '原告：，男，1980年11月16日生，汉族，住云南省昆明市盘龙区',
+   'level': 1,
+   'suggestion': '',
+-  'tip': '请补充当事人姓名',
++  'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]',
+-  'type': 1107}
 ?             ^
 
 +  'type': 1101}
@@ -1856,7 +2228,7 @@ Traceback (most recent call last):
     return func(self, *args, **kwargs)
   File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 47, in test_party
     self.assertEqual(expectResult,res)
-AssertionError: {'level': 1, 'type': 1105, 'keyword': '原告[119 chars]住址]'} != [{'index': 2, 'corrections': [{'level': 1[97 chars]'}]}]
+AssertionError: {'level': 1, 'type': 1107, 'keyword': '原告[64 chars]人姓名'} != [{'index': 2, 'corrections': [{'level': 1[153 chars]'}]}]
 
 
             </pre>
@@ -1866,87 +2238,55 @@ AssertionError: {'level': 1, 'type': 1105, 'keyword': '原告[119 chars]住址]'
     <td></td>
 </tr>
 
-    <tr id='pt5.10' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_party_00010: test_party_00010</div></td>
+    <tr id='ft5.12' class='none'>
+        <td class='failCase'><div class='testcase'>test_party_00012: test_party_00012</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.10')" >
-            通过</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.12')" >
+            失败</a>
 
-        <div id='div_pt5.10' class="popup_window">
+        <div id='div_ft5.12' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.10').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.12').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt5.10: case6_10----当事人信息不完整-缺少性别信息
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，1980年11月16日生，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+ft5.12: [1;31;40mcase6_13----当事人信息不完整-缺少姓名
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请写明当事人性别'}
-实际返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请写明当事人性别'}
+期望返回:{'level': 1, 'type': 1107, 'keyword': '原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请补充当事人姓名'}
+实际返回:{'level': 1, 'type': 1101, 'keyword': '原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}
+期望返回:{'level': 1, 'type': 1107, 'keyword': '原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请补充当事人姓名'}
+实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1101, 'keyword': '原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}]}]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 42, in test_party
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: {'lev[14 chars]: 1107, 'keyword': '原告，男，1980年11月16日生，汉族，住云南省昆[39 chars]人姓名'} != {'lev[14 chars]: 1101, 'keyword': '原告，男，1980年11月16日生，汉族，住云南省昆[44 chars]少冒号'}
+  {'keyword': '原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区',
+   'level': 1,
+   'suggestion': '',
+-  'tip': '请补充当事人姓名',
++  'tip': '诉讼地位与姓名之间缺少冒号',
+-  'type': 1107}
+?             ^
+
++  'type': 1101}
+?             ^
 
 
-            </pre>
-        </div>
-        <!--css div popup end-->
-    </td>
-    <td></td>
-</tr>
+During handling of the above exception, another exception occurred:
 
-    <tr id='pt5.11' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_party_00011: test_party_00011</div></td>
-        <td colspan='5' align='center'>
-
-        <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.11')" >
-            通过</a>
-
-        <div id='div_pt5.11' class="popup_window">
-            <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.11').style.display = 'none' " >
-               [x]</a>
-            </div>
-            <pre>
-            
-pt5.11: case6_11----当事人信息不完整-出生日期不完整
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月生，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
-D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn((
-期望返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}
-实际返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，1980年11月生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}
-
-
-            </pre>
-        </div>
-        <!--css div popup end-->
-    </td>
-    <td></td>
-</tr>
-
-    <tr id='pt5.12' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_party_00012: test_party_00012</div></td>
-        <td colspan='5' align='center'>
-
-        <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.12')" >
-            通过</a>
-
-        <div id='div_pt5.12' class="popup_window">
-            <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.12').style.display = 'none' " >
-               [x]</a>
-            </div>
-            <pre>
-            
-pt5.12: case6_12----当事人信息不完整-缺少姓名
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
-D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn((
-期望返回:{'level': 1, 'type': 1101, 'keyword': '原告：，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}
-实际返回:{'level': 1, 'type': 1101, 'keyword': '原告：，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 47, in test_party
+    self.assertEqual(expectResult,res)
+AssertionError: {'level': 1, 'type': 1107, 'keyword': '原告[63 chars]人姓名'} != [{'index': 2, 'corrections': [{'level': 1[101 chars]'}]}]
 
 
             </pre>
@@ -1971,26 +2311,30 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-ft5.13: case6_13----当事人信息不完整-缺少姓名
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+ft5.13: [1;31;40mcase6_14----当事人信息不完整-诉讼地位与姓名之间没有冒号
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1101, 'keyword': '原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}
-实际返回:{'level': 1, 'type': 1101, 'keyword': '原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}
-期望返回:{'level': 1, 'type': 1101, 'keyword': '原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}
-实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1101, 'keyword': '原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}]}]
+期望返回:{'level': 1, 'type': 1108, 'keyword': '原告张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}
+实际返回:{'level': 1, 'type': 1101, 'keyword': '原告张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}
+期望返回:{'level': 1, 'type': 1108, 'keyword': '原告张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}
+实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1101, 'keyword': '原告张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}]}]
 Traceback (most recent call last):
   File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 42, in test_party
     self.assertEqual(expectResult,res)
   File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
     assertion_func(first, second, msg=msg)
-AssertionError: {'lev[89 chars]p': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民[20 chars]住址]'} != {'lev[89 chars]p': '诉讼地位与姓名之间缺少冒号'}
-  {'keyword': '原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区',
+AssertionError: {'lev[14 chars]: 1108, 'keyword': '原告张三，男，1980年11月16日生，汉族，住云南[46 chars]少冒号'} != {'lev[14 chars]: 1101, 'keyword': '原告张三，男，1980年11月16日生，汉族，住云南[46 chars]少冒号'}
+  {'keyword': '原告张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区',
    'level': 1,
    'suggestion': '',
--  'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]',
-+  'tip': '诉讼地位与姓名之间缺少冒号',
-   'type': 1101}
+   'tip': '诉讼地位与姓名之间缺少冒号',
+-  'type': 1108}
+?             ^
+
++  'type': 1101}
+?             ^
+
 
 During handling of the above exception, another exception occurred:
 
@@ -1999,7 +2343,7 @@ Traceback (most recent call last):
     return func(self, *args, **kwargs)
   File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 47, in test_party
     self.assertEqual(expectResult,res)
-AssertionError: {'level': 1, 'type': 1101, 'keyword': '原告[119 chars]住址]'} != [{'index': 2, 'corrections': [{'level': 1[101 chars]'}]}]
+AssertionError: {'level': 1, 'type': 1108, 'keyword': '原告[70 chars]少冒号'} != [{'index': 2, 'corrections': [{'level': 1[103 chars]'}]}]
 
 
             </pre>
@@ -2024,12 +2368,12 @@ AssertionError: {'level': 1, 'type': 1101, 'keyword': '原告[119 chars]住址]'
             </div>
             <pre>
             
-pt5.14: case6_14----当事人信息不完整-诉讼地位与姓名之间没有冒号
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+pt5.14: [1;31;40mcase6_16----当事人信息错误-添加不必要信息
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，性别男，1980年11月16日生，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1101, 'keyword': '原告张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}
-实际返回:{'level': 1, 'type': 1101, 'keyword': '原告张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}
+期望返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，性别男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}
+实际返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，性别男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}
 
 
             </pre>
@@ -2054,12 +2398,12 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt5.15: case6_16----当事人信息错误-添加不必要信息
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，性别男，1980年11月16日生，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+pt5.15: [1;31;40mcase6_17----当事人信息不对等
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。 被告：李四，男，1980年11月16日生，汉族，住昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，性别男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}
-实际返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，性别男，1980年11月16日生，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}
+期望返回:{'level': 2, 'type': 1102, 'keyword': '', 'suggestion': '', 'tip': None}
+实际返回:{'level': 2, 'type': 1102, 'keyword': '', 'suggestion': '', 'tip': None}
 
 
             </pre>
@@ -2084,12 +2428,12 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt5.16: case6_17----当事人信息不对等
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。 被告：李四，男，1980年11月16日生，汉族，住昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+pt5.16: [1;31;40mcase6_18----当事人信息错误-住所地址不同时未写明属于哪个省份
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，住昆明市盘龙区。 被告：李四，男，1980年11月16日生，汉族，住厦门市思明区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 2, 'type': 1102, 'keyword': '', 'suggestion': '', 'tip': None}
-实际返回:{'level': 2, 'type': 1102, 'keyword': '', 'suggestion': '', 'tip': None}
+期望返回:{'level': 2, 'type': 1103, 'keyword': '', 'suggestion': '', 'tip': None}
+实际返回:{'level': 2, 'type': 1103, 'keyword': '', 'suggestion': '', 'tip': None}
 
 
             </pre>
@@ -2114,37 +2458,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt5.17: case6_18----当事人信息错误-住所地址不同时未写明属于哪个省份
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，住昆明市盘龙区。 被告：李四，男，1980年11月16日生，汉族，住厦门市思明区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
-D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn((
-期望返回:{'level': 2, 'type': 1103, 'keyword': '', 'suggestion': '', 'tip': None}
-实际返回:{'level': 2, 'type': 1103, 'keyword': '', 'suggestion': '', 'tip': None}
-
-
-            </pre>
-        </div>
-        <!--css div popup end-->
-    </td>
-    <td></td>
-</tr>
-
-    <tr id='pt5.18' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_party_00018: test_party_00018</div></td>
-        <td colspan='5' align='center'>
-
-        <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.18')" >
-            通过</a>
-
-        <div id='div_pt5.18' class="popup_window">
-            <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.18').style.display = 'none' " >
-               [x]</a>
-            </div>
-            <pre>
-            
-pt5.18: case6_19----当事人信息信息对等
+pt5.17: [1;31;40mcase6_19----当事人信息信息对等
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，住厦门市集美区。'}, {'index': 3, 'content': '被告：李四，男，1980年11月16日生，汉族，住厦门市思明区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -2159,22 +2473,22 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='ft5.19' class='none'>
-        <td class='failCase'><div class='testcase'>test_party_00019: test_party_00019</div></td>
+    <tr id='ft5.18' class='none'>
+        <td class='failCase'><div class='testcase'>test_party_00018: test_party_00018</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.19')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.18')" >
             失败</a>
 
-        <div id='div_ft5.19' class="popup_window">
+        <div id='div_ft5.18' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.19').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.18').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-ft5.19: case6_20----非当事人信息误报（【诉讼地位】，【日期】，【性别】）
+ft5.18: [1;31;40mcase6_20----非当事人信息误报（【诉讼地位】，【日期】，【性别】）
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '被告于1992年10月21日晚上回到家中，跟住在隔壁的男人大打出手。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -2218,22 +2532,22 @@ First extra element 0:
     <td></td>
 </tr>
 
-    <tr id='ft5.20' class='none'>
-        <td class='failCase'><div class='testcase'>test_party_00020: test_party_00020</div></td>
+    <tr id='ft5.19' class='none'>
+        <td class='failCase'><div class='testcase'>test_party_00019: test_party_00019</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.20')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.19')" >
             失败</a>
 
-        <div id='div_ft5.20' class="popup_window">
+        <div id='div_ft5.19' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.20').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.19').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-ft5.20: case6_21----非当事人信息误报（【诉讼地位】，【日期】，【性别】）
+ft5.19: [1;31;40mcase6_21----非当事人信息误报（【诉讼地位】，【日期】，【性别】）
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '本院经审理认定事实如下：原告王德范系王志韬（已故）父亲、张素云系王志韬母亲， 王某1（2002年3月13日出生）系王志韬之子、王某2（2006年9月1日出生）系王志韬之女'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -2277,6 +2591,65 @@ First extra element 0:
     <td></td>
 </tr>
 
+    <tr id='ft5.20' class='none'>
+        <td class='failCase'><div class='testcase'>test_party_00020: test_party_00020</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.20')" >
+            失败</a>
+
+        <div id='div_ft5.20' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.20').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+ft5.20: [1;31;40mcase6_22----非当事人信息误报（【诉讼地位】，【日期】，【汉】）
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告王德范、张素云、王某1、王某2与被告沈阳汉爵装饰材料有限公司劳动争议一案， 本院于2019年7月2日立案受理后，依法由审判员刘晓强担任审判长并主审，与人民陪审员李丞、孙维维组成合议庭，公开开庭进行了审理。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:[]
+实际返回:{'level': 1, 'type': 1101, 'keyword': '原告王德范、张素云、王某1、王某2与被告沈阳汉爵装饰材料有限公司劳动争议一案，本院于2019年7月2日立案受理后，依法由审判员刘晓强担任审判长并主审，与人民陪审员李丞、孙维维组成合议庭，公开开庭进行了审理', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}
+期望返回:[]
+实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1101, 'keyword': '原告王德范、张素云、王某1、王某2与被告沈阳汉爵装饰材料有限公司劳动争议一案，本院于2019年7月2日立案受理后，依法由审判员刘晓强担任审判长并主审，与人民陪审员李丞、孙维维组成合议庭，公开开庭进行了审理', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}]}]
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 42, in test_party
+    self.assertEqual(expectResult,res)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
+    assertion_func(first, second, msg=msg)
+AssertionError: [] != {'level': 1, 'type': 1101, 'keyword': '原告[139 chars]少冒号'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 47, in test_party
+    self.assertEqual(expectResult,res)
+AssertionError: Lists differ: [] != [{'index': 2, 'corrections': [{'level': 1,[171 chars]'}]}]
+
+Second list contains 1 additional elements.
+First extra element 0:
+{'index': 2, 'corrections': [{'level': 1, 'type': 1101, 'keyword': '原告王德范、张素云、王某1、王某2与被告沈阳汉爵装饰材料有限公司劳动争议一案，本院于2019年7月2日立案受理后，依法由审判员刘晓强担任审判长并主审，与人民陪审员李丞、孙维维组成合议庭，公开开庭进行了审理', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}]}
+
+- []
++ [{'corrections': [{'keyword': '原告王德范、张素云、王某1、王某2与被告沈阳汉爵装饰材料有限公司劳动争议一案，本院于2019年7月2日立案受理后，依法由审判员刘晓强担任审判长并主审，与人民陪审员李丞、孙维维组成合议庭，公开开庭进行了审理',
++                    'level': 1,
++                    'suggestion': '',
++                    'tip': '诉讼地位与姓名之间缺少冒号',
++                    'type': 1101}],
++   'index': 2}]
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
     <tr id='ft5.21' class='none'>
         <td class='failCase'><div class='testcase'>test_party_00021: test_party_00021</div></td>
         <td colspan='5' align='center'>
@@ -2292,20 +2665,31 @@ First extra element 0:
             </div>
             <pre>
             
-ft5.21: case6_22----非当事人信息误报（【诉讼地位】，【日期】，【汉】）
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告王德范、张素云、王某1、王某2与被告沈阳汉爵装饰材料有限公司劳动争议纠纷一案， 本院于2019年7月2日立案受理后，依法由审判员刘晓强担任审判长并主审，与人民陪审员李丞、孙维维组成合议庭，公开开庭进行了审理。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+ft5.21: [1;31;40mcase6_23----当事人信息不完整-缺少出生日期
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，汉族，住云南省昆明市盘龙区。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:[]
-实际返回:{'level': 1, 'type': 1101, 'keyword': '原告王德范、张素云、王某1、王某2与被告沈阳汉爵装饰材料有限公司劳动争议纠纷一案，本院于2019年7月2日立案受理后，依法由审判员刘晓强担任审判长并主审，与人民陪审员李丞、孙维维组成合议庭，公开开庭进行了审理', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}
-期望返回:[]
-实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1101, 'keyword': '原告王德范、张素云、王某1、王某2与被告沈阳汉爵装饰材料有限公司劳动争议纠纷一案，本院于2019年7月2日立案受理后，依法由审判员刘晓强担任审判长并主审，与人民陪审员李丞、孙维维组成合议庭，公开开庭进行了审理', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}]}]
+期望返回:{'level': 1, 'type': 1111, 'keyword': '原告：张三，男，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请补充当事人生日信息'}
+实际返回:{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}
+期望返回:{'level': 1, 'type': 1111, 'keyword': '原告：张三，男，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '请补充当事人生日信息'}
+实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1101, 'keyword': '原告：张三，男，汉族，住云南省昆明市盘龙区', 'suggestion': '', 'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]'}]}]
 Traceback (most recent call last):
   File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 42, in test_party
     self.assertEqual(expectResult,res)
   File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
     assertion_func(first, second, msg=msg)
-AssertionError: [] != {'level': 1, 'type': 1101, 'keyword': '原告[141 chars]少冒号'}
+AssertionError: {'lev[13 chars]': 1111, 'keyword': '原告：张三，男，汉族，住云南省昆明市盘龙区', '[32 chars]日信息'} != {'lev[13 chars]': 1101, 'keyword': '原告：张三，男，汉族，住云南省昆明市盘龙区', '[86 chars]住址]'}
+  {'keyword': '原告：张三，男，汉族，住云南省昆明市盘龙区',
+   'level': 1,
+   'suggestion': '',
+-  'tip': '请补充当事人生日信息',
++  'tip': '[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]',
+-  'type': 1111}
+?            ^
+
++  'type': 1101}
+?            ^
+
 
 During handling of the above exception, another exception occurred:
 
@@ -2314,19 +2698,7 @@ Traceback (most recent call last):
     return func(self, *args, **kwargs)
   File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_当事人信息.py", line 47, in test_party
     self.assertEqual(expectResult,res)
-AssertionError: Lists differ: [] != [{'index': 2, 'corrections': [{'level': 1,[173 chars]'}]}]
-
-Second list contains 1 additional elements.
-First extra element 0:
-{'index': 2, 'corrections': [{'level': 1, 'type': 1101, 'keyword': '原告王德范、张素云、王某1、王某2与被告沈阳汉爵装饰材料有限公司劳动争议纠纷一案，本院于2019年7月2日立案受理后，依法由审判员刘晓强担任审判长并主审，与人民陪审员李丞、孙维维组成合议庭，公开开庭进行了审理', 'suggestion': '', 'tip': '诉讼地位与姓名之间缺少冒号'}]}
-
-- []
-+ [{'corrections': [{'keyword': '原告王德范、张素云、王某1、王某2与被告沈阳汉爵装饰材料有限公司劳动争议纠纷一案，本院于2019年7月2日立案受理后，依法由审判员刘晓强担任审判长并主审，与人民陪审员李丞、孙维维组成合议庭，公开开庭进行了审理',
-+                    'level': 1,
-+                    'suggestion': '',
-+                    'tip': '诉讼地位与姓名之间缺少冒号',
-+                    'type': 1101}],
-+   'index': 2}]
+AssertionError: {'level': 1, 'type': 1111, 'keyword': '原告[55 chars]日信息'} != [{'index': 2, 'corrections': [{'level': 1[142 chars]'}]}]
 
 
             </pre>
@@ -2351,7 +2723,7 @@ First extra element 0:
             </div>
             <pre>
             
-pt5.22: case6_24----多名原告同时引用不需要都加诉讼地位
+pt5.22: [1;31;40mcase6_24----多名原告同时引用不需要都加诉讼地位
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：谢德云，男，1962年5月29日出生，汉族，住如皋市九华镇马桥村8组3号。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -2366,13 +2738,13 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-<tr class='failClass'>
+<tr class='passClass'>
     <td>Case.case2_文书纠错.test_标点符号.TestPunctuation</td>
-    <td>10</td>
-    <td>7</td>
-    <td>3</td>
+    <td>9</td>
+    <td>9</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c6',10)">详情</a></td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c6',9)">详情</a></td>
     <td>&nbsp;</td>
 </tr>
 
@@ -2452,7 +2824,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             <pre>
             
 pt6.3: case7_3----中英文标点使用混乱-逗号错误
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三,男，1980年11月16日生，汉族，住所：云南省昆明市盘龙区'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三,男，1980年11月16日生，汉族，住云南省昆明市盘龙区'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
 期望返回:{'level': 1, 'type': 1401, 'keyword': ',', 'suggestion': '，', 'tip': ''}
@@ -2482,7 +2854,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             <pre>
             
 pt6.4: case7_4----中英文标点使用混乱-句号错误
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，住所：云南省昆明市盘龙区.'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告：张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区.'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
 期望返回:{'level': 1, 'type': 1401, 'keyword': '.', 'suggestion': '。', 'tip': ''}
@@ -2526,40 +2898,27 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='ft6.6' class='none'>
-        <td class='failCase'><div class='testcase'>test_punctuation_00006: test_punctuation_00006</div></td>
+    <tr id='pt6.6' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_punctuation_00006: test_punctuation_00006</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.6')" >
-            失败</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.6')" >
+            通过</a>
 
-        <div id='div_ft6.6' class="popup_window">
+        <div id='div_pt6.6' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.6').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.6').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-ft6.6: case7_6----中英文标点使用混乱-书名号错误
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '&lt;民事协议书&gt;'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+pt6.6: case7_7----大数千分位检测-后面不带“元”
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '12346486'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1401, 'keyword': '&lt;', 'suggestion': '《', 'tip': ''}
+期望返回:[]
 实际返回:[]
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_标点符号.py", line 40, in test_punctuation
-    res = response.json()["detections"][0]["corrections"][0]
-IndexError: list index out of range
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_标点符号.py", line 47, in test_punctuation
-    self.assertEqual(expectResult,res)
-AssertionError: {'level': 1, 'type': 1401, 'keyword': '&lt;', 'suggestion': '《', 'tip': ''} != []
 
 
             </pre>
@@ -2584,12 +2943,12 @@ AssertionError: {'level': 1, 'type': 1401, 'keyword': '&lt;', 'suggestion': '《
             </div>
             <pre>
             
-pt6.7: case7_7----大数千分位检测-后面不带“元”
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '12346486'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+pt6.7: case7_8----大数千分位检测-后面带“元”
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '12346486元'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:[]
-实际返回:[]
+期望返回:{'level': 1, 'type': 1201, 'keyword': '12346486', 'suggestion': '12,346,486', 'tip': None}
+实际返回:{'level': 1, 'type': 1201, 'keyword': '12346486', 'suggestion': '12,346,486', 'tip': None}
 
 
             </pre>
@@ -2614,71 +2973,12 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt6.8: case7_8----大数千分位检测-后面带“元”
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '12346486元'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
-D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn((
-期望返回:{'level': 1, 'type': 1201, 'keyword': '12346486', 'suggestion': '12,346,486', 'tip': None}
-实际返回:{'level': 1, 'type': 1201, 'keyword': '12346486', 'suggestion': '12,346,486', 'tip': None}
-
-
-            </pre>
-        </div>
-        <!--css div popup end-->
-    </td>
-    <td></td>
-</tr>
-
-    <tr id='ft6.9' class='none'>
-        <td class='failCase'><div class='testcase'>test_punctuation_00009: test_punctuation_00009</div></td>
-        <td colspan='5' align='center'>
-
-        <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.9')" >
-            失败</a>
-
-        <div id='div_ft6.9' class="popup_window">
-            <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.9').style.display = 'none' " >
-               [x]</a>
-            </div>
-            <pre>
-            
-ft6.9: case7_9----大数千分位检测-有两个千分符
+pt6.8: case7_9----大数千分位检测-有两个千分符
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '1,560,000元'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
 期望返回:[]
-实际返回:{'level': 1, 'type': 1401, 'keyword': ',', 'suggestion': '，', 'tip': ''}
-期望返回:[]
-实际返回:[{'index': 2, 'corrections': [{'level': 1, 'type': 1401, 'keyword': ',', 'suggestion': '，', 'tip': ''}]}]
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_标点符号.py", line 42, in test_punctuation
-    self.assertEqual(expectResult,res)
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
-    assertion_func(first, second, msg=msg)
-AssertionError: [] != {'level': 1, 'type': 1401, 'keyword': ',', 'suggestion': '，', 'tip': ''}
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_标点符号.py", line 47, in test_punctuation
-    self.assertEqual(expectResult,res)
-AssertionError: Lists differ: [] != [{'index': 2, 'corrections': [{'level': 1,[58 chars]'}]}]
-
-Second list contains 1 additional elements.
-First extra element 0:
-{'index': 2, 'corrections': [{'level': 1, 'type': 1401, 'keyword': ',', 'suggestion': '，', 'tip': ''}]}
-
-- []
-+ [{'corrections': [{'keyword': ',',
-+                    'level': 1,
-+                    'suggestion': '，',
-+                    'tip': '',
-+                    'type': 1401}],
-+   'index': 2}]
+实际返回:[]
 
 
             </pre>
@@ -2688,40 +2988,27 @@ First extra element 0:
     <td></td>
 </tr>
 
-    <tr id='ft6.10' class='none'>
-        <td class='failCase'><div class='testcase'>test_punctuation_00010: test_punctuation_00010</div></td>
+    <tr id='pt6.9' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_punctuation_00009: test_punctuation_00009</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.10')" >
-            失败</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.9')" >
+            通过</a>
 
-        <div id='div_ft6.10' class="popup_window">
+        <div id='div_pt6.9' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.10').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.9').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-ft6.10: case7_10----大数千分位检测-千分符个数不够
+pt6.9: case7_10----大数千分位检测-千分符个数不够
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '1560,000元'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
 期望返回:{'level': 1, 'type': 1201, 'keyword': '1560,000', 'suggestion': '1,560,000', 'tip': None}
-实际返回:[]
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_标点符号.py", line 40, in test_punctuation
-    res = response.json()["detections"][0]["corrections"][0]
-IndexError: list index out of range
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Projects\PycharmProjects\unittest\Case\case2_文书纠错\test_标点符号.py", line 47, in test_punctuation
-    self.assertEqual(expectResult,res)
-AssertionError: {'level': 1, 'type': 1201, 'keyword': '15[43 chars]None} != []
+实际返回:{'level': 1, 'type': 1201, 'keyword': '1560,000', 'suggestion': '1,560,000', 'tip': None}
 
 
             </pre>
@@ -3100,7 +3387,7 @@ AssertionError: {'level': 1, 'type': 1006, 'keyword': '[2[38 chars]None} != []
             <pre>
             
 ft7.12: case5_14----只检测开头的一个案号
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '（2022）最高法民初2071号'}, {'index': 3, 'content': '再审申请人刘胜利因与被申请人唐景珍房屋买卖合同纠纷一案，不服吉林省高级人民法院（2021）吉民终292号民事判决，向本院申请再审。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '（2022）最高法民初2071号'}, {'index': 3, 'content': '再审申请人刘胜利因与被申请人唐景珍房屋买卖合同纠纷，不服吉林省高级人民法院（2021）吉民终292号民事判决，向本院申请再审。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
 期望返回:[]
@@ -3148,18 +3435,18 @@ First extra element 0:
     <td></td>
 </tr>
 
-<tr class='failClass'>
-    <td>Case.case3_敏感词.test_敏感词.TestSensWord</td>
-    <td>28</td>
-    <td>27</td>
-    <td>1</td>
+<tr class='passClass'>
+    <td>Case.case2_文书纠错.test_案由错误.TestCaseMain</td>
+    <td>21</td>
+    <td>21</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c8',28)">详情</a></td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c8',21)">详情</a></td>
     <td>&nbsp;</td>
 </tr>
 
     <tr id='pt8.1' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_sensWord_00001: test_sensWord_00001</div></td>
+        <td class='passCase'><div class='testcase'>test_caseMain_00001: test_caseMain_00001</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
@@ -3173,12 +3460,12 @@ First extra element 0:
             </div>
             <pre>
             
-pt8.1: case9_1----涉及恐怖主义
-{'judgeId': 5, 'paragraphs': [{'index': 2, 'content': '法轮功'}]}
+pt8.1: [1;31;40mcase13_1----案由在案由库中
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：范兴浩，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '原告福建威廉涂料有限公司与被告范兴浩买卖合同纠纷一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1501, 'keyword': '法轮功', 'suggestion': '', 'tip': ''}
-实际返回:{'level': 1, 'type': 1501, 'keyword': '法轮功', 'suggestion': '', 'tip': ''}
+期望返回:[]
+实际返回:[]
 
 
             </pre>
@@ -3189,7 +3476,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
 </tr>
 
     <tr id='pt8.2' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_sensWord_00002: test_sensWord_00002</div></td>
+        <td class='passCase'><div class='testcase'>test_caseMain_00002: test_caseMain_00002</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
@@ -3203,12 +3490,12 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt8.2: case9_2----涉及恐怖主义
-{'judgeId': 5, 'paragraphs': [{'index': 2, 'content': '邪教'}]}
+pt8.2: [1;31;40mcase13_2----案由不在案由库中
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '原告姚俊杰与被告张清辉工程承包合同纠纷一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1501, 'keyword': '邪教', 'suggestion': '', 'tip': ''}
-实际返回:{'level': 1, 'type': 1501, 'keyword': '邪教', 'suggestion': '', 'tip': ''}
+期望返回:[{'level': 1, 'type': 1900, 'keyword': '工程承包合同纠纷', 'suggestion': '', 'tip': ''}]
+实际返回:[{'level': 1, 'type': 1900, 'keyword': '工程承包合同纠纷', 'suggestion': '', 'tip': ''}]
 
 
             </pre>
@@ -3219,7 +3506,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
 </tr>
 
     <tr id='pt8.3' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_sensWord_00003: test_sensWord_00003</div></td>
+        <td class='passCase'><div class='testcase'>test_caseMain_00003: test_caseMain_00003</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
@@ -3233,12 +3520,12 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt8.3: case9_3----涉及危害国家安全犯罪、涉及国防利益、涉及军事秘密
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '打倒共产党'}]}
+pt8.3: [1;31;40mcase13_3----有“一案”但非案由信息的
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '原告姚俊杰与被告张清辉建设工程施工合同纠纷一案'}, {'index': 3, 'content': '法院在审理（2022）最高法民初123号一案中'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1502, 'keyword': '打倒共产党', 'suggestion': '', 'tip': ''}
-实际返回:{'level': 1, 'type': 1502, 'keyword': '打倒共产党', 'suggestion': '', 'tip': ''}
+期望返回:[]
+实际返回:[]
 
 
             </pre>
@@ -3249,7 +3536,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
 </tr>
 
     <tr id='pt8.4' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_sensWord_00004: test_sensWord_00004</div></td>
+        <td class='passCase'><div class='testcase'>test_caseMain_00004: test_caseMain_00004</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
@@ -3263,12 +3550,12 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt8.4: case9_4----涉及危害国家安全犯罪、涉及国防利益、涉及军事秘密
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '煽动颠覆国家政权'}]}
+pt8.4: [1;31;40mcase13_4----有两个案由信息且以“和”连接的
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被上诉人（一审原告）：夏中福，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '上诉人酒泉市华美种子有限责任公司（以下简称华美公司）因与被上诉人夏中福植物新品种临时保护期使用费纠纷和侵害植物新品种权纠纷一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1502, 'keyword': '煽动颠覆国家政权', 'suggestion': '', 'tip': ''}
-实际返回:{'level': 1, 'type': 1502, 'keyword': '煽动颠覆国家政权', 'suggestion': '', 'tip': ''}
+期望返回:[]
+实际返回:[]
 
 
             </pre>
@@ -3279,7 +3566,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
 </tr>
 
     <tr id='pt8.5' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_sensWord_00005: test_sensWord_00005</div></td>
+        <td class='passCase'><div class='testcase'>test_caseMain_00005: test_caseMain_00005</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
@@ -3293,12 +3580,12 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt8.5: case9_5----涉及国家秘密
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '国家秘密'}]}
+pt8.5: [1;31;40mcase13_5----有两个案由信息且以顿号连接的
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被上诉人（一审原告）：渭南成，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '上诉人中国人寿保险股份有限公司渭南分公司，因与被上诉人渭南成买卖合同纠纷、承揽合同纠纷一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1503, 'keyword': '国家秘密', 'suggestion': '', 'tip': ''}
-实际返回:{'level': 1, 'type': 1503, 'keyword': '国家秘密', 'suggestion': '', 'tip': ''}
+期望返回:[]
+实际返回:[]
 
 
             </pre>
@@ -3309,7 +3596,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
 </tr>
 
     <tr id='pt8.6' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_sensWord_00006: test_sensWord_00006</div></td>
+        <td class='passCase'><div class='testcase'>test_caseMain_00006: test_caseMain_00006</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
@@ -3323,12 +3610,12 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt8.6: case9_6----涉及党和国家形象的谣言、反动言论
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '藏独'}]}
+pt8.6: [1;31;40mcase13_6----案由名称中有顿号的
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '原告姚俊杰与被告张清辉生命权、健康权、身体权纠纷一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1504, 'keyword': '藏独', 'suggestion': '', 'tip': ''}
-实际返回:{'level': 1, 'type': 1504, 'keyword': '藏独', 'suggestion': '', 'tip': ''}
+期望返回:[]
+实际返回:[]
 
 
             </pre>
@@ -3339,7 +3626,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
 </tr>
 
     <tr id='pt8.7' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_sensWord_00007: test_sensWord_00007</div></td>
+        <td class='passCase'><div class='testcase'>test_caseMain_00007: test_caseMain_00007</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
@@ -3353,12 +3640,12 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt8.7: case9_7----涉及党和国家形象的谣言、反动言论
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '疆独'}]}
+pt8.7: [1;31;40mcase13_7----案由名称中有一个顿号的
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '原告姚俊杰与被告张清辉婚姻家庭、继承纠纷一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1504, 'keyword': '疆独', 'suggestion': '', 'tip': ''}
-实际返回:{'level': 1, 'type': 1504, 'keyword': '疆独', 'suggestion': '', 'tip': ''}
+期望返回:[]
+实际返回:[]
 
 
             </pre>
@@ -3369,7 +3656,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
 </tr>
 
     <tr id='pt8.8' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_sensWord_00008: test_sensWord_00008</div></td>
+        <td class='passCase'><div class='testcase'>test_caseMain_00008: test_caseMain_00008</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
@@ -3383,12 +3670,12 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt8.8: case9_8----涉及党和国家形象的谣言、反动言论
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '台独'}]}
+pt8.8: [1;31;40mcase13_8----案由名称中有两个顿号的
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '原告姚俊杰与被告张清辉合同、无因管理、不当得利纠纷一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1504, 'keyword': '台独', 'suggestion': '', 'tip': ''}
-实际返回:{'level': 1, 'type': 1504, 'keyword': '台独', 'suggestion': '', 'tip': ''}
+期望返回:[]
+实际返回:[]
 
 
             </pre>
@@ -3399,7 +3686,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
 </tr>
 
     <tr id='pt8.9' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_sensWord_00009: test_sensWord_00009</div></td>
+        <td class='passCase'><div class='testcase'>test_caseMain_00009: test_caseMain_00009</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
@@ -3413,12 +3700,12 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt8.9: case9_9----涉及党和国家形象的谣言、反动言论
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '社会主义制度'}]}
+pt8.9: [1;31;40mcase13_9----案由名称中有三个顿号的
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '原告姚俊杰与被告张清辉与公司、证券、保险、票据等有关的民事纠纷一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1504, 'keyword': '社会主义制度', 'suggestion': '', 'tip': ''}
-实际返回:{'level': 1, 'type': 1504, 'keyword': '社会主义制度', 'suggestion': '', 'tip': ''}
+期望返回:[]
+实际返回:[]
 
 
             </pre>
@@ -3429,7 +3716,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
 </tr>
 
     <tr id='pt8.10' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_sensWord_00010: test_sensWord_00010</div></td>
+        <td class='passCase'><div class='testcase'>test_caseMain_00010: test_caseMain_00010</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
@@ -3443,12 +3730,12 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt8.10: case9_10----涉及党和国家形象的谣言、反动言论
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '共产主义'}]}
+pt8.10: [1;31;40mcase13_10----案由名称中有“和”字的
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '原告姚俊杰与被告张清辉建筑物和其他土地附着物抵押权纠纷一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1504, 'keyword': '共产主义', 'suggestion': '', 'tip': ''}
-实际返回:{'level': 1, 'type': 1504, 'keyword': '共产主义', 'suggestion': '', 'tip': ''}
+期望返回:[]
+实际返回:[]
 
 
             </pre>
@@ -3459,7 +3746,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
 </tr>
 
     <tr id='pt8.11' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_sensWord_00011: test_sensWord_00011</div></td>
+        <td class='passCase'><div class='testcase'>test_caseMain_00011: test_caseMain_00011</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
@@ -3473,12 +3760,12 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt8.11: case9_11----涉及党和国家领导人
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '李克强'}]}
+pt8.11: [1;31;40mcase13_11----案由名称中有“和”字的
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '原告姚俊杰与被告张清辉申请破产和解一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1505, 'keyword': '涉及党和国家领导人', 'suggestion': '', 'tip': ''}
-实际返回:{'level': 1, 'type': 1505, 'keyword': '涉及党和国家领导人', 'suggestion': '', 'tip': ''}
+期望返回:[]
+实际返回:[]
 
 
             </pre>
@@ -3489,7 +3776,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
 </tr>
 
     <tr id='pt8.12' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_sensWord_00012: test_sensWord_00012</div></td>
+        <td class='passCase'><div class='testcase'>test_caseMain_00012: test_caseMain_00012</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
@@ -3503,12 +3790,12 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt8.12: case9_12----涉及党和国家领导人
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '邓小平'}]}
+pt8.12: [1;31;40mcase13_12----案由名称中有“和”字的
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '原告姚俊杰与被告张清辉协助送达司法文书和调查取证一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1505, 'keyword': '涉及党和国家领导人', 'suggestion': '', 'tip': ''}
-实际返回:{'level': 1, 'type': 1505, 'keyword': '涉及党和国家领导人', 'suggestion': '', 'tip': ''}
+期望返回:[]
+实际返回:[]
 
 
             </pre>
@@ -3519,7 +3806,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
 </tr>
 
     <tr id='pt8.13' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_sensWord_00013: test_sensWord_00013</div></td>
+        <td class='passCase'><div class='testcase'>test_caseMain_00013: test_caseMain_00013</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
@@ -3533,12 +3820,12 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt8.13: case9_13----涉及党和国家领导人
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '胡锦涛'}]}
+pt8.13: [1;31;40mcase13_13----案由名称中有“和”字以及顿号的
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '原告姚俊杰与被告张清辉申请承认和执行外国法院民事判决、裁定一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
-期望返回:{'level': 1, 'type': 1505, 'keyword': '涉及党和国家领导人', 'suggestion': '', 'tip': ''}
-实际返回:{'level': 1, 'type': 1505, 'keyword': '涉及党和国家领导人', 'suggestion': '', 'tip': ''}
+期望返回:[]
+实际返回:[]
 
 
             </pre>
@@ -3549,7 +3836,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
 </tr>
 
     <tr id='pt8.14' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_sensWord_00014: test_sensWord_00014</div></td>
+        <td class='passCase'><div class='testcase'>test_caseMain_00014: test_caseMain_00014</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
@@ -3563,8 +3850,8 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt8.14: case9_14----涉及党和国家领导人
-{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '毛泽东'}]}
+pt8.14: [1;31;40mcase13_14----案由名称中有“与”字的
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '原告姚俊杰与被告张清辉与公司有关的纠纷一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
 期望返回:[]
@@ -3579,7 +3866,7 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
 </tr>
 
     <tr id='pt8.15' class='hiddenRow'>
-        <td class='passCase'><div class='testcase'>test_sensWord_00015: test_sensWord_00015</div></td>
+        <td class='passCase'><div class='testcase'>test_caseMain_00015: test_caseMain_00015</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
@@ -3593,7 +3880,647 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
             </div>
             <pre>
             
-pt8.15: case9_15----涉及党和国家领导人
+pt8.15: [1;31;40mcase13_15----案由名称中有“及”字的
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '原告姚俊杰与被告张清辉申请扣押船用燃油及船用物料一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:[]
+实际返回:[]
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt8.16' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_caseMain_00016: test_caseMain_00016</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.16')" >
+            通过</a>
+
+        <div id='div_pt8.16' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.16').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt8.16: [1;31;40mcase13_16----案由名称中有“及”字的
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '一审第三人：郭国胜、陈四刚、徐克起'}, {'index': 2, 'content': '再审申请人张小变因与被申请人海南中航天建设集团有限公司（以下简称中航天公司）及一审第三人郭国胜、陈四刚、徐克起一般取回权纠纷一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:[]
+实际返回:[]
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt8.17' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_caseMain_00017: test_caseMain_00017</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.17')" >
+            通过</a>
+
+        <div id='div_pt8.17' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.17').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt8.17: [1;31;40mcase13_17----案由名称不对-匹配但缺少字
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：范兴浩，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '原告福建威廉涂料有限公司与被告范兴浩工程施工合同纠纷一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:[{'level': 1, 'type': 1900, 'keyword': '工程施工合同纠纷', 'suggestion': '', 'tip': ''}]
+实际返回:[{'level': 1, 'type': 1900, 'keyword': '工程施工合同纠纷', 'suggestion': '', 'tip': ''}]
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt8.18' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_caseMain_00018: test_caseMain_00018</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.18')" >
+            通过</a>
+
+        <div id='div_pt8.18' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.18').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt8.18: [1;31;40mcase13_18----案由名称不对-部分匹配、部分不匹配
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '被告：范兴浩，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '原告福建威廉涂料有限公司与被告范兴浩建设合同纠纷一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:[{'level': 1, 'type': 1900, 'keyword': '建设合同纠纷', 'suggestion': '', 'tip': ''}]
+实际返回:[{'level': 1, 'type': 1900, 'keyword': '建设合同纠纷', 'suggestion': '', 'tip': ''}]
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt8.19' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_caseMain_00019: test_caseMain_00019</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.19')" >
+            通过</a>
+
+        <div id='div_pt8.19' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.19').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt8.19: [1;31;40mcase13_19----案由名称不对-缺少“责任纠纷”
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '原告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '上诉人姚俊杰与原告张清辉船舶碰撞损害一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:[{'level': 1, 'type': 1900, 'keyword': '船舶碰撞损害', 'suggestion': '', 'tip': ''}]
+实际返回:[{'level': 1, 'type': 1900, 'keyword': '船舶碰撞损害', 'suggestion': '', 'tip': ''}]
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt8.20' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_caseMain_00020: test_caseMain_00020</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.20')" >
+            通过</a>
+
+        <div id='div_pt8.20' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.20').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt8.20: [1;31;40mcase13_20----案由名称不对-有多余的信息
+{'judgeId': 3, 'paragraphs': [{'index': 1, 'content': '原告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市'}, {'index': 2, 'content': '上诉人姚俊杰与原告张清辉不当婚约财产纠纷一案'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:[{'level': 1, 'type': 1900, 'keyword': '不当婚约财产纠纷', 'suggestion': '', 'tip': ''}]
+实际返回:[{'level': 1, 'type': 1900, 'keyword': '不当婚约财产纠纷', 'suggestion': '', 'tip': ''}]
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt8.21' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_caseMain_00021: test_caseMain_00021</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.21')" >
+            通过</a>
+
+        <div id='div_pt8.21' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.21').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt8.21: [1;31;40mcase13_21----案由名称不对-有多余的信息
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '原告王德范与被告沈阳汉爵装饰材料有限公司劳动争议纠纷一案。'}, {'index': 10, 'content': '案件受理费4,676元，由原告林印党负担。'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:[{'level': 1, 'type': 1900, 'keyword': '劳动争议纠纷', 'suggestion': '', 'tip': ''}]
+实际返回:[{'level': 1, 'type': 1900, 'keyword': '劳动争议纠纷', 'suggestion': '', 'tip': ''}]
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr class='passClass'>
+    <td>Case.case3_敏感词.test_敏感词.TestSensWord</td>
+    <td>28</td>
+    <td>28</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c9',28)">详情</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+    <tr id='pt9.1' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00001: test_sensWord_00001</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.1')" >
+            通过</a>
+
+        <div id='div_pt9.1' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.1').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt9.1: case9_1----涉及恐怖主义
+{'judgeId': 5, 'paragraphs': [{'index': 2, 'content': '法轮功'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1501, 'keyword': '法轮功', 'suggestion': '', 'tip': ''}
+实际返回:{'level': 1, 'type': 1501, 'keyword': '法轮功', 'suggestion': '', 'tip': ''}
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt9.2' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00002: test_sensWord_00002</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.2')" >
+            通过</a>
+
+        <div id='div_pt9.2' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.2').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt9.2: case9_2----涉及恐怖主义
+{'judgeId': 5, 'paragraphs': [{'index': 2, 'content': '邪教'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1501, 'keyword': '邪教', 'suggestion': '', 'tip': ''}
+实际返回:{'level': 1, 'type': 1501, 'keyword': '邪教', 'suggestion': '', 'tip': ''}
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt9.3' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00003: test_sensWord_00003</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.3')" >
+            通过</a>
+
+        <div id='div_pt9.3' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.3').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt9.3: case9_3----涉及危害国家安全犯罪、涉及国防利益、涉及军事秘密
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '打倒共产党'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1502, 'keyword': '打倒共产党', 'suggestion': '', 'tip': ''}
+实际返回:{'level': 1, 'type': 1502, 'keyword': '打倒共产党', 'suggestion': '', 'tip': ''}
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt9.4' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00004: test_sensWord_00004</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.4')" >
+            通过</a>
+
+        <div id='div_pt9.4' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.4').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt9.4: case9_4----涉及危害国家安全犯罪、涉及国防利益、涉及军事秘密
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '煽动颠覆国家政权'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1502, 'keyword': '煽动颠覆国家政权', 'suggestion': '', 'tip': ''}
+实际返回:{'level': 1, 'type': 1502, 'keyword': '煽动颠覆国家政权', 'suggestion': '', 'tip': ''}
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt9.5' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00005: test_sensWord_00005</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.5')" >
+            通过</a>
+
+        <div id='div_pt9.5' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.5').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt9.5: case9_5----涉及国家秘密
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '国家秘密'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1503, 'keyword': '国家秘密', 'suggestion': '', 'tip': ''}
+实际返回:{'level': 1, 'type': 1503, 'keyword': '国家秘密', 'suggestion': '', 'tip': ''}
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt9.6' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00006: test_sensWord_00006</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.6')" >
+            通过</a>
+
+        <div id='div_pt9.6' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.6').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt9.6: case9_6----涉及党和国家形象的谣言、反动言论
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '藏独'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1504, 'keyword': '藏独', 'suggestion': '', 'tip': ''}
+实际返回:{'level': 1, 'type': 1504, 'keyword': '藏独', 'suggestion': '', 'tip': ''}
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt9.7' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00007: test_sensWord_00007</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.7')" >
+            通过</a>
+
+        <div id='div_pt9.7' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.7').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt9.7: case9_7----涉及党和国家形象的谣言、反动言论
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '疆独'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1504, 'keyword': '疆独', 'suggestion': '', 'tip': ''}
+实际返回:{'level': 1, 'type': 1504, 'keyword': '疆独', 'suggestion': '', 'tip': ''}
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt9.8' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00008: test_sensWord_00008</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.8')" >
+            通过</a>
+
+        <div id='div_pt9.8' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.8').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt9.8: case9_8----涉及党和国家形象的谣言、反动言论
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '台独'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1504, 'keyword': '台独', 'suggestion': '', 'tip': ''}
+实际返回:{'level': 1, 'type': 1504, 'keyword': '台独', 'suggestion': '', 'tip': ''}
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt9.9' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00009: test_sensWord_00009</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.9')" >
+            通过</a>
+
+        <div id='div_pt9.9' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.9').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt9.9: case9_9----涉及党和国家形象的谣言、反动言论
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '社会主义制度'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1504, 'keyword': '社会主义制度', 'suggestion': '', 'tip': ''}
+实际返回:{'level': 1, 'type': 1504, 'keyword': '社会主义制度', 'suggestion': '', 'tip': ''}
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt9.10' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00010: test_sensWord_00010</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.10')" >
+            通过</a>
+
+        <div id='div_pt9.10' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.10').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt9.10: case9_10----涉及党和国家形象的谣言、反动言论
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '共产主义'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1504, 'keyword': '共产主义', 'suggestion': '', 'tip': ''}
+实际返回:{'level': 1, 'type': 1504, 'keyword': '共产主义', 'suggestion': '', 'tip': ''}
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt9.11' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00011: test_sensWord_00011</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.11')" >
+            通过</a>
+
+        <div id='div_pt9.11' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.11').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt9.11: case9_11----涉及党和国家领导人
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '李克强'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1505, 'keyword': '涉及党和国家领导人', 'suggestion': '', 'tip': ''}
+实际返回:{'level': 1, 'type': 1505, 'keyword': '涉及党和国家领导人', 'suggestion': '', 'tip': ''}
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt9.12' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00012: test_sensWord_00012</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.12')" >
+            通过</a>
+
+        <div id='div_pt9.12' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.12').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt9.12: case9_12----涉及党和国家领导人
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '邓小平'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1505, 'keyword': '涉及党和国家领导人', 'suggestion': '', 'tip': ''}
+实际返回:{'level': 1, 'type': 1505, 'keyword': '涉及党和国家领导人', 'suggestion': '', 'tip': ''}
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt9.13' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00013: test_sensWord_00013</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.13')" >
+            通过</a>
+
+        <div id='div_pt9.13' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.13').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt9.13: case9_13----涉及党和国家领导人
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '胡锦涛'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:{'level': 1, 'type': 1505, 'keyword': '涉及党和国家领导人', 'suggestion': '', 'tip': ''}
+实际返回:{'level': 1, 'type': 1505, 'keyword': '涉及党和国家领导人', 'suggestion': '', 'tip': ''}
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt9.14' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00014: test_sensWord_00014</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.14')" >
+            通过</a>
+
+        <div id='div_pt9.14' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.14').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt9.14: case9_14----涉及党和国家领导人
+{'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '毛泽东'}]}
+D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn((
+期望返回:[]
+实际返回:[]
+
+
+            </pre>
+        </div>
+        <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+    <tr id='pt9.15' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00015: test_sensWord_00015</div></td>
+        <td colspan='5' align='center'>
+
+        <!--css div popup start-->
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.15')" >
+            通过</a>
+
+        <div id='div_pt9.15' class="popup_window">
+            <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.15').style.display = 'none' " >
+               [x]</a>
+            </div>
+            <pre>
+            
+pt9.15: case9_15----涉及党和国家领导人
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '副委员长'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -3608,22 +4535,22 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt8.16' class='hiddenRow'>
+    <tr id='pt9.16' class='hiddenRow'>
         <td class='passCase'><div class='testcase'>test_sensWord_00016: test_sensWord_00016</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.16')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.16')" >
             通过</a>
 
-        <div id='div_pt8.16' class="popup_window">
+        <div id='div_pt9.16' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.16').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.16').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt8.16: case9_16----涉及党和国家领导人
+pt9.16: case9_16----涉及党和国家领导人
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '习明泽'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -3638,22 +4565,22 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt8.17' class='hiddenRow'>
+    <tr id='pt9.17' class='hiddenRow'>
         <td class='passCase'><div class='testcase'>test_sensWord_00017: test_sensWord_00017</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.17')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.17')" >
             通过</a>
 
-        <div id='div_pt8.17' class="popup_window">
+        <div id='div_pt9.17' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.17').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.17').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt8.17: case9_17----涉及不当言论
+pt9.17: case9_17----涉及不当言论
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '谣言'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -3668,22 +4595,22 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt8.18' class='hiddenRow'>
+    <tr id='pt9.18' class='hiddenRow'>
         <td class='passCase'><div class='testcase'>test_sensWord_00018: test_sensWord_00018</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.18')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.18')" >
             通过</a>
 
-        <div id='div_pt8.18' class="popup_window">
+        <div id='div_pt9.18' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.18').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.18').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt8.18: case9_18----人民法院认为可能影响政治、军事安全的其他情形
+pt9.18: case9_18----人民法院认为可能影响政治、军事安全的其他情形
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '死刑'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -3698,22 +4625,22 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt8.19' class='hiddenRow'>
+    <tr id='pt9.19' class='hiddenRow'>
         <td class='passCase'><div class='testcase'>test_sensWord_00019: test_sensWord_00019</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.19')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.19')" >
             通过</a>
 
-        <div id='div_pt8.19' class="popup_window">
+        <div id='div_pt9.19' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.19').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.19').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt8.19: case9_19----人民法院认为可能影响政治、军事安全的其他情形
+pt9.19: case9_19----人民法院认为可能影响政治、军事安全的其他情形
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '寻衅滋事'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -3728,22 +4655,22 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt8.20' class='hiddenRow'>
+    <tr id='pt9.20' class='hiddenRow'>
         <td class='passCase'><div class='testcase'>test_sensWord_00020: test_sensWord_00020</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.20')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.20')" >
             通过</a>
 
-        <div id='div_pt8.20' class="popup_window">
+        <div id='div_pt9.20' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.20').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.20').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt8.20: case9_20----人民法院认为可能影响政治、军事安全的其他情形
+pt9.20: case9_20----人民法院认为可能影响政治、军事安全的其他情形
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '诽谤'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -3758,22 +4685,22 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt8.21' class='hiddenRow'>
+    <tr id='pt9.21' class='hiddenRow'>
         <td class='passCase'><div class='testcase'>test_sensWord_00021: test_sensWord_00021</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.21')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.21')" >
             通过</a>
 
-        <div id='div_pt8.21' class="popup_window">
+        <div id='div_pt9.21' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.21').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.21').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt8.21: case9_21----人民法院认为可能影响政治、军事安全的其他情形
+pt9.21: case9_21----人民法院认为可能影响政治、军事安全的其他情形
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '中南海'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -3788,22 +4715,22 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt8.22' class='hiddenRow'>
+    <tr id='pt9.22' class='hiddenRow'>
         <td class='passCase'><div class='testcase'>test_sensWord_00022: test_sensWord_00022</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.22')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.22')" >
             通过</a>
 
-        <div id='div_pt8.22' class="popup_window">
+        <div id='div_pt9.22' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.22').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.22').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt8.22: case9_22----人民法院认为可能影响政治、军事安全的其他情形
+pt9.22: case9_22----人民法院认为可能影响政治、军事安全的其他情形
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '天安门'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -3818,22 +4745,22 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt8.23' class='hiddenRow'>
+    <tr id='pt9.23' class='hiddenRow'>
         <td class='passCase'><div class='testcase'>test_sensWord_00023: test_sensWord_00023</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.23')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.23')" >
             通过</a>
 
-        <div id='div_pt8.23' class="popup_window">
+        <div id='div_pt9.23' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.23').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.23').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt8.23: case9_23----人民法院认为可能影响政治、军事安全的其他情形
+pt9.23: case9_23----人民法院认为可能影响政治、军事安全的其他情形
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '公安局'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -3848,22 +4775,22 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt8.24' class='hiddenRow'>
+    <tr id='pt9.24' class='hiddenRow'>
         <td class='passCase'><div class='testcase'>test_sensWord_00024: test_sensWord_00024</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.24')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.24')" >
             通过</a>
 
-        <div id='div_pt8.24' class="popup_window">
+        <div id='div_pt9.24' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.24').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.24').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt8.24: case9_24----人民法院认为可能影响政治、军事安全的其他情形
+pt9.24: case9_24----人民法院认为可能影响政治、军事安全的其他情形
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '公安机关'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -3878,22 +4805,22 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt8.25' class='hiddenRow'>
+    <tr id='pt9.25' class='hiddenRow'>
         <td class='passCase'><div class='testcase'>test_sensWord_00025: test_sensWord_00025</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.25')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.25')" >
             通过</a>
 
-        <div id='div_pt8.25' class="popup_window">
+        <div id='div_pt9.25' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.25').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.25').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt8.25: case9_25----人民法院认为可能影响政治、军事安全的其他情形
+pt9.25: case9_25----人民法院认为可能影响政治、军事安全的其他情形
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '侮辱罪'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -3908,22 +4835,22 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt8.26' class='hiddenRow'>
+    <tr id='pt9.26' class='hiddenRow'>
         <td class='passCase'><div class='testcase'>test_sensWord_00026: test_sensWord_00026</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.26')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.26')" >
             通过</a>
 
-        <div id='div_pt8.26' class="popup_window">
+        <div id='div_pt9.26' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.26').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.26').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt8.26: case9_27----不涉及敏感词的
+pt9.26: case9_27----不涉及敏感词的
 {'judgeId': 3, 'paragraphs': [{'index': 2, 'content': '婚姻登记机关查明双方确实是自愿并对子女和财产问题已有适当处理时，发给离婚证'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -3938,22 +4865,22 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='pt8.27' class='hiddenRow'>
+    <tr id='pt9.27' class='hiddenRow'>
         <td class='passCase'><div class='testcase'>test_sensWord_00027: test_sensWord_00027</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.27')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.27')" >
             通过</a>
 
-        <div id='div_pt8.27' class="popup_window">
+        <div id='div_pt9.27' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.27').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.27').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-pt8.27: case9_28----在个人敏感词库中
+pt9.27: case9_28----在个人敏感词库中
 {'judgeId': 9, 'paragraphs': [{'index': 1, 'content': '国民党'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
@@ -3968,56 +4895,27 @@ D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpo
     <td></td>
 </tr>
 
-    <tr id='ft8.28' class='none'>
-        <td class='failCase'><div class='testcase'>test_sensWord_00028: test_sensWord_00028</div></td>
+    <tr id='pt9.28' class='hiddenRow'>
+        <td class='passCase'><div class='testcase'>test_sensWord_00028: test_sensWord_00028</div></td>
         <td colspan='5' align='center'>
 
         <!--css div popup start-->
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft8.28')" >
-            失败</a>
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.28')" >
+            通过</a>
 
-        <div id='div_ft8.28' class="popup_window">
+        <div id='div_pt9.28' class="popup_window">
             <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_ft8.28').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.28').style.display = 'none' " >
                [x]</a>
             </div>
             <pre>
             
-ft8.28: case9_29----不在当前账号的个人敏感词库中
+pt9.28: case9_29----不在当前账号的个人敏感词库中
 {'judgeId': 4, 'paragraphs': [{'index': 1, 'content': '国民党'}]}
 D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn((
 期望返回:[]
-实际返回:{'level': 1, 'type': 1504, 'keyword': '国民党', 'suggestion': '', 'tip': ''}
-期望返回:[]
-实际返回:[{'index': 1, 'corrections': [{'level': 1, 'type': 1504, 'keyword': '国民党', 'suggestion': '', 'tip': ''}]}]
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\Case\case3_敏感词\test_敏感词.py", line 42, in test_sensWord
-    self.assertEqual(expectResult,res)
-  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2544.0_x64__qbz5n2kfra8p0\lib\unittest\case.py", line 837, in assertEqual
-    assertion_func(first, second, msg=msg)
-AssertionError: [] != {'level': 1, 'type': 1504, 'keyword': '国民党', 'suggestion': '', 'tip': ''}
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\Projects\PycharmProjects\unittest\venv\lib\site-packages\ddt.py", line 145, in wrapper
-    return func(self, *args, **kwargs)
-  File "D:\Projects\PycharmProjects\unittest\Case\case3_敏感词\test_敏感词.py", line 47, in test_sensWord
-    self.assertEqual(expectResult,res)
-AssertionError: Lists differ: [] != [{'index': 1, 'corrections': [{'level': 1,[59 chars]'}]}]
-
-Second list contains 1 additional elements.
-First extra element 0:
-{'index': 1, 'corrections': [{'level': 1, 'type': 1504, 'keyword': '国民党', 'suggestion': '', 'tip': ''}]}
-
-- []
-+ [{'corrections': [{'keyword': '国民党',
-+                    'level': 1,
-+                    'suggestion': '',
-+                    'tip': '',
-+                    'type': 1504}],
-+   'index': 1}]
+实际返回:[]
 
 
             </pre>
@@ -4029,16 +4927,16 @@ First extra element 0:
 
 <tr id='total_row'>
     <td>总计</td>
+    <td>130</td>
     <td>105</td>
-    <td>87</td>
-    <td>18</td>
+    <td>25</td>
     <td>0</td>
-	<td>通过率：82.86%</td>
+	<td>通过率：80.77%</td>
 	<td>&nbsp;</td>
 </tr>
 </table>
 <script>
-    drawCircle(87, 18, 0)
+    drawCircle(105, 25, 0)
 </script>
 
 <div id='ending'>&nbsp;</div>

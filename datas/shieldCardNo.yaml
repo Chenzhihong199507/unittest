@@ -1,0 +1,97 @@
+#屏蔽银行卡号---API/#48
+-
+ caseName: case15_1----银行卡号暴露（16位）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "银行卡号：6222010235572211"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2001,
+                    "keyword": "6222010235572211",
+                    "suggestion": "622201xxxxxxxxx2211",
+                    "tip": ""
+                }
+-
+ caseName: case15_2----银行卡号暴露（17位）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "62220102355722118"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2001,
+                    "keyword": "62220102355722118",
+                    "suggestion": "622201xxxxxxxxx2118",
+                    "tip": ""
+                }
+-
+ caseName: case15_3----银行卡号暴露（18位）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "622201023557221184"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2001,
+                    "keyword": "622201023557221184",
+                    "suggestion": "622201xxxxxxxxx1184",
+                    "tip": ""
+                }
+-
+ caseName: case15_4----银行卡号暴露（19位）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "6222010235572211849"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2001,
+                    "keyword": "6222010235572211849",
+                    "suggestion": "622201xxxxxxxxx1849",
+                    "tip": ""
+                }
+-
+ caseName: case15_5----银行卡号暴露（超过19位）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "6222010235572211845682"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case15_6----银行卡号暴露（少于16位）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "622201023557221"
+                    }
+                ]
+            }
+ expectResult: []
