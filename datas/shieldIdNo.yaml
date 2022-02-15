@@ -1,0 +1,205 @@
+#屏蔽银行卡号---API/#48
+-
+ caseName: case19_1----正确数据-输入15位身份证号
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "320311770706001"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2005,
+                    "keyword": "320311770706001",
+                    "suggestion": "320311xxxxxx001",
+                    "tip": ""
+                }
+-
+ caseName: case19_2----正确数据-输入18位身份证号且只有数字
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "130701199310302288"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2005,
+                    "keyword": "130701199310302288",
+                    "suggestion": "130701xxxxxxxxx288",
+                    "tip": ""
+                }
+-
+ caseName: case19_3----正确数据_输入18位身份证号且最后一位为X
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "52030219891209794X"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2005,
+                    "keyword": "52030219891209794X",
+                    "suggestion": "520302xxxxxxxxx94X",
+                    "tip": ""
+                }
+#-
+# caseName: case19_4----错误数据_输入18位身份证号且最后一位为除X外的字母
+# payloads:  {
+#                "judgeId": 3,
+#                "paragraphs": [
+#                    {
+#                        "index": 2,
+#                        "content": "52030219891209794Y"
+#                    }
+#                ]
+#            }
+# expectResult: []
+-
+ caseName: case19_5----错误数据-输入数字少于15位
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "32031177070600"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case19_6----错误数据-输入数字多于15位少于18位（16位）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "3203117707060011"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2001,
+                    "keyword": "3203117707060011",
+                    "suggestion": "320311xxxxxx0011",
+                    "tip": ""
+                }
+-
+ caseName: case19_7----错误数据-输入数字少于18位（17位）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "52030219891209794"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2001,
+                    "keyword": "52030219891209794",
+                    "suggestion": "520302xxxxxxx9794",
+                    "tip": ""
+                }
+-
+ caseName: case19_8----错误数据-输入数字多于18位
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "5203021989120979412"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2001,
+                    "keyword": "5203021989120979412",
+                    "suggestion": "520302xxxxxxxxx9412",
+                    "tip": ""
+                }
+-
+ caseName: case19_9----错误数据-身份证号中含有字母
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "52030219aaaaddd8912"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case19_10----错误数据-输入数据中含有特殊字符
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "520@#￥%&×302198912"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case19_11----正确数据-输入15位身份证号(有其他文字信息)
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "身份证号为320311770706001"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2005,
+                    "keyword": "320311770706001",
+                    "suggestion": "320311xxxxxx001",
+                    "tip": ""
+                }
+-
+ caseName: case19_12----正确数据-输入18位身份证号且只有数字（有其他文字信息）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "身份证号为130701199310302288"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2005,
+                    "keyword": "130701199310302288",
+                    "suggestion": "130701xxxxxxxxx288",
+                    "tip": ""
+                }
+-
+ caseName: case19_13----以0开头
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "编码：030701199310302288"
+                    }
+                ]
+            }
+ expectResult: []

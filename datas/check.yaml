@@ -1,0 +1,5 @@
+#check接口
+-
+ caseName: case1_1
+ payloads: D:\Projects\python-automation-docs-master\docs\判决书0.docx
+ expectResult: 2

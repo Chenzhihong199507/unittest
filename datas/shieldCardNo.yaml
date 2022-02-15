@@ -14,7 +14,7 @@
                     "level": 1,
                     "type": 2001,
                     "keyword": "6222010235572211",
-                    "suggestion": "622201xxxxxxxxx2211",
+                    "suggestion": "622201xxxxxx2211",
                     "tip": ""
                 }
 -
@@ -32,7 +32,7 @@
                     "level": 1,
                     "type": 2001,
                     "keyword": "62220102355722118",
-                    "suggestion": "622201xxxxxxxxx2118",
+                    "suggestion": "622201xxxxxxx2118",
                     "tip": ""
                 }
 -
@@ -50,7 +50,7 @@
                     "level": 1,
                     "type": 2001,
                     "keyword": "622201023557221184",
-                    "suggestion": "622201xxxxxxxxx1184",
+                    "suggestion": "622201xxxxxxxx1184",
                     "tip": ""
                 }
 -
@@ -95,3 +95,21 @@
                 ]
             }
  expectResult: []
+-
+ caseName: case15_7----银行卡号暴露（有其他文字）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "银行卡号为6222082502004841432"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2001,
+                    "keyword": "6222082502004841432",
+                    "suggestion": "622208xxxxxxxxx1432",
+                    "tip": ""
+                }

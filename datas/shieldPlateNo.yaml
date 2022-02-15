@@ -143,3 +143,21 @@
                     "suggestion": "鲁Dxxxxxx",
                     "tip": ""
                 }
+-
+ caseName: case16_10----车牌号跟其他文字连接
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "车牌号为鲁DF23456"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2002,
+                    "keyword": "鲁DF23456",
+                    "suggestion": "鲁Dxxxxxx",
+                    "tip": ""
+                }

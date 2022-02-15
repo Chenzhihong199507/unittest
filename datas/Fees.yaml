@@ -65,7 +65,7 @@
  expectResult: {
                     "level": 1,
                     "type": 1803,
-                    "keyword": "",
+                    "keyword": "受理费4,676元",
                     "suggestion": "",
                     "tip": "请补充受理费承担人"
                 }
@@ -83,7 +83,7 @@
  expectResult: {
                     "level": 1,
                     "type": 1803,
-                    "keyword": "",
+                    "keyword": "受理费1,837.50元",
                     "suggestion": "",
                     "tip": "请补充受理费承担人"
                 }
@@ -101,7 +101,7 @@
  expectResult: {
                     "level": 1,
                     "type": 1803,
-                    "keyword": "",
+                    "keyword": "受理费11,837.50元",
                     "suggestion": "",
                     "tip": "请补充受理费承担人"
                 }
@@ -233,7 +233,7 @@
  expectResult: {
                     "level": 1,
                     "type": 1803,
-                    "keyword": "",
+                    "keyword": "受理费11,837.50元",
                     "suggestion": "",
                     "tip": "请补充受理费承担人"
                 }
@@ -251,12 +251,12 @@
  expectResult: {
                     "level": 1,
                     "type": 1803,
-                    "keyword": "",
+                    "keyword": "受理费11,837.50元",
                     "suggestion": "",
                     "tip": "请补充受理费承担人"
                 }
 -
- caseName: case12_12----承担人用***代替
+ caseName: case12_13----承担人用***代替
  payloads:  {
                 "judgeId":9,
                 "paragraphs": [
@@ -269,7 +269,7 @@
  expectResult: {
                     "level": 1,
                     "type": 1803,
-                    "keyword": "",
+                    "keyword": "受理费11,837.50元",
                     "suggestion": "",
                     "tip": "请补充受理费承担人"
                 }

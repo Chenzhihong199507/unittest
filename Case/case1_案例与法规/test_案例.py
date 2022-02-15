@@ -4,16 +4,13 @@
 # import unittest
 # import requests
 # import json
-# import ddt
 # from ddt import ddt, data, file_data, unpack
-# from common.excel_handler import ExcelHandler
-# from common.request import APIdemo
 # from common.readConfig import ReadConfigFile
-# from common.readYaml import WRYaml
+# from common.setting import file_path
 #
-# ad = APIdemo()
 # rc = ReadConfigFile()
 # host = rc.read_config("test_host")
+# fp = file_path()
 # #通过yaml文件读取数据
 # # wryaml = WRYaml()
 # # ym = wryaml.read_yaml('D:\\Projects\\PycharmProjects\\unittest\\datas\\CaseInfo.yaml')
@@ -37,7 +34,7 @@
 #         pass
 #
 #     # 4、定义测试用例，名字以“test”开头
-#     @file_data("D:\\Projects\\PycharmProjects\\unittest\\datas\\Cases.yaml")
+#     @file_data(fp.get_data_path("Cases.yaml"))
 #     def test_Cases(self,**kwargs):
 #         """案例查询结果接口"""
 #         caseName = kwargs.get("caseName")
@@ -51,7 +48,7 @@
 #         headers = {
 #             'Content-Type': 'application/json'
 #         }
-#         response = ad.do_post(url,json.dumps(payloads),headers=headers,verify=False)
+#         response = requests.post(url,json.dumps(payloads),headers=headers,verify=False)
 #         res = response.json()
 #         print("期望返回1:" + str(expectResult) + "\n" + "实际返回1:" + str(res["totalResults"]))
 #         print("期望返回2:" + str(expectResult2) + "\n" + "实际返回2:" + str(len(res["data"])))
@@ -72,7 +69,7 @@
 #         headers = {
 #             'Content-Type': 'application/json'
 #         }
-#         response = ad.do_post(url,json.dumps(payloads),headers=headers)
+#         response = requests.post(url,json.dumps(payloads),headers=headers,verify=False)
 #         res = response.json()["data"]["schema"]["anchors"]
 #         print("期望返回:" + str(expectResult) + "\n" + "实际返回:" + str(res))
 #         self.assertEqual(res, expectResult)

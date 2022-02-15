@@ -65,3 +65,21 @@
                 ]
             }
  expectResult: []
+-
+ caseName: case18_6----正常手机号(有连接其他文字信息）
+ payloads:  {
+                "judgeId": 3,
+                "paragraphs": [
+                    {
+                        "index": 2,
+                        "content": "手机号为15638296218"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2004,
+                    "keyword": "15638296218",
+                    "suggestion": "156xxxx6218",
+                    "tip": ""
+                }
