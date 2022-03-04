@@ -5,6 +5,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "原告:张三"
                     },
@@ -15,8 +19,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1401,
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1401,
+                        "code": 1401,
+                        "description": "文档格式：中英文标点使用混乱",
+                        "module": "纠错",
+                        "category": "常见标点符号错误"
+                    },
                     "keyword": ":",
                     "suggestion": "：",
                     "tip": ""
@@ -26,6 +36,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "(2021）"
@@ -37,8 +51,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1401,
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1401,
+                        "code": 1401,
+                        "description": "文档格式：中英文标点使用混乱",
+                        "module": "纠错",
+                        "category": "常见标点符号错误"
+                    },
                     "keyword": "(",
                     "suggestion": "（",
                     "tip": ""
@@ -48,6 +68,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "原告：张三,男，1980年11月16日生，汉族，住云南省昆明市盘龙区"
@@ -59,8 +83,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1401,
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1401,
+                        "code": 1401,
+                        "description": "文档格式：中英文标点使用混乱",
+                        "module": "纠错",
+                        "category": "常见标点符号错误"
+                    },
                     "keyword": ",",
                     "suggestion": "，",
                     "tip": ""
@@ -70,6 +100,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "原告：张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区."
@@ -81,8 +115,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1401,
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1401,
+                        "code": 1401,
+                        "description": "文档格式：中英文标点使用混乱",
+                        "module": "纠错",
+                        "category": "常见标点符号错误"
+                    },
                     "keyword": ".",
                     "suggestion": "。",
                     "tip": ""
@@ -92,6 +132,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": “'原告’”
@@ -103,8 +147,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1401,
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1401,
+                        "code": 1401,
+                        "description": "文档格式：中英文标点使用混乱",
+                        "module": "纠错",
+                        "category": "常见标点符号错误"
+                    },
                     "keyword": "'",
                     "suggestion": "",
                     "tip": "‘’"
@@ -137,6 +187,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "12346486"
                     },
@@ -153,6 +207,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "12346486元"
                     },
@@ -163,8 +221,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1201,
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1201,
+                        "code": 1201,
+                        "description": "大数缺少千分符",
+                        "module": "纠错",
+                        "category": "常见标点符号错误"
+                    },
                     "keyword": "12346486",
                     "suggestion": "12,346,486",
                     "tip": null
@@ -174,6 +238,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "1,560,000元"
@@ -191,6 +259,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "1560,000元"
                     },
@@ -201,8 +273,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1201,
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1201,
+                        "code": 1201,
+                        "description": "大数缺少千分符",
+                        "module": "纠错",
+                        "category": "常见标点符号错误"
+                    },
                     "keyword": "1560,000",
                     "suggestion": "1,560,000",
                     "tip": null

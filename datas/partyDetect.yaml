@@ -5,6 +5,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "原告：张三，汉族，男，系文盲，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
                     },
@@ -15,17 +19,27 @@
                 ]
             }
  expectResult: {
-                  "level": 1,
-                  "type": 1101,
-                  "keyword": "原告：张三，汉族，男，系文盲，1980年11月16日生，汉族，住云南省昆明市盘龙区",
-                  "suggestion": "",
-                  "tip": "[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]"
-              }
+                    "correctionTypes": {
+                        "level": 2,
+                        "type": 1101,
+                        "code": 1101,
+                        "description": "当事人：顺序错误",
+                        "module": "纠错",
+                        "category": "当事人信息错误"
+                    },
+                    "keyword": "原告：张三，汉族，男，系文盲，1980年11月16日生，汉族，住云南省昆明市盘龙区",
+                    "suggestion": "",
+                    "tip": "[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]"
+                }
 -
  caseName: case6_2----当事人信息正确（包含职业）
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "原告：张三，男，1980年11月16日生，汉族，农村务农，住云南省昆明市盘龙区。"
@@ -43,6 +57,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "原告：张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
                     },
@@ -59,6 +77,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "原告：张三，男，1980年11月16日生，汉，住云南省昆明市盘龙区。"
                     },
@@ -69,8 +91,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1110,
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1110,
+                        "code": 1110,
+                        "description": "当事人：民族后面没有“族”字",
+                        "module": "纠错",
+                        "category": "当事人信息错误"
+                    },
                     "keyword": "原告：张三，男，1980年11月16日生，汉，住云南省昆明市盘龙区",
                     "suggestion": "",
                     "tip": "民族后缺少“族”字"
@@ -80,6 +108,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "原告：张三，男，1980年11月16日生，汉族，居住地云南省昆明市盘龙区。"
@@ -91,8 +123,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1113,
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1113,
+                        "code": 1113,
+                        "description": "当事人：地址应该以“住”开始",
+                        "module": "纠错",
+                        "category": "当事人信息错误"
+                    },
                     "keyword": "原告：张三，男，1980年11月16日生，汉族，居住地云南省昆明市盘龙区",
                     "suggestion": "",
                     "tip": "住址信息要以“住”字开头"
@@ -125,6 +163,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "原告：张三，男，1980年11月16日生，汉族，联系住址云南省昆明市盘龙区。"
                     },
@@ -135,8 +177,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1113,
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1113,
+                        "code": 1113,
+                        "description": "当事人：地址应该以“住”开始",
+                        "module": "纠错",
+                        "category": "当事人信息错误"
+                    },
                     "keyword": "原告：张三，男，1980年11月16日生，汉族，联系住址云南省昆明市盘龙区",
                     "suggestion": "",
                     "tip": "住址信息要以“住”字开头"
@@ -146,6 +194,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "原告：张三，男，1980年11月16日生，汉族，云南省昆明市盘龙区。"
@@ -157,8 +209,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1113,
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1113,
+                        "code": 1113,
+                        "description": "当事人：地址应该以“住”开始",
+                        "module": "纠错",
+                        "category": "当事人信息错误"
+                    },
                     "keyword": "原告：张三，男，1980年11月16日生，汉族，云南省昆明市盘龙区",
                     "suggestion": "",
                     "tip": "住址信息要以“住”字开头"
@@ -166,96 +224,140 @@
 -
  caseName: case6_9----当事人信息不完整-缺少民族信息
  payloads: {
-             "judgeId": 3,
-             "paragraphs": [
-                 {
-                   "index": 2,
-                   "content": "原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区。"
-                 },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
+                   "judgeId": 3,
+                   "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                       {
+                         "index": 2,
+                         "content": "原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区。"
+                       },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                   ]
+                 }
  expectResult: {
-                 "level": 1,
-                 "type": 1109,
-                 "keyword": "原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区",
-                 "suggestion": "",
-                 "tip": "请补充当事人民族信息"
-               }
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1109,
+                        "code": 1109,
+                        "description": "当事人：没有提供民族",
+                        "module": "纠错",
+                        "category": "当事人信息错误"
+                    },
+                    "keyword": "原告：张三，男，1980年11月16日生，住云南省昆明市盘龙区",
+                    "suggestion": "",
+                    "tip": "请补充当事人民族信息"
+                }
 -
  caseName: case6_10----当事人信息不完整-缺少性别信息
  payloads: {
-             "judgeId": 3,
-             "paragraphs": [
-                 {
-                   "index": 2,
-                   "content": "原告：张三，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
-                 },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
+                   "judgeId": 3,
+                   "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                       {
+                         "index": 2,
+                         "content": "原告：张三，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+                       },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                   ]
+                 }
  expectResult: {
-                 "level": 1,
-                 "type": 1114,
-                 "keyword": "原告：张三，1980年11月16日生，汉族，住云南省昆明市盘龙区",
-                 "suggestion": "",
-                 "tip": "请补充当事人性别信息"
-               }
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1114,
+                        "code": 1114,
+                        "description": "当事人：没有提供性别",
+                        "module": "纠错",
+                        "category": "当事人信息错误"
+                    },
+                    "keyword": "原告：张三，1980年11月16日生，汉族，住云南省昆明市盘龙区",
+                    "suggestion": "",
+                    "tip": "请补充当事人性别信息"
+                }
 -
  caseName: case6_11----当事人信息不完整-出生日期不完整
  payloads: {
-             "judgeId": 3,
-             "paragraphs": [
-                 {
-                   "index": 2,
-                   "content": "原告：张三，男，1980年11月生，汉族，住云南省昆明市盘龙区。"
-                 },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
+                   "judgeId": 3,
+                   "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                       {
+                         "index": 2,
+                         "content": "原告：张三，男，1980年11月生，汉族，住云南省昆明市盘龙区。"
+                       },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                   ]
+                 }
  expectResult: {
-                 "level": 1,
-                 "type": 1111,
-                 "keyword": "原告：张三，男，1980年11月生，汉族，住云南省昆明市盘龙区",
-                 "suggestion": "",
-                 "tip": "请补充当事人生日信息"
-               }
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1111,
+                        "code": 1111,
+                        "description": "当事人：没有提供生日",
+                        "module": "纠错",
+                        "category": "当事人信息错误"
+                    },
+                    "keyword": "原告：张三，男，1980年11月生，汉族，住云南省昆明市盘龙区",
+                    "suggestion": "",
+                    "tip": "请补充当事人生日信息"
+                }
 -
  caseName: case6_12----当事人信息不完整-缺少姓名
  payloads: {
-             "judgeId": 3,
-             "paragraphs": [
-               {
-                 "index": 2,
-                 "content": "原告：，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
-               },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
+                   "judgeId": 3,
+                   "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                     {
+                       "index": 2,
+                       "content": "原告：，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+                     },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                   ]
+                 }
  expectResult: {
-                 "level": 1,
-                 "type": 1107,
-                 "keyword": "原告：，男，1980年11月16日生，汉族，住云南省昆明市盘龙区",
-                 "suggestion": "",
-                 "tip": "请补充当事人姓名"
-               }
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1107,
+                        "code": 1107,
+                        "description": "当事人：没有提供姓名",
+                        "module": "纠错",
+                        "category": "当事人信息错误"
+                    },
+                    "keyword": "原告：，男，1980年11月16日生，汉族，住云南省昆明市盘龙区",
+                    "suggestion": "",
+                    "tip": "请补充当事人姓名"
+                }
 -
  caseName: case6_13----当事人信息不完整-缺少姓名
  payloads: {
              "judgeId": 3,
              "paragraphs": [
+              {
+                "index": 1,
+                "content": "最高人民法院"
+              },
                {
                  "index": 2,
                  "content": "原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
@@ -267,34 +369,50 @@
              ]
            }
  expectResult: {
-                 "level": 1,
-                 "type": 1107,
-                 "keyword": "原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区",
-                 "suggestion": "",
-                 "tip": "请补充当事人姓名"
-               }
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1107,
+                        "code": 1107,
+                        "description": "当事人：没有提供姓名",
+                        "module": "纠错",
+                        "category": "当事人信息错误"
+                    },
+                    "keyword": "原告，男，1980年11月16日生，汉族，住云南省昆明市盘龙区",
+                    "suggestion": "",
+                    "tip": "请补充当事人姓名"
+                }
 -
  caseName: case6_14----当事人信息不完整-诉讼地位与姓名之间没有冒号
  payloads: {
-             "judgeId": 3,
-             "paragraphs": [
-               {
-                 "index": 2,
-                 "content": "原告张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
-               },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
+                   "judgeId": 3,
+                   "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                     {
+                       "index": 2,
+                       "content": "原告张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+                     },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                   ]
+                 }
  expectResult: {
-                 "level": 1,
-                 "type": 1108,
-                 "keyword": "原告张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区",
-                 "suggestion": "",
-                 "tip": "诉讼地位与姓名之间缺少冒号"
-               }
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1108,
+                        "code": 1108,
+                        "description": "当事人：诉讼身份与姓名之间没有用冒号隔开",
+                        "module": "纠错",
+                        "category": "当事人信息错误"
+                    },
+                    "keyword": "原告张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区",
+                    "suggestion": "",
+                    "tip": "诉讼地位与姓名之间缺少冒号"
+                }
 #-
 # caseName: case6_15----当事人信息不完整-缺少诉讼地位
 # payloads: {
@@ -320,67 +438,97 @@
 -
  caseName: case6_16----当事人信息错误-添加不必要信息
  payloads: {
-             "judgeId": 3,
-             "paragraphs": [
-               {
-                 "index": 2,
-                 "content": "原告：张三，性别男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
-               },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
+                   "judgeId": 3,
+                   "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                     {
+                       "index": 2,
+                       "content": "原告：张三，性别男，1980年11月16日生，汉族，住云南省昆明市盘龙区。"
+                     },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                   ]
+                 }
  expectResult: {
-                 "level": 1,
-                 "type": 1101,
-                 "keyword": "原告：张三，性别男，1980年11月16日生，汉族，住云南省昆明市盘龙区",
-                 "suggestion": "",
-                 "tip": "[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]"
-               }
+                    "correctionTypes": {
+                        "level": 2,
+                        "type": 1101,
+                        "code": 1101,
+                        "description": "当事人：顺序错误",
+                        "module": "纠错",
+                        "category": "当事人信息错误"
+                    },
+                    "keyword": "原告：张三，性别男，1980年11月16日生，汉族，住云南省昆明市盘龙区",
+                    "suggestion": "",
+                    "tip": "[诉讼地位]：[姓名]，[性别]，[出生年份]年[出生月份]月[出生日]日生，[民族]族，[职业或者工作单位和职务]，住[住址]"
+                }
 -
  caseName: case6_17----当事人信息不对等
  payloads: {
-             "judgeId": 3,
-             "paragraphs": [
-               {
-                 "index": 2,
-                 "content": "原告：张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。
-                 被告：李四，男，1980年11月16日生，汉族，住昆明市盘龙区。"
-               },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
+                   "judgeId": 3,
+                   "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                     {
+                       "index": 2,
+                       "content": "原告：张三，男，1980年11月16日生，汉族，住云南省昆明市盘龙区。
+                       被告：李四，男，1980年11月16日生，汉族，住昆明市盘龙区。"
+                     },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                   ]
+                 }
  expectResult: {
-                  "level": 2,
-                  "type": 1102,
-                  "keyword": "",
-                  "suggestion": "",
-                  "tip": null
-              }
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1102,
+                        "code": 1102,
+                        "description": "当事人：当事人之间的住所信息对应的行政区划级别应是对等的",
+                        "module": "纠错",
+                        "category": "当事人信息错误"
+                    },
+                    "keyword": "",
+                    "suggestion": "",
+                    "tip": null
+                }
 -
  caseName: case6_18----当事人信息错误-住所地址不同时未写明属于哪个省份
  payloads: {
-             "judgeId": 3,
-             "paragraphs": [
-               {
-                 "index": 2,
-                 "content": "原告：张三，男，1980年11月16日生，汉族，住昆明市盘龙区。
-                 被告：李四，男，1980年11月16日生，汉族，住厦门市思明区。"
-               },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
+                   "judgeId": 3,
+                   "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                     {
+                       "index": 2,
+                       "content": "原告：张三，男，1980年11月16日生，汉族，住昆明市盘龙区。
+                       被告：李四，男，1980年11月16日生，汉族，住厦门市思明区。"
+                     },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                   ]
+                 }
  expectResult: {
-                    "level": 2,
-                    "type": 1103,
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1103,
+                        "code": 1103,
+                        "description": "当事人：不同当事人的住所地址不同时，住所信息须写明属于哪个省份（市、自治区）",
+                        "module": "纠错",
+                        "category": "当事人信息错误"
+                    },
                     "keyword": "",
                     "suggestion": "",
                     "tip": null
@@ -388,124 +536,158 @@
 -
  caseName: case6_19----当事人信息信息对等
  payloads: {
-             "judgeId": 3,
-             "paragraphs": [
-               {
-                 "index": 2,
-                 "content": "原告：张三，男，1980年11月16日生，汉族，住厦门市集美区。"
-               },
-               {
-                 "index": 3,
-                 "content": "被告：李四，男，1980年11月16日生，汉族，住厦门市思明区。"
-               },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
+                   "judgeId": 3,
+                   "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                     {
+                       "index": 2,
+                       "content": "原告：张三，男，1980年11月16日生，汉族，住厦门市集美区。"
+                     },
+                     {
+                       "index": 3,
+                       "content": "被告：李四，男，1980年11月16日生，汉族，住厦门市思明区。"
+                     },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                   ]
+                 }
  expectResult: []
 -
  caseName: case6_20----非当事人信息误报（【诉讼地位】，【日期】，【性别】）
  payloads: {
-             "judgeId": 3,
-             "paragraphs": [
-               {
-                 "index": 2,
-                 "content": "被告于1992年10月21日晚上回到家中，跟住在隔壁的男人大打出手。"
-               },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
+                   "judgeId": 3,
+                   "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                     {
+                       "index": 2,
+                       "content": "被告于1992年10月21日晚上回到家中，跟住在隔壁的男人大打出手。"
+                     },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                   ]
+                 }
  expectResult: []
 -
  caseName: case6_21----非当事人信息误报（【诉讼地位】，【日期】，【性别】）
  payloads: {
-             "judgeId": 3,
-             "paragraphs": [
-               {
-                 "index": 2,
-                 "content": "本院经审理认定事实如下：原告王德范系王志韬（已故）父亲、张素云系王志韬母亲，
-                 王某1（2002年3月13日出生）系王志韬之子、王某2（2006年9月1日出生）系王志韬之女"
-               },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
+                   "judgeId": 3,
+                   "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                     {
+                       "index": 2,
+                       "content": "本院经审理认定事实如下：原告王德范系王志韬（已故）父亲、张素云系王志韬母亲，
+                       王某1（2002年3月13日出生）系王志韬之子、王某2（2006年9月1日出生）系王志韬之女"
+                     },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                   ]
+                 }
  expectResult: []
 -
  caseName: case6_22----非当事人信息误报（【诉讼地位】，【日期】，【汉】）
  payloads: {
-             "judgeId": 3,
-             "paragraphs": [
-               {
-                 "index": 2,
-                 "content": "原告王德范、张素云、王某1、王某2与被告沈阳汉爵装饰材料有限公司劳动争议一案，
-                 本院于2019年7月2日立案受理后，依法由审判员刘晓强担任审判长并主审，与人民陪审员李丞、孙维维组成合议庭，公开开庭进行了审理。"
-               },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
+                   "judgeId": 3,
+                   "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                     {
+                       "index": 2,
+                       "content": "原告王德范、张素云、王某1、王某2与被告沈阳汉爵装饰材料有限公司劳动争议一案，
+                       本院于2019年7月2日立案受理后，依法由审判员刘晓强担任审判长并主审，与人民陪审员李丞、孙维维组成合议庭，公开开庭进行了审理。"
+                     },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                   ]
+                 }
  expectResult: []
 -
  caseName: case6_23----当事人信息不完整-缺少出生日期
  payloads: {
-             "judgeId": 3,
-             "paragraphs": [
-                 {
-                   "index": 2,
-                   "content": "原告：张三，男，汉族，住云南省昆明市盘龙区。"
-                 },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
+                     "judgeId": 3,
+                     "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                         {
+                           "index": 2,
+                           "content": "原告：张三，男，汉族，住云南省昆明市盘龙区。"
+                         },
+                        {
+                          "index": 10,
+                          "content": "案件受理费4,676元，由原告林印党负担。"
+                        }
+                     ]
+                   }
  expectResult: {
-                 "level": 1,
-                 "type": 1111,
-                 "keyword": "原告：张三，男，汉族，住云南省昆明市盘龙区",
-                 "suggestion": "",
-                 "tip": "请补充当事人生日信息"
-               }
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1111,
+                        "code": 1111,
+                        "description": "当事人：没有提供生日",
+                        "module": "纠错",
+                        "category": "当事人信息错误"
+                    },
+                    "keyword": "原告：张三，男，汉族，住云南省昆明市盘龙区",
+                    "suggestion": "",
+                    "tip": "请补充当事人生日信息"
+                }
 -
  caseName: case6_24----多名原告同时引用不需要都加诉讼地位
  payloads: {
-             "judgeId": 3,
-             "paragraphs": [
-               {
-                 "index": 2,
-                 "content": "原告：谢德云，男，1962年5月29日出生，汉族，住如皋市九华镇马桥村8组3号。"
-               },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
+                   "judgeId": 3,
+                   "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                     {
+                       "index": 2,
+                       "content": "原告：谢德云，男，1962年5月29日出生，汉族，住如皋市九华镇马桥村8组3号。"
+                     },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                   ]
+                 }
  expectResult: []
 -
  caseName: case6_25----上诉或被上诉
  payloads: {
-             "judgeId": 3,
-             "paragraphs": [
-               {
-                 "index": 2,
-                 "content": "被上诉人（一审原告）：夏中福，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市。"
-               },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
+                   "judgeId": 3,
+                   "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                     {
+                       "index": 2,
+                       "content": "被上诉人（一审原告）：夏中福，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市。"
+                     },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                   ]
+                 }
  expectResult: []

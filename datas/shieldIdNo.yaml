@@ -11,8 +11,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 2005,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 2005,
+                        "code": 2005,
+                        "description": "身份证号码被暴露",
+                        "module": "屏蔽",
+                        "category": "身份证号码被暴露"
+                    },
                     "keyword": "320311770706001",
                     "suggestion": "320311xxxxxx001",
                     "tip": ""
@@ -29,8 +35,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 2005,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 2005,
+                        "code": 2005,
+                        "description": "身份证号码被暴露",
+                        "module": "屏蔽",
+                        "category": "身份证号码被暴露"
+                    },
                     "keyword": "130701199310302288",
                     "suggestion": "130701xxxxxxxxx288",
                     "tip": ""
@@ -47,8 +59,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 2005,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 2005,
+                        "code": 2005,
+                        "description": "身份证号码被暴露",
+                        "module": "屏蔽",
+                        "category": "身份证号码被暴露"
+                    },
                     "keyword": "52030219891209794X",
                     "suggestion": "520302xxxxxxxxx94X",
                     "tip": ""
@@ -89,8 +107,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 2001,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 2001,
+                        "code": 2001,
+                        "description": "银行卡号被暴露",
+                        "module": "屏蔽",
+                        "category": "银行卡号被暴露"
+                    },
                     "keyword": "3203117707060011",
                     "suggestion": "320311xxxxxx0011",
                     "tip": ""
@@ -107,8 +131,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 2001,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 2001,
+                        "code": 2001,
+                        "description": "银行卡号被暴露",
+                        "module": "屏蔽",
+                        "category": "银行卡号被暴露"
+                    },
                     "keyword": "52030219891209794",
                     "suggestion": "520302xxxxxxx9794",
                     "tip": ""
@@ -125,8 +155,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 2001,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 2001,
+                        "code": 2001,
+                        "description": "银行卡号被暴露",
+                        "module": "屏蔽",
+                        "category": "银行卡号被暴露"
+                    },
                     "keyword": "5203021989120979412",
                     "suggestion": "520302xxxxxxxxx9412",
                     "tip": ""
@@ -167,8 +203,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 2005,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 2005,
+                        "code": 2005,
+                        "description": "身份证号码被暴露",
+                        "module": "屏蔽",
+                        "category": "身份证号码被暴露"
+                    },
                     "keyword": "320311770706001",
                     "suggestion": "320311xxxxxx001",
                     "tip": ""
@@ -185,8 +227,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 2005,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 2005,
+                        "code": 2005,
+                        "description": "身份证号码被暴露",
+                        "module": "屏蔽",
+                        "category": "身份证号码被暴露"
+                    },
                     "keyword": "130701199310302288",
                     "suggestion": "130701xxxxxxxxx288",
                     "tip": ""

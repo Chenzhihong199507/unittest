@@ -2,8 +2,12 @@
 -
  caseName: case10_1----数字重复
  payloads:  {
-                "judgeId":5,
+                "judgeId":4,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "2020"
@@ -18,8 +22,12 @@
 -
  caseName: case10_2----一段里面出现多个相同数字
  payloads:  {
-                "judgeId":5,
+                "judgeId":4,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "被告人名下工商银行开户账号银行卡号6222082502004841432，以上财产价值暂计：1，560,000.00元人民币；
@@ -39,6 +47,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "《中《中华人民共和国民法通则》"
                     },
@@ -49,8 +61,14 @@
                 ]
             }
  expectResult: [{
-                    "level": 1,
-                    "type": 1700,
+                    "correctionTypes": {
+                        "level": 2,
+                        "type": 1700,
+                        "code": 1700,
+                        "description": "文书中出错重复的词或句子",
+                        "module": "纠错",
+                        "category": "常见语法错误"
+                    },
                     "keyword": "《中《中",
                     "suggestion": "",
                     "tip": ""
@@ -60,6 +78,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "根据当事人的陈述、举证及庭审查明的事实，本院确认如下事实。"
@@ -75,8 +97,14 @@
                 ]
             }
  expectResult: [{
-                    "level": 1,
-                    "type": 1700,
+                    "correctionTypes": {
+                        "level": 2,
+                        "type": 1700,
+                        "code": 1700,
+                        "description": "文书中出错重复的词或句子",
+                        "module": "纠错",
+                        "category": "常见语法错误"
+                    },
                     "keyword": "根据当事人的陈述、举证及庭审查明的事实，本院确认如下事实",
                     "suggestion": "",
                     "tip": ""
@@ -86,6 +114,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "原告：张三，男，1980年11月16日生，汉族，汉族，住云南省昆明市盘龙区。"
@@ -97,8 +129,14 @@
                 ]
             }
  expectResult: [{
-                    "level": 1,
-                    "type": 1700,
+                    "correctionTypes": {
+                        "level": 2,
+                        "type": 1700,
+                        "code": 1700,
+                        "description": "文书中出错重复的词或句子",
+                        "module": "纠错",
+                        "category": "常见语法错误"
+                    },
                     "keyword": "，汉族，汉族",
                     "suggestion": "",
                     "tip": ""
@@ -108,6 +146,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "口口声声"
@@ -125,6 +167,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "一个一个"
                     },
@@ -135,8 +181,14 @@
                 ]
             }
  expectResult: [{
-                    "level": 1,
-                    "type": 1700,
+                    "correctionTypes": {
+                        "level": 2,
+                        "type": 1700,
+                        "code": 1700,
+                        "description": "文书中出错重复的词或句子",
+                        "module": "纠错",
+                        "category": "常见语法错误"
+                    },
                     "keyword": "一个一个",
                     "suggestion": "",
                     "tip": ""
@@ -146,6 +198,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "原告张三起诉称：1.依法判令撤销原被告双方签订的协议（财产分割部分）；
@@ -160,8 +216,14 @@
                 ]
             }
  expectResult: [{
-                    "level": 1,
-                    "type": 1700,
+                    "correctionTypes": {
+                        "level": 2,
+                        "type": 1700,
+                        "code": 1700,
+                        "description": "文书中出错重复的词或句子",
+                        "module": "纠错",
+                        "category": "常见语法错误"
+                    },
                     "keyword": "昆明市盘龙区青云街道办事处东三环西侧金色交响家园",
                     "suggestion": "",
                     "tip": ""

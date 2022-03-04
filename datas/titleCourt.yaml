@@ -1,0 +1,145 @@
+#标题法院检测
+-
+ caseName: case21_1----登录账号为“最高法”，标题为“福建人民法院”
+ payloads:  {
+                "judgeId": 4,
+                "paragraphs": [
+                    {
+                        "index": 0,
+                        "content": ""
+                    },
+                    {
+                        "index": 1,
+                        "content": "福建人民法院"
+                    },
+                    {
+                        "index": 2,
+                        "content": "民 事 判 决 书"
+                    },
+                    {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2200,
+                    "keyword": "福建人民法院",
+                    "suggestion": "最高人民法院",
+                    "tip": ""
+                }
+-
+ caseName: case21_2----登录账号“最高人民法院”，标题“XXX人民法院”
+ payloads:  {
+                "judgeId": 4,
+                "paragraphs": [
+                    {
+                        "index": 0,
+                        "content": ""
+                    },
+                    {
+                        "index": 1,
+                        "content": "XXX人民法院"
+                    },
+                    {
+                        "index": 2,
+                        "content": "民 事 判 决 书"
+                    },
+                    {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2200,
+                    "keyword": "XXX人民法院",
+                    "suggestion": "最高人民法院",
+                    "tip": ""
+                }
+-
+ caseName: case21_3----登录账号“厦门市同安区人民法院”，标题“最高人民法院”
+ payloads:  {
+                "judgeId": 14,
+                "paragraphs": [
+                    {
+                        "index": 0,
+                        "content": ""
+                    },
+                    {
+                        "index": 1,
+                        "content": "最高人民法院"
+                    },
+                    {
+                        "index": 2,
+                        "content": "民 事 判 决 书"
+                    },
+                    {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2200,
+                    "keyword": "最高人民法院",
+                    "suggestion": "厦门市同安区人民法院",
+                    "tip": ""
+                }
+-
+ caseName: case21_4----登录账号“福建省厦门市中级人民法院”，标题“厦门市中级人民法院”
+ payloads:  {
+                "judgeId": 5,
+                "paragraphs": [
+                    {
+                        "index": 0,
+                        "content": ""
+                    },
+                    {
+                        "index": 1,
+                        "content": "厦门市中级人民法院"
+                    },
+                    {
+                        "index": 2,
+                        "content": "民 事 判 决 书"
+                    },
+                    {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 2200,
+                    "keyword": "厦门市中级人民法院",
+                    "suggestion": "福建省厦门市中级人民法院",
+                    "tip": ""
+                }
+-
+ caseName: case21_5----登录账号“福建省厦门市中级人民法院”，标题“福建省厦门市中级人民法院”
+ payloads:  {
+                "judgeId": 5,
+                "paragraphs": [
+                    {
+                        "index": 0,
+                        "content": ""
+                    },
+                    {
+                        "index": 1,
+                        "content": "福建省厦门市中级人民法院"
+                    },
+                    {
+                        "index": 2,
+                        "content": "民 事 判 决 书"
+                    },
+                    {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                    }
+                ]
+            }
+ expectResult: []

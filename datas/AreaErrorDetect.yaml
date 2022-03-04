@@ -5,6 +5,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "福建省九江市"
                     },
@@ -15,8 +19,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1600,
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1600,
+                        "code": 1600,
+                        "description": "地区套用错误：如江西省厦门市",
+                        "module": "纠错",
+                        "category": "常见语法错误"
+                    },
                     "keyword": "福建省九江市",
                     "suggestion": "",
                     "tip": ""
@@ -26,6 +36,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "黑龙江省哈尔滨市"
@@ -43,6 +57,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "广西省昆明市盘龙区"
                     },
@@ -53,8 +71,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1600,
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1600,
+                        "code": 1600,
+                        "description": "地区套用错误：如江西省厦门市",
+                        "module": "纠错",
+                        "category": "常见语法错误"
+                    },
                     "keyword": "广西省昆明市",
                     "suggestion": "",
                     "tip": ""
@@ -64,6 +88,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "福建省漳浦县"
@@ -75,8 +103,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1600,
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1600,
+                        "code": 1600,
+                        "description": "地区套用错误：如江西省厦门市",
+                        "module": "纠错",
+                        "category": "常见语法错误"
+                    },
                     "keyword": "福建省漳浦县",
                     "suggestion": "",
                     "tip": ""
@@ -86,6 +120,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": '江苏省丹徒区'
@@ -103,6 +141,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "福建省龙海市"
                     },
@@ -118,6 +160,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "重庆市沙坪坝区 "
@@ -135,6 +181,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "天津市蓟县"
                     },
@@ -150,6 +200,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "北京市隆安（南京）律师事务所律师"
@@ -167,6 +221,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "重庆市火锅节"
                     },
@@ -182,6 +240,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "福建省东南花都"

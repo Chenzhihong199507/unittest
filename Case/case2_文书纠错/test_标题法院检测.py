@@ -14,36 +14,37 @@
 #
 # # 2、继承自unittest.TestCase类
 # @ddt
-# class TestParty(unittest.TestCase):
+# class TestTitleCourt(unittest.TestCase):
 #     # 3、配置环境：进行测试前的初始化工作
 #     def setUp(self):
 #         #print('\ncases before')
 #         pass
 #
 #     # 4、定义测试用例，名字以“test”开头
-#     @file_data(fp.get_data_path("check.yaml"))
-#     def test_check(self,**kwargs):
-#         """check_xiaoli"""
+#     @file_data(fp.get_data_path("titleCourt.yaml"))
+#     def test_titleCourt(self,**kwargs):
+#         """titleCourt"""
 #         caseName = kwargs.get("caseName")
 #         payloads = kwargs.get("payloads")
 #         expectResult =kwargs.get("expectResult")
-#
-#         print('\033[1;31;40m'+caseName)
+#         print(caseName)
 #         print(payloads)
-#         url = host[0] + "/Judgements/ErrorDetect"
 #
+#         url = host[0] + "/Judgements/ErrorDetect"
 #         headers = {
-#             'Content-Type': 'application/json'
+#             'Content-Type': 'application/json',
 #         }
 #         response = requests.post(url,json.dumps(payloads),headers=headers,verify=False)
-#         # try:
-#         #     res = response.json()["detections"][0]["corrections"][0]
-#         #     print("期望返回:" + str(expectResult) + "\n" + "实际返回:" + str(res))
-#         #     self.assertEqual(expectResult,res)
 #
-#         res = response.json()["detections"]
-#         print("期望返回:" + str(expectResult) + "\n" + "实际返回:" + str(res))
-#         self.assertEqual(expectResult,res)
+#         try:
+#             res = response.json()["detections"][0]["corrections"][0]
+#             print("期望返回:" + str(expectResult) + "\n" + "实际返回:" + str(res))
+#             self.assertEqual(expectResult,res)
+#
+#         except:
+#             res = response.json()["detections"]
+#             print("期望返回:" + str(expectResult) + "\n" + "实际返回:" + str(res))
+#             self.assertEqual(expectResult,res)
 #
 #
 #     # 6、清理环境

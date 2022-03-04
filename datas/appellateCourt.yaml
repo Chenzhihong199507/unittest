@@ -5,6 +5,10 @@
                 "judgeId":4,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "如不服本判决，可在判决书送达之日起十五日内向本院递交上诉状，并按对方当事人的人数提出副本，上诉于最高人民法院。"
                     },
@@ -15,8 +19,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1800,
+                    "correctionTypes": {
+                        "level": 2,
+                        "type": 1800,
+                        "code": 1800,
+                        "description": "上诉法院出错",
+                        "module": "纠错",
+                        "category": "审判信息错误"
+                    },
                     "keyword": "最高人民法院",
                     "suggestion": null,
                     "tip": ""
@@ -27,6 +37,10 @@
                 "judgeId":1,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "福建省厦门市中级人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "如不服本判决，可在判决书送达之日起十五日内向本院递交上诉状，并按对方当事人的人数提出副本，上诉于最高人民法院。"
                     },
@@ -37,8 +51,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1800,
+                    "correctionTypes": {
+                        "level": 2,
+                        "type": 1800,
+                        "code": 1800,
+                        "description": "上诉法院出错",
+                        "module": "纠错",
+                        "category": "审判信息错误"
+                    },
                     "keyword": "最高人民法院",
                     "suggestion": "福建省高级人民法院",
                     "tip": ""
@@ -49,6 +69,10 @@
                 "judgeId":8,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "延庆县人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "如不服本判决，可在判决书送达之日起十五日内向本院递交上诉状，并按对方当事人的人数提出副本，上诉于最高人民法院。"
                     },
@@ -59,8 +83,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1800,
+                    "correctionTypes": {
+                        "level": 2,
+                        "type": 1800,
+                        "code": 1800,
+                        "description": "上诉法院出错",
+                        "module": "纠错",
+                        "category": "审判信息错误"
+                    },
                     "keyword": "最高人民法院",
                     "suggestion": "北京市第二中级人民法院",
                     "tip": ""
@@ -70,6 +100,10 @@
  payloads:  {
                 "judgeId":9,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "遵化市人民法院"
+                    },
                     {
                         "index":2,
                         "content": "如不服本判决，可在判决书送达之日起十五日内向本院递交上诉状，并按对方当事人的人数提出副本，上诉于河北省高级人民法院。"
@@ -81,8 +115,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1800,
+                    "correctionTypes": {
+                        "level": 2,
+                        "type": 1800,
+                        "code": 1800,
+                        "description": "上诉法院出错",
+                        "module": "纠错",
+                        "category": "审判信息错误"
+                    },
                     "keyword": "河北省高级人民法院",
                     "suggestion": "河北省唐山市中级人民法院",
                     "tip": ""
@@ -92,6 +132,10 @@
  payloads:  {
                 "judgeId":10,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "中国人民解放军北京军区河北军事法院"
+                    },
                     {
                         "index":2,
                         "content": "如不服本判决，可在判决书送达之日起十五日内向本院递交上诉状，并按对方当事人的人数提出副本，上诉于中国人民解放军北京军区河北军事法院。"
@@ -103,8 +147,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1800,
+                    "correctionTypes": {
+                        "level": 2,
+                        "type": 1800,
+                        "code": 1800,
+                        "description": "上诉法院出错",
+                        "module": "纠错",
+                        "category": "审判信息错误"
+                    },
                     "keyword": "中国人民解放军北京军区河北军事法院",
                     "suggestion": "中国人民解放军北京军区军事法院",
                     "tip": ""
@@ -114,6 +164,10 @@
  payloads:  {
                 "judgeId":4,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index":2,
                         "content": "本判决为终审判决。"

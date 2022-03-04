@@ -5,6 +5,10 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
                         "index":2,
                         "content": "(2022)最高法民初2071号"
                     },
@@ -15,8 +19,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1401,
+                    "correctionTypes": {
+                        "level": 1,
+                        "type": 1401,
+                        "code": 1401,
+                        "description": "文档格式：中英文标点使用混乱",
+                        "module": "纠错",
+                        "category": "常见标点符号错误"
+                    },
                     "keyword": "(",
                     "suggestion": "（",
                     "tip": ""
@@ -27,6 +37,9 @@
                 "judgeId":5,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "福建省厦门市中级人民法院"
+                    },{
                         "index":2,
                         "content": "（2022）最高法民初2071号"
                     },
@@ -37,8 +50,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1003,
+                    "correctionTypes": {
+                        "level": 2,
+                        "type": 1003,
+                        "code": 1003,
+                        "description": "案号：法院代字不匹配",
+                        "module": "纠错",
+                        "category": "案号错误"
+                    },
                     "keyword": "最高法",
                     "suggestion": "闽02",
                     "tip": null
@@ -49,6 +68,9 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },{
                         "index":2,
                         "content": "（2020）最高法民初2071号"
                     },
@@ -59,8 +81,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1002,
+                    "correctionTypes": {
+                        "level": 2,
+                        "type": 1002,
+                        "code": 1002,
+                        "description": "案号：非当前年份",
+                        "module": "纠错",
+                        "category": "案号错误"
+                    },
                     "keyword": "2020",
                     "suggestion": "2022",
                     "tip": null
@@ -71,6 +99,9 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },{
                         "index":2,
                         "content": "（2022）最高法民众2071号"
                     },
@@ -81,8 +112,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1005,
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1005,
+                        "code": 1005,
+                        "description": "案号：类型代字错误",
+                        "module": "纠错",
+                        "category": "案号错误"
+                    },
                     "keyword": "民众",
                     "suggestion": "",
                     "tip": null
@@ -93,6 +130,9 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },{
                         "index":2,
                         "content": "（2022）最高法民初2071号"
                     },
@@ -109,6 +149,9 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },{
                         "index":2,
                         "content": "（2022）民初最高法2071号"
                     },
@@ -119,8 +162,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1001,
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1001,
+                        "code": 1001,
+                        "description": "案号：顺序错误",
+                        "module": "纠错",
+                        "category": "案号错误"
+                    },
                     "keyword": "（2022）民初最高法2071号",
                     "suggestion": "",
                     "tip": "正确的案号格式为：（[收案年度]）[法院代字][类型代字][案件编号]号"
@@ -131,6 +180,9 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },{
                         "index":2,
                         "content": "（2022）民初2071号"
                     },
@@ -141,8 +193,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1001,
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1001,
+                        "code": 1001,
+                        "description": "案号：顺序错误",
+                        "module": "纠错",
+                        "category": "案号错误"
+                    },
                     "keyword": "（2022）民初2071号",
                     "suggestion": "",
                     "tip": "请写明法院"
@@ -153,6 +211,9 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },{
                         "index":2,
                         "content": "（2022）最高法2071号"
                     },
@@ -163,8 +224,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1001,
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1001,
+                        "code": 1001,
+                        "description": "案号：顺序错误",
+                        "module": "纠错",
+                        "category": "案号错误"
+                    },
                     "keyword": "（2022）最高法2071号",
                     "suggestion": "",
                     "tip": "请写明案件类型"
@@ -175,6 +242,9 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },{
                         "index":2,
                         "content": "（2022）最高法民初"
                     },
@@ -185,8 +255,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1001,
+                "correctionTypes": {
+                        "level": 4,
+                        "type": 1001,
+                        "code": 1001,
+                        "description": "案号：顺序错误",
+                        "module": "纠错",
+                        "category": "案号错误"
+                    },
                     "keyword": "（2022）最高法民初",
                     "suggestion": "",
                     "tip": "请写明案件编号"
@@ -197,6 +273,9 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },{
                         "index":2,
                         "content": "（2022）最高法民初2071"
                     },
@@ -207,8 +286,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1001,
+                 "correctionTypes": {
+                   "level": 4,
+                   "type": 1001,
+                   "code": 1001,
+                   "description": "案号：顺序错误",
+                   "module": "纠错",
+                   "category": "案号错误"
+                 },
                     "keyword": "（2022）最高法民初2071",
                     "suggestion": "",
                     "tip": "请写明案件编号"
@@ -263,6 +348,9 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },{
                         "index":2,
                         "content": "[2022]最高法民初2071号"
                     },
@@ -273,8 +361,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1006,
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1006,
+                        "code": 1006,
+                        "description": "案号：格式错误，如:[2022]最高法民初2071号",
+                        "module": "纠错",
+                        "category": "案号错误"
+                    },
                     "keyword": "[2022]",
                     "suggestion": "（2022）",
                     "tip": null
@@ -285,6 +379,9 @@
                 "judgeId":3,
                 "paragraphs": [
                     {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },{
                         "index":2,
                         "content": "（2022）最高法民初2071号"
                     },

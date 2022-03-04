@@ -6,6 +6,10 @@
                 "paragraphs": [
                     {
                       "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
+                      "index": 1,
                       "content": "被告：范兴浩，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
                     },
                     {
@@ -26,6 +30,10 @@
                 "paragraphs": [
                     {
                       "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
+                      "index": 1,
                       "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
                     },
                     {
@@ -38,18 +46,28 @@
                     }
                 ]
             }
- expectResult: [{
-                    "level": 1,
-                    "type": 1900,
+ expectResult: {
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1900,
+                        "code": 1900,
+                        "description": "案由错误",
+                        "module": "纠错",
+                        "category": "案由错误"
+                    },
                     "keyword": "工程承包合同纠纷",
                     "suggestion": "",
                     "tip": ""
-                }]
+                }
 -
  caseName: case13_3----有“一案”但非案由信息的
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                       "index": 1,
                       "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
@@ -76,6 +94,10 @@
                 "paragraphs": [
                     {
                       "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
+                      "index": 1,
                       "content": "被上诉人（一审原告）：夏中福，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
                     },
                     {
@@ -94,6 +116,10 @@
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                       "index": 1,
                       "content": "被上诉人（一审原告）：渭南成，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
@@ -116,6 +142,10 @@
                 "paragraphs": [
                     {
                       "index": 1,
+                      "content": "最高人民法院"
+                    },
+                    {
+                      "index": 1,
                       "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
                     },
                     {
@@ -128,216 +158,296 @@
                     }
                 ]
             }
- expectResult: []
+ expectResult: {
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1900,
+                        "code": 1900,
+                        "description": "案由错误",
+                        "module": "纠错",
+                        "category": "案由错误"
+                    },
+                    "keyword": "生命权、健康权、身体权纠纷",
+                    "suggestion": "",
+                    "tip": ""
+                }
 -
  caseName: case13_7----案由名称中有一个顿号的
  payloads:  {
-                "judgeId":3,
-                "paragraphs": [
-                  {
-                    "index": 1,
-                    "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
-                  },
-                  {
-                        "index":2,
-                        "content": "原告姚俊杰与被告张清辉婚姻家庭、继承纠纷一案"
+                  "judgeId":3,
+                  "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
                     },
                     {
-                      "index": 10,
-                      "content": "案件受理费4,676元，由原告林印党负担。"
-                    }
-                ]
-            }
+                      "index": 1,
+                      "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
+                    },
+                    {
+                          "index":2,
+                          "content": "原告姚俊杰与被告张清辉婚姻家庭、继承纠纷一案"
+                      },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                  ]
+              }
  expectResult: []
 -
  caseName: case13_8----案由名称中有两个顿号的
  payloads:  {
-                "judgeId":3,
-                "paragraphs": [
-                  {
-                    "index": 1,
-                    "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
-                  },
-                  {
-                        "index":2,
-                        "content": "原告姚俊杰与被告张清辉合同、无因管理、不当得利纠纷一案"
+                  "judgeId":3,
+                  "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
                     },
                     {
-                      "index": 10,
-                      "content": "案件受理费4,676元，由原告林印党负担。"
-                    }
-                ]
-            }
- expectResult: []
+                      "index": 1,
+                      "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
+                    },
+                    {
+                          "index":2,
+                          "content": "原告姚俊杰与被告张清辉合同、无因管理、不当得利纠纷一案"
+                      },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                  ]
+              }
+ expectResult: {
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1900,
+                        "code": 1900,
+                        "description": "案由错误",
+                        "module": "纠错",
+                        "category": "案由错误"
+                    },
+                    "keyword": "合同、无因管理、不当得利纠纷",
+                    "suggestion": "",
+                    "tip": ""
+                }
 -
  caseName: case13_9----案由名称中有三个顿号的
  payloads:  {
-                "judgeId":3,
-                "paragraphs": [
-                  {
-                    "index": 1,
-                    "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
-                  },
-                  {
-                        "index":2,
-                        "content": "原告姚俊杰与被告张清辉与公司、证券、保险、票据等有关的民事纠纷一案"
+                  "judgeId":3,
+                  "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
                     },
                     {
-                      "index": 10,
-                      "content": "案件受理费4,676元，由原告林印党负担。"
-                    }
-                ]
-            }
+                      "index": 1,
+                      "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
+                    },
+                    {
+                          "index":2,
+                          "content": "原告姚俊杰与被告张清辉与公司、证券、保险、票据等有关的民事纠纷一案"
+                      },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                  ]
+              }
  expectResult: []
 -
  caseName: case13_10----案由名称中有“和”字的
  payloads:  {
-                "judgeId":3,
-                "paragraphs": [
-                  {
-                    "index": 1,
-                    "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
-                  },
-                  {
-                        "index":2,
-                        "content": "原告姚俊杰与被告张清辉建筑物和其他土地附着物抵押权纠纷一案"
+                  "judgeId":3,
+                  "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
                     },
                     {
-                      "index": 10,
-                      "content": "案件受理费4,676元，由原告林印党负担。"
-                    }
-                ]
-            }
+                      "index": 1,
+                      "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
+                    },
+                    {
+                          "index":2,
+                          "content": "原告姚俊杰与被告张清辉建筑物和其他土地附着物抵押权纠纷一案"
+                      },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                  ]
+              }
  expectResult: []
 -
  caseName: case13_11----案由名称中有“和”字的
  payloads:  {
-                "judgeId":3,
-                "paragraphs": [
-                  {
-                    "index": 1,
-                    "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
-                  },
-                  {
-                        "index":2,
-                        "content": "原告姚俊杰与被告张清辉申请破产和解一案"
+                  "judgeId":3,
+                  "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
                     },
                     {
-                      "index": 10,
-                      "content": "案件受理费4,676元，由原告林印党负担。"
-                    }
-                ]
-            }
+                      "index": 1,
+                      "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
+                    },
+                    {
+                          "index":2,
+                          "content": "原告姚俊杰与被告张清辉申请破产和解一案"
+                      },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                  ]
+              }
  expectResult: []
 -
  caseName: case13_12----案由名称中有“和”字的
  payloads:  {
-                "judgeId":3,
-                "paragraphs": [
-                  {
-                    "index": 1,
-                    "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
-                  },
-                  {
-                        "index":2,
-                        "content": "原告姚俊杰与被告张清辉协助送达司法文书和调查取证一案"
+                  "judgeId":3,
+                  "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
                     },
                     {
-                      "index": 10,
-                      "content": "案件受理费4,676元，由原告林印党负担。"
-                    }
-                ]
-            }
- expectResult: []
+                      "index": 1,
+                      "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
+                    },
+                    {
+                          "index":2,
+                          "content": "原告姚俊杰与被告张清辉协助送达司法文书和调查取证一案"
+                      },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                  ]
+              }
+ expectResult: {
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1900,
+                        "code": 1900,
+                        "description": "案由错误",
+                        "module": "纠错",
+                        "category": "案由错误"
+                    },
+                    "keyword": "协助送达司法文书和调查取证",
+                    "suggestion": "",
+                    "tip": ""
+                }
 -
  caseName: case13_13----案由名称中有“和”字以及顿号的
  payloads:  {
-                "judgeId":3,
-                "paragraphs": [
-                  {
-                    "index": 1,
-                    "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
-                  },
-                  {
-                        "index":2,
-                        "content": "原告姚俊杰与被告张清辉申请承认和执行外国法院民事判决、裁定一案"
+                  "judgeId":3,
+                  "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
                     },
                     {
-                      "index": 10,
-                      "content": "案件受理费4,676元，由原告林印党负担。"
-                    }
-                ]
-            }
+                      "index": 1,
+                      "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
+                    },
+                    {
+                          "index":2,
+                          "content": "原告姚俊杰与被告张清辉申请承认和执行外国法院民事判决、裁定一案"
+                      },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                  ]
+              }
  expectResult: []
 -
  caseName: case13_14----案由名称中有“与”字的
  payloads:  {
-                "judgeId":3,
-                "paragraphs": [
-                  {
-                    "index": 1,
-                    "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
-                  },
-                  {
-                        "index":2,
-                        "content": "原告姚俊杰与被告张清辉与公司有关的纠纷一案"
+                  "judgeId":3,
+                  "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
                     },
                     {
-                      "index": 10,
-                      "content": "案件受理费4,676元，由原告林印党负担。"
-                    }
-                ]
-            }
+                      "index": 1,
+                      "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
+                    },
+                    {
+                          "index":2,
+                          "content": "原告姚俊杰与被告张清辉与公司有关的纠纷一案"
+                      },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                  ]
+              }
  expectResult: []
 -
  caseName: case13_15----案由名称中有“及”字的
  payloads:  {
-                "judgeId":3,
-                "paragraphs": [
-                  {
-                    "index": 1,
-                    "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
-                  },
-                  {
-                        "index":2,
-                        "content": "原告姚俊杰与被告张清辉申请扣押船用燃油及船用物料一案"
+                  "judgeId":3,
+                  "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
                     },
                     {
-                      "index": 10,
-                      "content": "案件受理费4,676元，由原告林印党负担。"
-                    }
-                ]
-            }
+                      "index": 1,
+                      "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
+                    },
+                    {
+                          "index":2,
+                          "content": "原告姚俊杰与被告张清辉申请扣押船用燃油及船用物料一案"
+                      },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                  ]
+              }
  expectResult: []
 -
  caseName: case13_16----案由名称中有“及”字的
  payloads:  {
-                "judgeId":3,
-                "paragraphs": [
-                  {
-                    "index": 1,
-                    "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
-                  },
-                  {
-                    "index": 2,
-                    "content": "一审第三人：郭国胜、陈四刚、徐克起"
-                  },
-                  {
-                        "index":2,
-                        "content": "再审申请人张小变因与被申请人海南中航天建设集团有限公司（以下简称中航天公司）及一审第三人郭国胜、陈四刚、徐克起一般取回权纠纷一案"
+                  "judgeId":3,
+                  "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
                     },
                     {
-                      "index": 10,
-                      "content": "案件受理费4,676元，由原告林印党负担。"
-                    }
-                ]
-            }
+                      "index": 1,
+                      "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
+                    },
+                    {
+                      "index": 2,
+                      "content": "一审第三人：郭国胜、陈四刚、徐克起"
+                    },
+                    {
+                          "index":2,
+                          "content": "再审申请人张小变因与被申请人海南中航天建设集团有限公司（以下简称中航天公司）及一审第三人郭国胜、陈四刚、徐克起一般取回权纠纷一案"
+                      },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                  ]
+              }
  expectResult: []
 -
  caseName: case13_17----案由名称不对-匹配但缺少字
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                       "index": 1,
                       "content": "被告：范兴浩，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
@@ -352,18 +462,28 @@
                     }
                 ]
             }
- expectResult: [{
-                    "level": 1,
-                    "type": 1900,
+ expectResult: {
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1900,
+                        "code": 1900,
+                        "description": "案由错误",
+                        "module": "纠错",
+                        "category": "案由错误"
+                    },
                     "keyword": "工程施工合同纠纷",
                     "suggestion": "",
                     "tip": ""
-                }]
+                }
 -
  caseName: case13_18----案由名称不对-部分匹配、部分不匹配
  payloads:  {
                 "judgeId":3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                       "index": 1,
                       "content": "被告：范兴浩，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
@@ -378,18 +498,28 @@
                     }
                 ]
             }
- expectResult: [{
-                    "level": 1,
-                    "type": 1900,
+ expectResult: {
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1900,
+                        "code": 1900,
+                        "description": "案由错误",
+                        "module": "纠错",
+                        "category": "案由错误"
+                    },
                     "keyword": "建设合同纠纷",
                     "suggestion": "",
                     "tip": ""
-                }]
+                }
 -
  caseName: case13_19----案由名称不对-缺少“责任纠纷”
  payloads:  {
                 "judgeId": 3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index": 1,
                         "content": "原告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
@@ -404,18 +534,28 @@
                     }
                 ]
             }
- expectResult: [{
-                    "level": 1,
-                    "type": 1900,
+ expectResult: {
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1900,
+                        "code": 1900,
+                        "description": "案由错误",
+                        "module": "纠错",
+                        "category": "案由错误"
+                    },
                     "keyword": "船舶碰撞损害",
                     "suggestion": "",
                     "tip": ""
-                }]
+                }
 -
  caseName: case13_20----案由名称不对-有多余的信息
  payloads:  {
                 "judgeId": 3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index": 1,
                         "content": "原告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"
@@ -430,40 +570,60 @@
                     }
                 ]
             }
- expectResult: [{
-                    "level": 1,
-                    "type": 1900,
+ expectResult: {
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1900,
+                        "code": 1900,
+                        "description": "案由错误",
+                        "module": "纠错",
+                        "category": "案由错误"
+                    },
                     "keyword": "不当婚约财产纠纷",
                     "suggestion": "",
                     "tip": ""
-                }]
+                }
 -
  caseName: case13_21----案由名称不对-有多余的信息
  payloads:  {
-             "judgeId": 3,
-             "paragraphs": [
-               {
-                 "index": 2,
-                 "content": "原告王德范与被告沈阳汉爵装饰材料有限公司劳动争议纠纷一案。"
-               },
-                {
-                  "index": 10,
-                  "content": "案件受理费4,676元，由原告林印党负担。"
-                }
-             ]
-           }
- expectResult: [{
-                    "level": 1,
-                    "type": 1900,
+                   "judgeId": 3,
+                   "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
+                     {
+                       "index": 2,
+                       "content": "原告王德范与被告沈阳汉爵装饰材料有限公司劳动争议纠纷一案。"
+                     },
+                      {
+                        "index": 10,
+                        "content": "案件受理费4,676元，由原告林印党负担。"
+                      }
+                   ]
+                 }
+ expectResult: {
+                    "correctionTypes": {
+                        "level": 4,
+                        "type": 1900,
+                        "code": 1900,
+                        "description": "案由错误",
+                        "module": "纠错",
+                        "category": "案由错误"
+                    },
                     "keyword": "劳动争议纠纷",
                     "suggestion": "",
                     "tip": ""
-                }]
+                }
 -
  caseName: case13_22----文章中有多个“一案”
  payloads:  {
                 "judgeId": 3,
                 "paragraphs": [
+                    {
+                      "index": 1,
+                      "content": "最高人民法院"
+                    },
                     {
                         "index": 1,
                         "content": "被告：张清辉，男，1990年2月20日生，汉族，住新疆省乌鲁木齐市"

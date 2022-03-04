@@ -11,8 +11,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1501,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1501,
+                        "code": 1501,
+                        "description": "敏感词分类：涉恐怖主义、极端主义、邪教组织犯罪",
+                        "module": "敏感词",
+                        "category": "涉恐怖主义、极端主义、邪教组织犯罪"
+                    },
                     "keyword": "法轮功",
                     "suggestion": "",
                     "tip": ""
@@ -29,8 +35,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1501,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1501,
+                        "code": 1501,
+                        "description": "敏感词分类：涉恐怖主义、极端主义、邪教组织犯罪",
+                        "module": "敏感词",
+                        "category": "涉恐怖主义、极端主义、邪教组织犯罪"
+                    },
                     "keyword": "邪教",
                     "suggestion": "",
                     "tip": ""
@@ -47,8 +59,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1502,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1502,
+                        "code": 1502,
+                        "description": "敏感词分类：涉及危害国家安全犯罪、涉及国防利益、涉及军事秘密",
+                        "module": "敏感词",
+                        "category": "涉及危害国家安全犯罪、涉及国防利益、涉及军事秘密"
+                    },
                     "keyword": "打倒共产党",
                     "suggestion": "",
                     "tip": ""
@@ -65,8 +83,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1502,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1502,
+                        "code": 1502,
+                        "description": "敏感词分类：涉及危害国家安全犯罪、涉及国防利益、涉及军事秘密",
+                        "module": "敏感词",
+                        "category": "涉及危害国家安全犯罪、涉及国防利益、涉及军事秘密"
+                    },
                     "keyword": "煽动颠覆国家政权",
                     "suggestion": "",
                     "tip": ""
@@ -83,8 +107,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1503,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1503,
+                        "code": 1503,
+                        "description": "敏感词分类：涉及国家秘密",
+                        "module": "敏感词",
+                        "category": "涉及国家秘密"
+                    },
                     "keyword": "国家秘密",
                     "suggestion": "",
                     "tip": ""
@@ -101,8 +131,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1504,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1504,
+                        "code": 1504,
+                        "description": "敏感词分类：涉及党和国家形象的谣言、反动言论",
+                        "module": "敏感词",
+                        "category": "涉及党和国家形象的谣言、反动言论"
+                    },
                     "keyword": "藏独",
                     "suggestion": "",
                     "tip": ""
@@ -119,8 +155,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1504,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1504,
+                        "code": 1504,
+                        "description": "敏感词分类：涉及党和国家形象的谣言、反动言论",
+                        "module": "敏感词",
+                        "category": "涉及党和国家形象的谣言、反动言论"
+                    },
                     "keyword": "疆独",
                     "suggestion": "",
                     "tip": ""
@@ -137,8 +179,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1504,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1504,
+                        "code": 1504,
+                        "description": "敏感词分类：涉及党和国家形象的谣言、反动言论",
+                        "module": "敏感词",
+                        "category": "涉及党和国家形象的谣言、反动言论"
+                    },
                     "keyword": "台独",
                     "suggestion": "",
                     "tip": ""
@@ -155,8 +203,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1504,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1504,
+                        "code": 1504,
+                        "description": "敏感词分类：涉及党和国家形象的谣言、反动言论",
+                        "module": "敏感词",
+                        "category": "涉及党和国家形象的谣言、反动言论"
+                    },
                     "keyword": "社会主义制度",
                     "suggestion": "",
                     "tip": ""
@@ -173,8 +227,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1504,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1504,
+                        "code": 1504,
+                        "description": "敏感词分类：涉及党和国家形象的谣言、反动言论",
+                        "module": "敏感词",
+                        "category": "涉及党和国家形象的谣言、反动言论"
+                    },
                     "keyword": "共产主义",
                     "suggestion": "",
                     "tip": ""
@@ -191,8 +251,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1505,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1505,
+                        "code": 1505,
+                        "description": "敏感词分类：涉及党和国家领导人",
+                        "module": "敏感词",
+                        "category": "涉及党和国家领导人"
+                    },
                     "keyword": "涉及党和国家领导人",
                     "suggestion": "",
                     "tip": ""
@@ -209,8 +275,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1505,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1505,
+                        "code": 1505,
+                        "description": "敏感词分类：涉及党和国家领导人",
+                        "module": "敏感词",
+                        "category": "涉及党和国家领导人"
+                    },
                     "keyword": "涉及党和国家领导人",
                     "suggestion": "",
                     "tip": ""
@@ -227,8 +299,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1505,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1505,
+                        "code": 1505,
+                        "description": "敏感词分类：涉及党和国家领导人",
+                        "module": "敏感词",
+                        "category": "涉及党和国家领导人"
+                    },
                     "keyword": "涉及党和国家领导人",
                     "suggestion": "",
                     "tip": ""
@@ -257,8 +335,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1505,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1505,
+                        "code": 1505,
+                        "description": "敏感词分类：涉及党和国家领导人",
+                        "module": "敏感词",
+                        "category": "涉及党和国家领导人"
+                    },
                     "keyword": "涉及党和国家领导人",
                     "suggestion": "",
                     "tip": ""
@@ -275,8 +359,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1505,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1505,
+                        "code": 1505,
+                        "description": "敏感词分类：涉及党和国家领导人",
+                        "module": "敏感词",
+                        "category": "涉及党和国家领导人"
+                    },
                     "keyword": "涉及党和国家领导人",
                     "suggestion": "",
                     "tip": ""
@@ -293,8 +383,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1506,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1506,
+                        "code": 1506,
+                        "description": "敏感词分类：涉及不当言论",
+                        "module": "敏感词",
+                        "category": "涉及不当言论"
+                    },
                     "keyword": "谣言",
                     "suggestion": "",
                     "tip": ""
@@ -311,8 +407,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1507,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1507,
+                        "code": 1507,
+                        "description": "敏感词分类：人民法院认为可能影响政治、军事安全的其他情形",
+                        "module": "敏感词",
+                        "category": "人民法院认为可能影响政治、军事安全的其他情形"
+                    },
                     "keyword": "死刑",
                     "suggestion": "",
                     "tip": ""
@@ -329,8 +431,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1507,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1507,
+                        "code": 1507,
+                        "description": "敏感词分类：人民法院认为可能影响政治、军事安全的其他情形",
+                        "module": "敏感词",
+                        "category": "人民法院认为可能影响政治、军事安全的其他情形"
+                    },
                     "keyword": "寻衅滋事",
                     "suggestion": "",
                     "tip": ""
@@ -347,8 +455,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1507,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1507,
+                        "code": 1507,
+                        "description": "敏感词分类：人民法院认为可能影响政治、军事安全的其他情形",
+                        "module": "敏感词",
+                        "category": "人民法院认为可能影响政治、军事安全的其他情形"
+                    },
                     "keyword": "诽谤",
                     "suggestion": "",
                     "tip": ""
@@ -366,8 +480,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1507,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1507,
+                        "code": 1507,
+                        "description": "敏感词分类：人民法院认为可能影响政治、军事安全的其他情形",
+                        "module": "敏感词",
+                        "category": "人民法院认为可能影响政治、军事安全的其他情形"
+                    },
                     "keyword": "中南海",
                     "suggestion": "",
                     "tip": ""
@@ -384,8 +504,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1507,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1507,
+                        "code": 1507,
+                        "description": "敏感词分类：人民法院认为可能影响政治、军事安全的其他情形",
+                        "module": "敏感词",
+                        "category": "人民法院认为可能影响政治、军事安全的其他情形"
+                    },
                     "keyword": "天安门",
                     "suggestion": "",
                     "tip": ""
@@ -402,8 +528,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1507,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1507,
+                        "code": 1507,
+                        "description": "敏感词分类：人民法院认为可能影响政治、军事安全的其他情形",
+                        "module": "敏感词",
+                        "category": "人民法院认为可能影响政治、军事安全的其他情形"
+                    },
                     "keyword": "公安局",
                     "suggestion": "",
                     "tip": ""
@@ -420,8 +552,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1507,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1507,
+                        "code": 1507,
+                        "description": "敏感词分类：人民法院认为可能影响政治、军事安全的其他情形",
+                        "module": "敏感词",
+                        "category": "人民法院认为可能影响政治、军事安全的其他情形"
+                    },
                     "keyword": "公安机关",
                     "suggestion": "",
                     "tip": ""
@@ -438,8 +576,14 @@
                 ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1507,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1507,
+                        "code": 1507,
+                        "description": "敏感词分类：人民法院认为可能影响政治、军事安全的其他情形",
+                        "module": "敏感词",
+                        "category": "人民法院认为可能影响政治、军事安全的其他情形"
+                    },
                     "keyword": "侮辱罪",
                     "suggestion": "",
                     "tip": ""
@@ -486,8 +630,14 @@
               ]
             }
  expectResult: {
-                    "level": 1,
-                    "type": 1506,
+                    "correctionTypes": {
+                        "level": 3,
+                        "type": 1506,
+                        "code": 1506,
+                        "description": "敏感词分类：涉及不当言论",
+                        "module": "敏感词",
+                        "category": "涉及不当言论"
+                    },
                     "keyword": "国民党",
                     "suggestion": "",
                     "tip": ""
