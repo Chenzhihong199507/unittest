@@ -1,0 +1,97 @@
+#筛选地域排位
+-
+ caseName: case22_1----福建省厦门市
+ payloads:  {
+                "keyword":"离婚 打架",
+                "dimensions": "",
+                "courtid": "",
+                "slcxid": "",
+                "fyjbid": "",
+                "cpwsYear": "",
+                "judgeId":19
+            }
+ expectResult: ["福建省","北京市","上海市","广东省","浙江省"]
+-
+ caseName: case22_2----广东省广州市
+ payloads:  {
+                "keyword":"离婚 打架",
+                "dimensions": "",
+                "courtid": "",
+                "slcxid": "",
+                "fyjbid": "",
+                "cpwsYear": "",
+                "judgeId":20
+            }
+ expectResult: ["广东省","北京市","上海市","浙江省"]
+-
+ caseName: case22_3----河北省保定市
+ payloads:  {
+                "keyword":"离婚 打架",
+                "dimensions": "",
+                "courtid": "",
+                "slcxid": "",
+                "fyjbid": "",
+                "cpwsYear": "",
+                "judgeId":3
+            }
+ expectResult: ["河北省","北京市","上海市","广东省","浙江省"]
+-
+ caseName: case22_4----上海市嘉定区
+ payloads:  {
+                "keyword":"离婚 打架",
+                "dimensions": "",
+                "courtid": "",
+                "slcxid": "",
+                "fyjbid": "",
+                "cpwsYear": "",
+                "judgeId":22
+            }
+ expectResult: ["上海市","北京市","广东省","浙江省"]
+-
+ caseName: case22_5----浙江省杭州市
+ payloads:  {
+                "keyword":"离婚 打架",
+                "dimensions": "",
+                "courtid": "",
+                "slcxid": "",
+                "fyjbid": "",
+                "cpwsYear": "",
+                "judgeId":23
+            }
+ expectResult: ["浙江省","北京市","上海市","广东省"]
+-
+ caseName: case22_6----最高法
+ payloads:  {
+                "keyword":"离婚 打架",
+                "dimensions": "",
+                "courtid": "",
+                "slcxid": "",
+                "fyjbid": "",
+                "cpwsYear": "",
+                "judgeId":7
+            }
+ expectResult: ["北京市","上海市","广东省","浙江省","最高人民法院"]
+-
+ caseName: case22_7----北京市东城区
+ payloads:  {
+                "keyword":"离婚 打架",
+                "dimensions": "",
+                "courtid": "",
+                "slcxid": "",
+                "fyjbid": "",
+                "cpwsYear": "",
+                "judgeId":9
+            }
+ expectResult: ["北京市","上海市","广东省","浙江省"]
+-
+ caseName: case22_8----福建省漳州市芗城区
+ payloads:  {
+                "keyword":"离婚 打架",
+                "dimensions": "",
+                "courtid": "",
+                "slcxid": "",
+                "fyjbid": "",
+                "cpwsYear": "",
+                "judgeId":21
+            }
+ expectResult: ["福建省","北京市","上海市","广东省","浙江省"]
